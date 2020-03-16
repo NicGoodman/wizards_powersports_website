@@ -1,5 +1,36 @@
 @tailwind base;
 
+@font-face {
+font-family: 'SF WADIM GIANT ITALIC';
+font-style: normal;
+font-weight: normal;
+src: local('SF WADIM GIANT ITALIC'), url('assets/fonts/wadim_giant_italic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF WADIM GIANT LINES';
+font-style: normal;
+font-weight: normal;
+src: local('SF WADIM GIANT LINES'), url('assets/fonts/wadim_giant_lines.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF WADIM GIANT OUTLINE';
+font-style: normal;
+font-weight: normal;
+src: local('SF WADIM GIANT OUTLINE'), url('assets/fonts/wadim_giant_outline.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'SF WADIM GIANT Heavy';
+font-style: normal;
+font-weight: normal;
+src: local('SF WADIM GIANT Heavy'), url('assets/fonts/wadim_giant.woff') format('woff');
+}
+
 @tailwind components;
 
 @tailwind utilities;
