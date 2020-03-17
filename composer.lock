@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4be1b8c8e66a4e232d393801cfbd7b99",
+    "content-hash": "14dcfdedd3ad0d410d62c1320b3c5628",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1858,6 +1858,57 @@
                 "shell"
             ],
             "time": "2019-12-20T08:48:10+00:00"
+        },
+        {
+            "name": "monachilada/craft-matrixtoolbar",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monachilada/craft-matrixtoolbar.git",
+                "reference": "97c862ace5f5633972e8b7f81e4161eb4c06af78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monachilada/craft-matrixtoolbar/zipball/97c862ace5f5633972e8b7f81e4161eb4c06af78",
+                "reference": "97c862ace5f5633972e8b7f81e4161eb4c06af78",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.27"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Matrix Toolbar",
+                "handle": "matrixtoolbar",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/monachilada/craft-matrixtoolbar/master/CHANGELOG.md",
+                "class": "monachilada\\matrixtoolbar\\MatrixToolbar"
+            },
+            "autoload": {
+                "psr-4": {
+                    "monachilada\\matrixtoolbar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Pierce",
+                    "homepage": "https://michaelpierce.trade/"
+                }
+            ],
+            "description": "Expand, collapse, change the status of, or delete multiple blocks in a Matrix field simultaneously.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "matrix toolbar"
+            ],
+            "time": "2018-10-11T15:05:48+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4382,6 +4433,94 @@
                 "templating"
             ],
             "time": "2020-02-11T15:31:23+00:00"
+        },
+        {
+            "name": "verbb/base",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/verbb-base.git",
+                "reference": "c95545f2b86db0791294a4b25e967a007f1dbf57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/c95545f2b86db0791294a4b25e967a007f1dbf57",
+                "reference": "c95545f2b86db0791294a4b25e967a007f1dbf57",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "yii-module",
+            "autoload": {
+                "psr-4": {
+                    "verbb\\base\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
+            "time": "2020-01-23T22:22:44+00:00"
+        },
+        {
+            "name": "verbb/super-table",
+            "version": "2.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/super-table.git",
+                "reference": "29e4a2eea3653fa8822725d59032b4afb762ced1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/29e4a2eea3653fa8822725d59032b4afb762ced1",
+                "reference": "29e4a2eea3653fa8822725d59032b4afb762ced1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.4.8",
+                "verbb/base": "^1.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Super Table",
+                "handle": "super-table",
+                "description": "Super-charge your Craft workflow with Super Table. Use it to group fields together or build complex Matrix-in-Matrix solutions.",
+                "documentationUrl": "https://github.com/verbb/super-table",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/super-table/craft-3/CHANGELOG.md",
+                "class": "verbb\\supertable\\SuperTable"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\supertable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Super-charge your Craft workflow with Super Table. Use it to group fields together or build complex Matrix-in-Matrix solutions.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "super table"
+            ],
+            "time": "2020-02-28T09:01:53+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
