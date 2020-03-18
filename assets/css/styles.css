@@ -35,7 +35,7 @@ src: local('SF WADIM GIANT Heavy'), url('../fonts/wadim_giant.woff') format('wof
 
 @tailwind utilities;
 
-.wz-grid {
+.bg-wz-grid {
   background: #FEF4E9;
   background-image: url("../images/gridBG.png");
   background-repeat: repeat;
