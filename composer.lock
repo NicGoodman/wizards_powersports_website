@@ -322,16 +322,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.4.9",
+            "version": "3.4.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "fa28541499591b458e11f61c21016365da7120f5"
+                "reference": "2613dc758987a2d986ccf0a0c4f59b4c303eef1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/fa28541499591b458e11f61c21016365da7120f5",
-                "reference": "fa28541499591b458e11f61c21016365da7120f5",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2613dc758987a2d986ccf0a0c4f59b4c303eef1c",
+                "reference": "2613dc758987a2d986ccf0a0c4f59b4c303eef1c",
                 "shasum": ""
             },
             "require": {
@@ -415,7 +415,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-02-28T19:59:36+00:00"
+            "time": "2020-03-18T13:20:28+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1619,16 +1619,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.65",
+            "version": "1.0.66",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "8f17b3ba67097aafb8318cd5c553b1acf7c891c8"
+                "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8f17b3ba67097aafb8318cd5c553b1acf7c891c8",
-                "reference": "8f17b3ba67097aafb8318cd5c553b1acf7c891c8",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/021569195e15f8209b1c4bebb78bd66aa4f08c21",
+                "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21",
                 "shasum": ""
             },
             "require": {
@@ -1699,7 +1699,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-03-08T18:53:20+00:00"
+            "time": "2020-03-17T18:58:12+00:00"
         },
         {
             "name": "league/oauth2-client",
@@ -2403,16 +2403,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.2.47",
+            "version": "3.2.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "8d491cab541a944fbae90baed2a5cc7b3a8ce4f6"
+                "reference": "c35aad8da75d6da41b88eb4539c7b1d78eff32ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/8d491cab541a944fbae90baed2a5cc7b3a8ce4f6",
-                "reference": "8d491cab541a944fbae90baed2a5cc7b3a8ce4f6",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/c35aad8da75d6da41b88eb4539c7b1d78eff32ba",
+                "reference": "c35aad8da75d6da41b88eb4539c7b1d78eff32ba",
                 "shasum": ""
             },
             "require": {
@@ -2473,7 +2473,7 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2020-03-06T00:46:42+00:00"
+            "time": "2020-03-18T13:47:11+00:00"
         },
         {
             "name": "opis/closure",
