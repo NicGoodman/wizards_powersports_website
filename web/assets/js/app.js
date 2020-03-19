@@ -46,6 +46,7 @@ const router = new VueRouter({
 window.onload = function () {
 const app = new Vue({
   el: '#main',
+  delimiters: ['${', '}'],
   router
 });
 }
