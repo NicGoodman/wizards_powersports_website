@@ -1,6 +1,7 @@
 {
   "require": {
     "craftcms/cms": "^3.4.0",
+    "elivz/craft-single-cat": "^1.2",
     "monachilada/craft-matrixtoolbar": "^1.0",
     "nystudio107/craft-imageoptimize": "^1.6",
     "nystudio107/craft-seomatic": "^3.2",
