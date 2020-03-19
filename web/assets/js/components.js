@@ -1,6 +1,1 @@
-Vue.component('main-content', {
-  template: `  <section id="main-content">
-  <p>test</p>
-  <p>{{ testContent }}</p>
-  </section>`
-})
+Vue.component('main-content', {});
