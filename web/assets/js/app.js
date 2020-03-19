@@ -49,7 +49,7 @@ Vue.component('main-content'
 
 window.onload = function() {
   const app = new Vue({
-    el: '#main',
+    el: '#body',
     delimiters: ['${', '}'],
     router
   });
