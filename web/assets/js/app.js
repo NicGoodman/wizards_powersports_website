@@ -1,3 +1,7 @@
+const Home = {
+  template: `<main-content></main-content>`
+}
+
 const router = new VueRouter({
   routes: [{
     path: '/',
@@ -22,7 +26,3 @@ const router = new VueRouter({
   el: '#main',
   router
 });
-
-const Home = {
-  template: `<main-content></main-content>`
-}
