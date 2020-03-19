@@ -1,6 +1,7 @@
 module.exports = {
   theme: {
-    extend: {colors: {
+    extend: {
+      colors: {
       'wz-black': '#212A30',
       'wz-cream': '#FEF4E9',
       'wz-yellow': '#F2C58C',
