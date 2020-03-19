@@ -42,7 +42,8 @@ const router = new VueRouter({
     path: '/service',
     component: Service
   }]
-}); const app = new Vue({
+});
+const app = new Vue({
   el: '#main',
   router
 });
