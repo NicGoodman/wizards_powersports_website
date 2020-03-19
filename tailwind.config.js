@@ -11,10 +11,10 @@ module.exports = {
     }
   },
   fontFamily: {
-    'wz-italic': ['SF WADIM GIANT ITALIC, sans-serif'],
-    'wz-lines': ['SF WADIM GIANT LINES, sans-serif'],
-    'wz-outline': ['SF WADIM GIANT OUTLINE, sans-serif'],
-    'wz-heavy': ['SF WADIM GIANT Heavy, sans-serif'],
+    'wz-italic': ['SF WADIM GIANT ITALIC', 'sans-serif'],
+    'wz-lines': ['SF WADIM GIANT LINES', 'sans-serif'],
+    'wz-outline': ['SF WADIM GIANT OUTLINE', 'sans-serif'],
+    'wz-heavy': ['SF WADIM GIANT Heavy', 'sans-serif'],
   }
 },
   variants: {},

@@ -4,7 +4,7 @@
 font-family: 'SF WADIM GIANT ITALIC';
 font-style: normal;
 font-weight: normal;
-src: local('SF WADIM GIANT ITALIC'), url('../fonts/wadim_giant_italic.woff') format('woff');
+src: url('../fonts/wadim_giant_italic.woff') format('woff');
 }
 
 
@@ -12,7 +12,7 @@ src: local('SF WADIM GIANT ITALIC'), url('../fonts/wadim_giant_italic.woff') for
 font-family: 'SF WADIM GIANT LINES';
 font-style: normal;
 font-weight: normal;
-src: local('SF WADIM GIANT LINES'), url('../fonts/wadim_giant_lines.woff') format('woff');
+src: url('../fonts/wadim_giant_lines.woff') format('woff');
 }
 
 
@@ -20,7 +20,7 @@ src: local('SF WADIM GIANT LINES'), url('../fonts/wadim_giant_lines.woff') forma
 font-family: 'SF WADIM GIANT OUTLINE';
 font-style: normal;
 font-weight: normal;
-src: local('SF WADIM GIANT OUTLINE'), url('../fonts/wadim_giant_outline.woff') format('woff');
+src: url('../fonts/wadim_giant_outline.woff') format('woff');
 }
 
 
@@ -28,7 +28,7 @@ src: local('SF WADIM GIANT OUTLINE'), url('../fonts/wadim_giant_outline.woff') f
 font-family: 'SF WADIM GIANT Heavy';
 font-style: normal;
 font-weight: normal;
-src: local('SF WADIM GIANT Heavy'), url('../fonts/wadim_giant.woff') format('woff');
+src: url('../fonts/wadim_giant.woff') format('woff');
 }
 
 @tailwind components;

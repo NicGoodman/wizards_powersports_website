@@ -602,7 +602,7 @@ video {
 
   font-weight: normal;
 
-  src: local('SF WADIM GIANT ITALIC'), url('../fonts/wadim_giant_italic.woff') format('woff');
+  src: url('../fonts/wadim_giant_italic.woff') format('woff');
 }
 
 @font-face {
@@ -612,7 +612,7 @@ video {
 
   font-weight: normal;
 
-  src: local('SF WADIM GIANT LINES'), url('../fonts/wadim_giant_lines.woff') format('woff');
+  src: url('../fonts/wadim_giant_lines.woff') format('woff');
 }
 
 @font-face {
@@ -622,7 +622,7 @@ video {
 
   font-weight: normal;
 
-  src: local('SF WADIM GIANT OUTLINE'), url('../fonts/wadim_giant_outline.woff') format('woff');
+  src: url('../fonts/wadim_giant_outline.woff') format('woff');
 }
 
 @font-face {
@@ -632,7 +632,7 @@ video {
 
   font-weight: normal;
 
-  src: local('SF WADIM GIANT Heavy'), url('../fonts/wadim_giant.woff') format('woff');
+  src: url('../fonts/wadim_giant.woff') format('woff');
 }
 
 .container {
