@@ -1,1 +1,7 @@
-Vue.component('main-content');
+Vue.component('main-content', {
+  data() {
+    return{
+      '{{ entry.testContent }}'
+    }
+  }
+});
