@@ -1,14 +1,12 @@
 {% extends "_layouts/base-layout" %}
 {% block body %}
-<header>
-
-</header>
-<main>
-<p class="font-wz-italic">Hello World</p>
-</main>
-<footer>
-  {% include "_sections/_general/footer-section" %}
-  {% block footer %}
-  {% endblock %}
-</footer>
+{% include "_sections/_general/header-section" %}
+{% block header %}
+{% endblock %}
+{% include "_sections/_general/main-section" %}
+{% block main %}
+{% endblock %}
+{% include "_sections/_general/footer-section" %}
+{% block footer %}
+{% endblock %}
 {% endblock %}
