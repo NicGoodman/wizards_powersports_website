@@ -44,7 +44,9 @@ const router = new VueRouter({
   }]
 });
 
-Vue.component('main-content', {});
+Vue.component('main-content', {
+
+});
 
 window.onload = function() {
   const app = new Vue({
