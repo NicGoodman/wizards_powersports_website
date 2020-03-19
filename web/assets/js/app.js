@@ -43,6 +43,8 @@ const router = new VueRouter({
     component: Service
   }]
 });
+Vue.component('main-content'});
+
 window.onload = function () {
 const app = new Vue({
   el: '#main',
