@@ -5,14 +5,14 @@
       {% case "5050Split" %}
         {% set leftWidth = "w-1/2" %}
         {% set rightWidth = "w-1/2" %}
-        <section id="left-column" class="{{ leftWidth }}">
+        <section id="left-column" class="flex flex-col {{ leftWidth }}">
         {% for block in row.sectionContent.all() %}
           {% if block.column.value == 'left' %}
           {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
           {% endif %}
         {% endfor %}
         </section>
-        <section id="right-column" class="{{ rightWidth }}">
+        <section id="right-column" class="flex flex-col {{ rightWidth }}">
         {% for block in row.sectionContent.all() %}
           {% if block.column.value == 'right' %}
           {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
@@ -22,14 +22,14 @@
       {% case "3366Split" %}
           {% set leftWidth = "w-1/3" %}
           {% set rightWidth = "w-2/3" %}
-          <section id="left-column" class="{{ leftWidth }}">
+          <section id="left-column" class="flex flex-col {{ leftWidth }}">
           {% for block in row.sectionContent.all() %}
             {% if block.column.value == 'left' %}
             {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
             {% endif %}
           {% endfor %}
           </section>
-          <section id="right-column" class="{{ rightWidth }}">
+          <section id="right-column" class="flex flex-col {{ rightWidth }}">
           {% for block in row.sectionContent.all() %}
             {% if block.column.value == 'right' %}
             {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
@@ -39,14 +39,14 @@
       {% case "66/33Split" %}
           {% set leftWidth = "w-2/3" %}
           {% set rightWidth = "w-1/3" %}
-          <section id="left-column" class="{{ leftWidth }}">
+          <section id="left-column" class="flex flex-col {{ leftWidth }}">
           {% for block in row.sectionContent.all() %}
             {% if block.column.value == 'left' %}
             {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
             {% endif %}
           {% endfor %}
           </section>
-          <section id="right-column" class="{{ rightWidth }}">
+          <section id="right-column" class="flex flex-col {{ rightWidth }}">
           {% for block in row.sectionContent.all() %}
             {% if block.column.value == 'right' %}
             {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
@@ -56,14 +56,14 @@
       {% case "75/25Split" %}
           {% set leftWidth = "w-3/4" %}
           {% set rightWidth = "w-1/4" %}
-          <section id="left-column" class="{{ leftWidth }}">
+          <section id="left-column" class="flex flex-col {{ leftWidth }}">
           {% for block in row.sectionContent.all() %}
             {% if block.column.value == 'left' %}
             {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
             {% endif %}
           {% endfor %}
           </section>
-          <section id="right-column" class="{{ rightWidth }}">
+          <section id="right-column" class="flex flex-col {{ rightWidth }}">
           {% for block in row.sectionContent.all() %}
             {% if block.column.value == 'right' %}
             {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
@@ -73,14 +73,14 @@
       {% case "25/75Split" %}
           {% set leftWidth = "w-1/4" %}
           {% set rightWidth = "w-3/4" %}
-          <section id="left-column" class="{{ leftWidth }}">
+          <section id="left-column" class="flex flex-col {{ leftWidth }}">
           {% for block in row.sectionContent.all() %}
             {% if block.column.value == 'left' %}
             {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
             {% endif %}
           {% endfor %}
           </section>
-          <section id="right-column" class="{{ rightWidth }}">
+          <section id="right-column" class="flex flex-col {{ rightWidth }}">
           {% for block in row.sectionContent.all() %}
             {% if block.column.value == 'right' %}
             {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
