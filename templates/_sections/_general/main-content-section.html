@@ -17,11 +17,11 @@
     {% case "25/75Split" %}
         {% set leftWidth = w-1/4 %}
         {% set rightWidth = w-3/4 %}
-  {% endswitch %}
     {% for block in row.sectionContent.all() %}
       {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
       {{ leftWidth }}
     {% endfor %}
+  {% endswitch %}
   {% endfor %}
 </main>
 {% endblock %}
