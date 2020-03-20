@@ -7,20 +7,31 @@
       {% set rightWidth = "w-1/2" %}
       {% for block in row.sectionContent.all() %}
         {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
-        {{ leftWidth }}
       {% endfor %}
     {% case "3366Split" %}
-        {% set leftWidth = w-1/3 %}
-        {% set rightWidth = w-2/3 %}
+        {% set leftWidth = "w-1/3" %}
+        {% set rightWidth = "w-2/3" %}
+        {% for block in row.sectionContent.all() %}
+          {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+        {% endfor %}
     {% case "66/33Split" %}
-        {% set leftWidth = w-2/3 %}
-        {% set rightWidth = w-1/3 %}
+        {% set leftWidth = "w-2/3" %}
+        {% set rightWidth = "w-1/3" %}
+        {% for block in row.sectionContent.all() %}
+          {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+        {% endfor %}
     {% case "75/25Split" %}
-        {% set leftWidth = w-3/4 %}
-        {% set rightWidth = w-1/4 %}
+        {% set leftWidth = "w-3/4" %}
+        {% set rightWidth = "w-1/4" %}
+        {% for block in row.sectionContent.all() %}
+          {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+        {% endfor %}
     {% case "25/75Split" %}
-        {% set leftWidth = w-1/4 %}
-        {% set rightWidth = w-3/4 %}
+        {% set leftWidth = "w-1/4" %}
+        {% set rightWidth = "w-3/4" %}
+        {% for block in row.sectionContent.all() %}
+          {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+        {% endfor %}
   {% endswitch %}
   {% endfor %}
 </main>
