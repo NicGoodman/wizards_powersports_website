@@ -31,6 +31,97 @@ font-weight: normal;
 src: url('../fonts/wadim_giant.woff') format('woff');
 }
 
+
+h1 {
+  @apply font-wz-heavy;
+  @apply text-3xl;
+}
+
+h2 {
+  @apply font-wz-italic;
+  @apply text-xl
+}
+
+h3 {
+  @apply font-wz-italic;
+  @apply text-lg;
+}
+
+p {
+  @apply font-sans;
+  @apply text-sm;
+}
+
+h4 {
+  @apply font-sans;
+  @apply font-bold;
+  @apply text-xs;
+}
+
+label {
+  @apply font-wz-italic;
+  @apply text-xs;
+}
+
+button {
+
+}
+
+button:hover {
+
+}
+
+button:active {
+
+}
+
+@screen md {
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  p {
+
+  }
+
+  h4 {
+
+  }
+}
+
+@screen lg {
+
+}
+
+@screen xl {
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  p {
+
+  }
+
+  h4 {
+
+  }
+}
 @tailwind components;
 
 @tailwind utilities;

@@ -635,6 +635,83 @@ video {
   src: url('../fonts/wadim_giant.woff') format('woff');
 }
 
+h1 {
+  font-family: SF WADIM GIANT Heavy, sans-serif;
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-family: SF WADIM GIANT ITALIC, sans-serif;
+  font-size: 1.25rem
+}
+
+h3 {
+  font-family: SF WADIM GIANT ITALIC, sans-serif;
+  font-size: 1.125rem;
+}
+
+p {
+  font-family: Lato, sans-serif;
+  font-size: 0.875rem;
+}
+
+h4 {
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+label {
+  font-family: SF WADIM GIANT ITALIC, sans-serif;
+  font-size: 0.75rem;
+}
+
+button {
+}
+
+button:hover {
+}
+
+button:active {
+}
+
+@media (min-width: 768px) {
+  h1 {
+  }
+
+  h2 {
+  }
+
+  h3 {
+  }
+
+  p {
+  }
+
+  h4 {
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+  h1 {
+  }
+
+  h2 {
+  }
+
+  h3 {
+  }
+
+  p {
+  }
+
+  h4 {
+  }
+}
+
 .container {
   width: 100%;
 }
