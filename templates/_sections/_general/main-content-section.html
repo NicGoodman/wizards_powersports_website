@@ -88,6 +88,13 @@
     {% endfor %}
   </section>
   {% endswitch %}
+  <section id="full-width" class="flex flex-col w-full px-0 md:px-16">
+    {% for block in row.sectionContent.all() %}
+      {% if block.column.value == 'full' %}
+      {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+      {% endif %}
+    {% endfor %}
+  </section>
   {% endfor %}
 </main>
 {% endblock %}
