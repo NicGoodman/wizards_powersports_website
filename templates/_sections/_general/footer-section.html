@@ -1,4 +1,10 @@
 {% block footer %}
 <footer id="footer-content">
+  {% include "_components/_general/wizard-component" %}
+  {% block wizard %}
+  {% endblock %}
+  {% include "_components/_general/footer-nav-component" %}
+  {% block wizard %}
+  {% endblock %}
 </footer>
 {% endblock %}
