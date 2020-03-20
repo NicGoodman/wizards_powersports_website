@@ -1,5 +1,8 @@
 {% block main_nav %}
 <nav id="main-nav" class="flex flex-row">
-{{ craft.olivemenus.getMenuHTML('mainMenu') }}
+{% set pages = craft.sections.all() %}
+{% for page in pages if page.type =='single' %}
+test
+{% endfor %}
 </nav>
 {% endblock %}
