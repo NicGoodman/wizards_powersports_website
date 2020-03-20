@@ -14610,12 +14610,6 @@ button:active {
   background-attachment: fixed;
 }
 
-.bg-hero {
-  background-image: url("{{ image.url }}");
-  background-position: center;
-  background-size: cover;
-}
-
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

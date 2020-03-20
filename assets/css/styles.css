@@ -132,9 +132,3 @@ button:active {
   background-repeat: repeat;
   background-attachment: fixed;
 }
-
-.bg-hero {
-  background-image: url("{{ image.url }}");
-  background-position: center;
-  background-size: cover;
-}
