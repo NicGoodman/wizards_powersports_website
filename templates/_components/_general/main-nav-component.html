@@ -2,7 +2,7 @@
 <nav id="main-nav" class="flex flex-row">
 {% set pages = craft.app.sections.allSections () %}
 {% for page in pages if page.type =='single' %}
-test
+{{ entry.title }}
 {% endfor %}
 </nav>
 {% endblock %}
