@@ -2,7 +2,7 @@
 <main id="main-content">
   {% for row in entry.pageContent.all() %}
     {% for block in row.sectionContent.all() %}
-      {% include ('_components/_main-content/block.type.handle ~ '-component' ) %}
+      {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
     {% endfor %}
   {% endfor %}
 </main>
