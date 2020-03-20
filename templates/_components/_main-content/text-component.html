@@ -1,5 +1,5 @@
 {% block text %}
-<article class="{% if block.alignment.value == 'left' %}text-left{% elseif block.column.value == 'right' %}text-right{% endif %}">
+<article class="{% if block.alignment.value == 'leftAlign' %}text-left{% elseif block.alignment.value == 'rightAlign' %}text-right{% endif %}">
   {% if block.subHeading|length %}
   <h3>{{ block.subHeading }}</h3>
   {% endif %}
