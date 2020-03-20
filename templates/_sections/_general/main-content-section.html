@@ -1,38 +1,93 @@
 {% block main_content %}
-<main id="main-content" class="block max-w-screen-xl mx-auto">
-  {% for row in entry.pageContent.all() %}
-  {% switch row.sectionLayout %}
-    {% case "5050Split" %}
-      {% set leftWidth = "w-1/2" %}
-      {% set rightWidth = "w-1/2" %}
-      {% for block in row.sectionContent.all() %}
-        {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
-      {% endfor %}
-    {% case "3366Split" %}
-        {% set leftWidth = "w-1/3" %}
-        {% set rightWidth = "w-2/3" %}
+<main id="main-content" class="flex flex-col md:flex-row max-w-screen-xl mx-auto">
+    {% for row in entry.pageContent.all() %}
+    {% switch row.sectionLayout %}
+      {% case "5050Split" %}
+        {% set leftWidth = "w-1/2" %}
+        {% set rightWidth = "w-1/2" %}
+        <section id="left-column" class="{{ leftWidth }}">
         {% for block in row.sectionContent.all() %}
+          {% if block.column.value == 'left' %}
           {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+          {% endif %}
         {% endfor %}
-    {% case "66/33Split" %}
-        {% set leftWidth = "w-2/3" %}
-        {% set rightWidth = "w-1/3" %}
+        </section>
+        <section id="right-column" class="{{ rightWidth }}">
         {% for block in row.sectionContent.all() %}
+          {% if block.column.value == 'right' %}
           {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+          {% endif %}
         {% endfor %}
-    {% case "75/25Split" %}
-        {% set leftWidth = "w-3/4" %}
-        {% set rightWidth = "w-1/4" %}
-        {% for block in row.sectionContent.all() %}
-          {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
-        {% endfor %}
-    {% case "25/75Split" %}
-        {% set leftWidth = "w-1/4" %}
-        {% set rightWidth = "w-3/4" %}
-        {% for block in row.sectionContent.all() %}
-          {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
-        {% endfor %}
-  {% endswitch %}
-  {% endfor %}
+        </section>
+      {% case "3366Split" %}
+          {% set leftWidth = "w-1/3" %}
+          {% set rightWidth = "w-2/3" %}
+          <section id="left-column" class="{{ leftWidth }}">
+          {% for block in row.sectionContent.all() %}
+            {% if block.column.value == 'left' %}
+            {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+            {% endif %}
+          {% endfor %}
+          </section>
+          <section id="right-column" class="{{ rightWidth }}">
+          {% for block in row.sectionContent.all() %}
+            {% if block.column.value == 'right' %}
+            {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+            {% endif %}
+          {% endfor %}
+          </section>
+      {% case "66/33Split" %}
+          {% set leftWidth = "w-2/3" %}
+          {% set rightWidth = "w-1/3" %}
+          <section id="left-column" class="{{ leftWidth }}">
+          {% for block in row.sectionContent.all() %}
+            {% if block.column.value == 'left' %}
+            {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+            {% endif %}
+          {% endfor %}
+          </section>
+          <section id="right-column" class="{{ rightWidth }}">
+          {% for block in row.sectionContent.all() %}
+            {% if block.column.value == 'right' %}
+            {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+            {% endif %}
+          {% endfor %}
+          </section>
+      {% case "75/25Split" %}
+          {% set leftWidth = "w-3/4" %}
+          {% set rightWidth = "w-1/4" %}
+          <section id="left-column" class="{{ leftWidth }}">
+          {% for block in row.sectionContent.all() %}
+            {% if block.column.value == 'left' %}
+            {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+            {% endif %}
+          {% endfor %}
+          </section>
+          <section id="right-column" class="{{ rightWidth }}">
+          {% for block in row.sectionContent.all() %}
+            {% if block.column.value == 'right' %}
+            {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+            {% endif %}
+          {% endfor %}
+          </section>
+      {% case "25/75Split" %}
+          {% set leftWidth = "w-1/4" %}
+          {% set rightWidth = "w-3/4" %}
+          <section id="left-column" class="{{ leftWidth }}">
+          {% for block in row.sectionContent.all() %}
+            {% if block.column.value == 'left' %}
+            {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+            {% endif %}
+          {% endfor %}
+          </section>
+          <section id="right-column" class="{{ rightWidth }}">
+          {% for block in row.sectionContent.all() %}
+            {% if block.column.value == 'right' %}
+            {% include ('_components/_main-content/' ~ block.type.handle ~ '-component' ) %}
+            {% endif %}
+          {% endfor %}
+          </section>
+    {% endswitch %}
+    {% endfor %}
 </main>
 {% endblock %}

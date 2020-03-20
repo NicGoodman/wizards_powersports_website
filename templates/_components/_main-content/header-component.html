@@ -1,5 +1,5 @@
 {% block header %}
-<header id="section-header" class="{% if block.column.value == 'left' %}{{ leftWidth }} float-left{% elseif block.column.value == 'right' %}{{ rightWidth }} float-right{% elseif block.column.value == 'full' %}w-full block{% endif %} border-b border-wz-red text-right">
+<header id="section-header" class="border-b border-wz-red text-right">
   <h2>{{ block.text }}</h2>
 </header>
 {% endblock %}
