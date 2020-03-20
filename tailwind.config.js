@@ -16,6 +16,7 @@ module.exports = {
     'wz-lines': ['SF WADIM GIANT LINES', 'sans-serif'],
     'wz-outline': ['SF WADIM GIANT OUTLINE', 'sans-serif'],
     'wz-heavy': ['SF WADIM GIANT Heavy', 'sans-serif'],
+    'sans': ['Lato', 'sans-serif'],
   }
 },
   variants: {},
