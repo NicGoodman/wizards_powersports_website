@@ -1,4 +1,10 @@
 {% block header %}
-<header id="header">
+<header id="header" class="space-between p-8 border-b-1">
+  {% include "_components/_general/logo-component" %}
+  {% block header %}
+  {% endblock %}
+  {% include "_components/_general/nav-component" %}
+  {% block header %}
+  {% endblock %}
 </header>
 {% endblock %}
