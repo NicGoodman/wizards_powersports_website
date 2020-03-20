@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "00d39d68ab6c2665ec434b48d6255ec6",
+    "content-hash": "c80979bf35b7922d31aae63528e7d131",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2524,6 +2524,60 @@
                 "twitter"
             ],
             "time": "2020-03-18T13:47:11+00:00"
+        },
+        {
+            "name": "olivestudio/craft-olivemenus",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OliveStudio/olivemenus.git",
+                "reference": "246c61d304247a3e98603e928928a05395500f27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OliveStudio/olivemenus/zipball/246c61d304247a3e98603e928928a05395500f27",
+                "reference": "246c61d304247a3e98603e928928a05395500f27",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Olivemenus",
+                "handle": "olivemenus",
+                "hasCpSettings": false,
+                "hasCpSection": true,
+                "changelogUrl": "https://raw.githubusercontent.com/OliveStudio/olivemenus/master/CHANGELOG.md",
+                "components": {
+                    "olivemenusService": "olivestudio\\olivemenus\\services\\OlivemenusService"
+                },
+                "class": "olivestudio\\olivemenus\\Olivemenus"
+            },
+            "autoload": {
+                "psr-4": {
+                    "olivestudio\\olivemenus\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Olive Studio",
+                    "homepage": "https://www.olivestudio.net/"
+                }
+            ],
+            "description": "A powerful menus plugin for Craft 3 built for the need of simplicity and flexibility",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "olivemenus"
+            ],
+            "time": "2020-02-26T14:42:34+00:00"
         },
         {
             "name": "opis/closure",
