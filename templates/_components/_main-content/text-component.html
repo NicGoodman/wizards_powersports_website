@@ -1,5 +1,8 @@
 {% block text %}
 <article class="{% if block.column.value == 'left' %}{{ leftWidth }} float-left{% elseif block.column.value == 'right' %}{{ rightWidth }} float-right{% elseif block.column.value == 'full' %}w-full block{% endif %} {% if block.alignment.value == 'left' %}text-left{% elseif block.column.value == 'right' %}text-right{% endif %}">
-{{ block.body }}
+  {% if block.subHeading|length %}
+  <h3>{{ block.subHeading }}</h3>
+  {% endif %}
+  {{ block.body }}
 </article>
 {% endblock %}
