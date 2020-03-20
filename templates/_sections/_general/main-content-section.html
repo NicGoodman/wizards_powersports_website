@@ -1,5 +1,9 @@
 {% block main_content %}
 <main id="main-content">
-  <p>{{ entry.testContent }}</p>
+  {% for row in entry.pageContent.all() %}
+    {% for block in row.sectionContent.all() %}
+      {% include ('_components/_main-content/block.type.handle ~ '-component' ) %}
+    {% endfor %}
+  {% endfor %}
 </main>
 {% endblock %}
