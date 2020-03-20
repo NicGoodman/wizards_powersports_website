@@ -1,8 +1,8 @@
 {% block main_nav %}
 <nav id="main-nav" class="flex flex-row">
-{% set pages = craft.app.sections.allSections () %}
+{% set pages = craft.app.sections.allSections() %}
 {% for page in pages if page.type =='single' %}
-{{ entry.title }}
+{{ page.title.one() }}
 {% endfor %}
 </nav>
 {% endblock %}
