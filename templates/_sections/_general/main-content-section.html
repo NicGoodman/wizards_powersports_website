@@ -1,8 +1,4 @@
 {% block main_content %}
-{% set image = entry.heroImage.one() %}
-<section id="hero-image" class="w-screen h-64 bg-hero" style="background-image: url('{{ image.url }}'); background-position: center; background-size: cover;">
-
-</section>
 <main id="main-content" class="flex flex-col md:flex-row flex-wrap px-4 md:px-0 py-6 md:py-12 max-w-screen-xl mx-auto">
   {% for row in entry.pageContent.all() %}
   {% switch row.sectionLayout %}

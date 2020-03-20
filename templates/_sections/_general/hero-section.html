@@ -1,0 +1,6 @@
+{% block hero %}
+{% set image = entry.heroImage.one() %}
+<section id="hero" class="w-screen h-64 bg-hero text-wz-cream text-left px-4 md:px-8" style="background-image: url('{{ image.url }}'); background-position: center; background-size: cover;">
+<h1>{{ entry.title }}</h1>
+</section>
+{% endblock %}
