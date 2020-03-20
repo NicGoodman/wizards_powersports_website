@@ -1,5 +1,5 @@
 {% block main_content %}
-<main id="main-content" class="block max-w-screen-xl">
+<main id="main-content" class="block max-w-screen-xl mx-auto">
   {% for row in entry.pageContent.all() %}
   {% switch row.sectionLayout %}
     {% case "5050Split" %}
