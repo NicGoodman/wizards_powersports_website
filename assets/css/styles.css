@@ -50,7 +50,7 @@ h3 {
 p {
   @apply font-sans;
   @apply text-sm;
-  @apply pb-1;
+  @apply pb-3;
 }
 
 h4 {
