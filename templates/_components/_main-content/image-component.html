@@ -1,2 +1,28 @@
 {% block image %}
+{% switch block.size %}
+{% case "fullWidth" %}
+<article class="mb-2 w-full {{ block.alignment }}">
+  {% set image = block.image.one() %}
+  <img src="{{ image.url}}" alt="" class="w-full h-auto">
+  {% if block.caption|length %}
+  <h4 class="mb-2">{{ block.caption }}</h4>
+  {% endif %}
+</article>
+{% case "halfWidth" %}
+<article class="mb-2 w-1/2 {{ block.alignment }}">
+  {% set image = block.image.one() %}
+  <img src="{{ image.url}}" alt="" class="w-full h-auto">
+  {% if block.caption|length %}
+  <h4 class="mb-2">{{ block.caption }}</h4>
+  {% endif %}
+</article>
+{% case "thirdWidth" %}
+<article class="mb-2 w-1/3 {{ block.alignment }}">
+  {% set image = block.image.one() %}
+  <img src="{{ image.url}}" alt="" class="w-full h-auto">
+  {% if block.caption|length %}
+  <h4 class="mb-2">{{ block.caption }}</h4>
+  {% endif %}
+</article>
+{% endswitch %}
 {% endblock %}
