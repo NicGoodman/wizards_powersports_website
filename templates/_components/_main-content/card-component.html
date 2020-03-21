@@ -1,0 +1,23 @@
+{% block card %}
+{% if block.cardLink|length %}
+<a href="{{ block.cardLink }}">
+  {% endif %}
+  <article class="w-full {{ block.backgroundColor }} p-4 flex flex-col items-center">
+    {% if block.heading|length %}
+    <h3 class="mb-2">{{ block.heading }}</h3>
+    {% endif %}
+    {% if block.image|length %}
+    {% set image = block.image.one() %}
+    <img src="{{ image.url}}" alt="" class="w-full h-auto mb-2">
+    {% endif %}
+    {% if block.callOutText|length %}
+    <h1 class="mb-2">{{ block.callOutText }}</h1>
+    {% endif %}
+    {% if block.body|length %}
+    <p class="">{{ block.callOutText }}</p>
+    {% endif %}
+  </article>
+  {% if block.cardLink|length %}
+</a>
+{% endif %}
+{% endblock %}
