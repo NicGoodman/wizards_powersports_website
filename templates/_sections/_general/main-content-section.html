@@ -88,6 +88,7 @@
     {% endfor %}
   </section>
   {% endswitch %}
+  {% if row.sectionLayout == 'full' %}
   <section id="full-width" class="flex flex-col w-full px-0 md:px-16">
     {% for block in row.sectionContent.all() %}
       {% if block.column.value == 'full' %}
@@ -95,7 +96,7 @@
       {% endif %}
     {% endfor %}
   </section>
-  {% if row.sectionLayout == '3UpGrid' %}
+  {% if row.sectionLayout == 'grid' %}
   {% set width = "w-1/3" %}
   <section id="grid" class="flex flex-row flex-wrap w-full px-0 md:px-16">
     {% for block in row.sectionContent.all() %}
