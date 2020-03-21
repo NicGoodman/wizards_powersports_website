@@ -1,12 +1,23 @@
 {% block main_nav %}
-<nav id="main-nav" class="flex flex-row">
+<nav id="main-nav-desktop" class="hidden md:block flex flex-row">
   {% set pages = craft.app.sections.allSections() %}
   {% for page in pages if page.type =='single' %}
     {% set singleEntry = craft.entries.sectionId(page.id).one() %}
     <a href="{{ singleEntry.url }}" class="p-4 hover:font-normal font-bold hover:border-b hover:border-wz-red font-wz-italic hover:text-wz-red">{{ singleEntry.title }}</a>
   {% endfor %}
   {% for entry in craft.entries.section('clientAddedPages').all() %}
-  <a href="{{ entry.url }}" class="p-4 hover:font-normal font-bold hover:border-b hover:border-wz-red font-wz-italic hover:text-wz-red">{{ entry.title }}</a>
+    <a href="{{ entry.url }}" class="p-4 hover:font-normal font-bold hover:border-b hover:border-wz-red font-wz-italic hover:text-wz-red">{{ entry.title }}</a>
+  {% endfor %}
+</nav>
+
+<nav id="main-nav-mobile" class="absolute md:hidden flex flex-col w-screen bottom-0">
+  {% set pages = craft.app.sections.allSections() %}
+  {% for page in pages if page.type =='single' %}
+    {% set singleEntry = craft.entries.sectionId(page.id).one() %}
+    <a href="{{ singleEntry.url }}" class="p-4 hover:font-normal font-bold hover:border-b hover:border-wz-red font-wz-italic hover:text-wz-red">{{ singleEntry.title }}</a>
+  {% endfor %}
+  {% for entry in craft.entries.section('clientAddedPages').all() %}
+    <a href="{{ entry.url }}" class="p-4 hover:font-normal font-bold hover:border-b hover:border-wz-red font-wz-italic hover:text-wz-red">{{ entry.title }}</a>
   {% endfor %}
 </nav>
 {% endblock %}
