@@ -28,8 +28,11 @@
 	</script>
 </head>
 
-<body class="bg-wz-grid flex flex-col is-preload">
+<body class="bg-wz-grid flex flex-col justify-between min-h-screen">
 	{% block body %}{% endblock %}
+	{% include "_sections/_general/footer-section" %}
+	{% block footer %}
+	{% endblock %}
   <!--
 	<script type="text/javascript">
 	var $grid = $('.grid').isotope({
