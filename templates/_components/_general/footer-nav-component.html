@@ -1,5 +1,5 @@
 {% block footer_nav %}
-<nav id="footer-nav" class="flex flex-col">
+<nav id="footer-nav" class="flex flex-col mr-4">
   {% set pages = craft.app.sections.allSections() %}
   {% for page in pages if page.type =='single' %}
     {% set singleEntry = craft.entries.sectionId(page.id).one() %}
