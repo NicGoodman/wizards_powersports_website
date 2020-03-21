@@ -3,7 +3,7 @@
   {% set pages = craft.app.sections.allSections() %}
   {% for page in pages if page.type =='single' %}
     {% set singleEntry = craft.entries.sectionId(page.id).one() %}
-    <a href="{{ singleEntry.url }}" class="p-4 font-italic hover:font-bold hover:border-b border-{{ singleEntry.linkColor }} text-wz-heavy hover:text-{{ singleEntry.linkColor }}">{{ singleEntry.title }}</a>
+    <a href="{{ singleEntry.url }}" class="p-4 font-italic hover:font-bold hover:border-b border-{{ singleEntry.linkColor }} font-wz-heavy hover:text-{{ singleEntry.linkColor }}">{{ singleEntry.title }}</a>
   {% endfor %}
   {% for entry in craft.entries.section('clientAddedPages').all() %}
   <a href="{{ entry.url }}" class="p-4 font-wz-heavy hover:font-bold hover:border-b border-{{ singleEntry.linkColor }} text-{{ singleEntry.linkColor }}">{{ entry.title }}</a>
