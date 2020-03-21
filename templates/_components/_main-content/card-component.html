@@ -7,7 +7,7 @@
     {% set image = block.image.one() %}
     <img src="{{ image.url}}" alt="" class="w-full h-auto mb-2">
     {% endif %}
-    <div id="text-wrapper" class="">
+    <div id="text-wrapper" class="flex flex-col items-center">
     {% if block.callOutText|length %}
     <h1 class="mb-2 leading-none text-center">{{ block.callOutText }}</h1>
     {% endif %}
