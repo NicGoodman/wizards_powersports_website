@@ -34,17 +34,17 @@ src: url('../fonts/wadim_giant.woff') format('woff');
 
 h1 {
   @apply font-wz-heavy;
-  @apply text-3xl;
+  @apply text-5xl;
 }
 
 h2 {
   @apply font-wz-italic;
-  @apply text-xl
+  @apply text-3xl
 }
 
 h3 {
   @apply font-wz-italic;
-  @apply text-lg;
+  @apply text-xl;
 }
 
 p {

@@ -1,6 +1,9 @@
 {% block hero %}
 {% set image = entry.heroImage.one() %}
-<section id="hero" class="w-screen h-64 bg-hero text-wz-cream text-left px-4 md:px-8" style="background-image: url('{{ image.url }}'); background-position: center; background-size: cover;">
-<h1>{{ entry.title }}</h1>
+{% set icon = entry.navigationIcon.one() %}
+<section id="hero" class="flex flex-col justify-center w-screen h-64 bg-hero text-wz-cream text-left px-4 md:px-8" style="background-image: url('{{ image.url }}'); background-position: center; background-size: cover;">
+  <header>
+    <img src="{{ icon.url }}" alt="" class="mr-2"><h1>{{ entry.title }}</h1>
+  </header>
 </section>
 {% endblock %}
