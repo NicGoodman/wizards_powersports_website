@@ -1,0 +1,11 @@
+{% block nav_tile %}
+{% set icon = page.navigationIcon.one() %}
+{% set hero = page.heroImage.one() %}
+<a href="{{ page.url }}">
+  <div id="nav-tile" class="w-1/2 md:w-1/4">
+    <img id="nav-icon" src="{{ icon.url }}" alt="{{ icon.title }}">
+    <img id="nav-hero" src="{{ hero.url }}" alt="{{ hero.title }}">
+    <h3>{{ page.title }}</h3>
+  </div>
+</a>
+{% endblock %}

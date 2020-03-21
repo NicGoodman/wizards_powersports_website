@@ -1,5 +1,7 @@
 {% block tile_nav %}
-<nav id="tile-nav" class="flex flex-row flex-wrap">
-
+<nav id="tile-nav" class="flex flex-row flex-wrap w-full">
+{% for page in entry.navigationTiles.all() %}
+  {% include ('_components/_home/nav-tile-component' ) %}
+{% endfor %}
 </nav>
 {% endblock %}
