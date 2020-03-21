@@ -2,7 +2,7 @@
 {% if block.cardLink|length %}
 <a href="{{ block.cardLink }}">
   {% endif %}
-  <article class="w-full {{ block.backgroundColor }} p-4 flex flex-col items-center justify-between h-full {% if block.backgroundColor.value == 'bg-wz-black' %}text-wz-cream{% elseif block.alignment.value == 'bg-wz-red' %}text-wz-cream{% else %}text-wz-black{% endif %}">
+  <article class="w-full {{ block.backgroundColor }} p-4 flex flex-col items-center justify-between h-full {% if block.backgroundColor.value == 'bg-wz-black' %}text-wz-cream{% elseif block.backgroundColor.value == 'bg-wz-red' %}text-wz-cream{% else %}text-wz-black{% endif %}">
     {% if block.image|length %}
     {% set image = block.image.one() %}
     <img src="{{ image.url}}" alt="" class="w-full h-auto mb-2">
