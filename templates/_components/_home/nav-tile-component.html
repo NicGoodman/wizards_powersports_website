@@ -9,10 +9,12 @@
     </header>
   </div>
 </a>
-<div id="nav-tile-mobile" class="md:hidden w-1/2 flex flex-col content-center">
+<div id="nav-tile-mobile" class="md:hidden w-1/2 flex flex-col content-center p-8">
   <a href="{{ page.url }}">
     <img id="nav-icon" class="w-full" src="{{ icon.url }}" alt="{{ icon.title }}">
-    <h3>{{ page.title }}</h3>
+    <header class="bg-{{ page.linkColor}} w-full px-2 mt-4">
+      <h3 class="{% if page.linkColor.value == 'wz-black' %}text-wz-cream{% else %}text-wz-black{% endif %}">{{ page.title }}</h3>
+    </header>
   </a>
 </div>
 {% endblock %}
