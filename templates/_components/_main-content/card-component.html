@@ -10,14 +10,14 @@
     {% if block.callOutText|length %}
     <h1 class="mb-2 leading-none text-center">{{ block.callOutText }}</h1>
     {% endif %}
-    {% if block.price|length %}
-    <h1 class="mb-2 font-sans font-bold leading-none text-center">{{ block.price }}</h1>
-    {% endif %}
     {% if block.heading|length %}
     <h3 class="mb-2">{{ block.heading }}</h3>
     {% endif %}
     {% if block.body|length %}
     <p class="p-2">{{ block.body }}</p>
+    {% endif %}
+    {% if block.price|length %}
+    <h1 class="mb-2 font-sans font-bold leading-none text-center">{{ block.price }}</h1>
     {% endif %}
   </article>
   {% if block.cardLink|length %}
