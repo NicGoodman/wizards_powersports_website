@@ -7,11 +7,14 @@
     {% set image = block.image.one() %}
     <img src="{{ image.url}}" alt="" class="w-full h-auto mb-2">
     {% endif %}
-    {% if block.heading|length %}
-    <h3 class="mb-2">{{ block.heading }}</h3>
-    {% endif %}
     {% if block.callOutText|length %}
     <h1 class="mb-2">{{ block.callOutText }}</h1>
+    {% endif %}
+    {% if block.price|length %}
+    <h1 class="mb-2 font-sans font-bold">{{ block.price }}</h1>
+    {% endif %}
+    {% if block.heading|length %}
+    <h3 class="mb-2">{{ block.heading }}</h3>
     {% endif %}
     {% if block.body|length %}
     <p class="p-2">{{ block.body }}</p>
