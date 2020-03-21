@@ -5,11 +5,11 @@
   <div id="nav-tile-desktop" class="flex flex-col justify-end w-full h-full" style="background-image: url('{{ hero.url }}'); background-position: center; background-size: cover;">
     <img id="nav-icon" class="w-1/4 align-right" src="{{ icon.url }}" alt="{{ icon.title }}">
     <header class="bg-{{ page.linkColor}} w-full">
-      <h3 class="text-wz-black">{{ page.title }}</h3>
+      <h3 class="{% if page.linkColor.value == 'wz-black' %}text-wz-cream{% else %}text-wz-black{% endif %}">{{ page.title }}</h3>
     </header>
   </div>
 </a>
-<div id="nav-tile-mobile" class="md:hidden w-1/2" style="background-image: url('{{ hero.url }}'); background-position: center; background-size: cover;">
+<div id="nav-tile-mobile" class="md:hidden w-1/2 flex flex-col align-center" style="background-image: url('{{ hero.url }}'); background-position: center; background-size: cover;">
   <a href="{{ page.url }}">
     <img id="nav-icon" class="w-full" src="{{ icon.url }}" alt="{{ icon.title }}">
     <h3>{{ page.title }}</h3>
