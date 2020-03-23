@@ -61,7 +61,7 @@ h4 {
 
 label {
   @apply font-wz-italic;
-  @apply text-xs;
+  @apply text-sm;
 }
 
 button {
