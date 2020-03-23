@@ -1,6 +1,6 @@
 {% block card %}
 {% if block.cardLink|length %}
-<a href="{{ block.cardLink }}" class="transition-transform ease-in-out duration-300 hover:scale-105 hover:shadow-xl transform z-40 hover:z-50">
+<a href="{{ block.cardLink }}">
   {% endif %}
   <article class="w-full {{ block.backgroundColor }} p-4 flex flex-col items-center justify-between h-full {% if block.backgroundColor.value == 'bg-wz-black' %}text-wz-cream{% elseif block.backgroundColor.value == 'bg-wz-red' %}text-wz-cream{% else %}text-wz-black{% endif %} shadow-lg">
     {% if block.image|length %}
