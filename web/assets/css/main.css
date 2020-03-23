@@ -14668,8 +14668,8 @@ button:active {
 }
 
 .shadow-wrap {
-  -webkit-filter: drop-shadow(10px 10px 33px rgba(0, 42, 78, 0.33));
-          filter: drop-shadow(10px 10px 33px rgba(0, 42, 78, 0.33));
+  -webkit-filter: drop-shadow(10px 10px 33px rgba(0, 42, 78, 0.20));
+          filter: drop-shadow(10px 10px 33px rgba(0, 42, 78, 0.20));
 }
 
 @media (min-width: 640px) {
