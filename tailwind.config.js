@@ -19,6 +19,8 @@ module.exports = {
     'sans': ['Lato', 'sans-serif'],
   }
 },
-  variants: {},
+  variants: {
+   zIndex: ['responsive', 'hover', 'focus'],
+  },
   plugins: [],
 }
