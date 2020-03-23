@@ -1,7 +1,7 @@
 {% block hero %}
 {% set image = entry.heroImage.one() %}
 {% set icon = entry.navigationIcon.one() %}
-<section id="hero" class="flex flex-col justify-start w-screen h-64 bg-hero text-wz-cream text-left" style="background-image: url('{{ image.url }}'); background-position: center; background-size: cover;">
+<section id="hero" class="flex flex-col justify-start w-screen h-64 bg-hero text-wz-cream text-left border-b border-wz-black" style="background-image: url('{{ image.url }}'); background-position: center; background-size: cover;">
   <header class="mt-8 h-20 flex flex-row items-center p-4 md:p-8 bg-wz-cream">
     <img src="{{ icon.url }}" alt="" class="mr-2 h-full"><h1 class="text-{{ entry.linkColor }}">{{ entry.title }}</h1>
   </header>
