@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2267bb7b6f76cea7f0b7b1e71e06118",
+    "content-hash": "8995ac631698f3f3caa2778e4a8719f8",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -4421,6 +4421,68 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2017-07-23T12:43:26+00:00"
+        },
+        {
+            "name": "topshelfcraft/supersort",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TopShelfCraft/SuperSort.git",
+                "reference": "8e3e23e30b49a9fbb285e6b2dd0b458de74e340d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TopShelfCraft/SuperSort/zipball/8e3e23e30b49a9fbb285e6b2dd0b458de74e340d",
+                "reference": "8e3e23e30b49a9fbb285e6b2dd0b458de74e340d",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC3"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "SuperSort",
+                "handle": "supersort",
+                "developer": "Top Shelf Craft (Michael Rog)",
+                "developerUrl": "https://topshelfcraft.com",
+                "schemaVersion": "0.0.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/TopShelfCraft/SuperSort/raw/master/CHANGELOG.md",
+                "components": {
+                    "sorter": "topshelfcraft\\supersort\\services\\Sorter"
+                },
+                "class": "topshelfcraft\\supersort\\SuperSort"
+            },
+            "autoload": {
+                "psr-4": {
+                    "topshelfcraft\\supersort\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Top Shelf Craft (Michael Rog)",
+                    "homepage": "https://topshelfcraft.com"
+                },
+                {
+                    "name": "TJ Draper",
+                    "homepage": "https://buzzingpixel.com"
+                }
+            ],
+            "description": "...a super-duper sorting function for your Craft templates.",
+            "keywords": [
+                "Craft",
+                "SuperSort",
+                "array",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "list",
+                "sort",
+                "sorting"
+            ],
+            "time": "2017-12-24T07:18:11+00:00"
         },
         {
             "name": "true/punycode",

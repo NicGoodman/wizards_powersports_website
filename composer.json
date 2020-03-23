@@ -7,6 +7,7 @@
     "nystudio107/craft-imageoptimize": "^1.6",
     "nystudio107/craft-seomatic": "^3.2",
     "olivestudio/craft-olivemenus": "^1.1",
+    "topshelfcraft/supersort": "^3.0",
     "verbb/field-manager": "^2.1",
     "verbb/super-table": "^2.4",
     "vlucas/phpdotenv": "^3.4.0"
