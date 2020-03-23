@@ -1,12 +1,8 @@
 {% block header %}
-<header id="header-desktop" class="hidden md:block flex flex-row justify-between items-center border-b border-wz-black pt-8 pl-8">
+<header id="header-desktop" class="hidden md:block flex flex-row justify-between items-center border-b border-wz-black pt-8">
     {% include "_components/_general/logo-component" %}
-    {% block logo %}
-    {% endblock %}
 <section class="flex flex-col">
   {% include "_components/_general/main-nav-component" %}
-  {% block main_nav %}
-  {% endblock %}
   <section id="contact-info" class="flex flex-row flex-wrap w-full lg:w-auto max-w-3xl bg-wz-black border-b border-wz-cream self-end mt-4">
     <a href="tel:1-704-966-1872" class="w-auto">
     <div id="call" class="border-r border-wz-cream ">
@@ -26,14 +22,17 @@
   </section>
 </section>
 </header>
+
+
+
+
+
+
 <header id="header-mobile" class="block md:hidden flex flex-col border-b border-wz-black">
   <section class="flex flex-row justify-between items-center p-4 md:p-8 w-full">
     {% include "_components/_general/logo-component" %}
-
     {% include "_components/_general/main-nav-component" %}
-
     {% include "_components/_general/mobile-nav-button-component" %}
-
   </section>
   <section id="contact-info" class="flex flex-row flex-wrap w-full lg:w-auto max-w-3xl bg-wz-black border-b border-wz-cream self-end">
     <a href="tel:1-704-966-1872" class="w-auto">
