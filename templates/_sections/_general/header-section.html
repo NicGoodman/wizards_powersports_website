@@ -1,5 +1,5 @@
 {% block header %}
-<header id="header" class="flex flex-col">
+<header id="header" class="flex flex-col border-b border-wz-black">
   <section class="flex flex-row justify-between items-center p-4 md:p-8 w-full">
     {% include "_components/_general/logo-component" %}
     {% block logo %}
@@ -11,7 +11,7 @@
     {% block mobile_nav_button %}
     {% endblock %}
   </section>
-  <section id="contact-info" class="flex flex-row flex-wrap w-full max-w-3xl bg-wz-black border-b border-wz-cream self-end">
+  <section id="contact-info" class="flex flex-row flex-wrap w-full lg:w-auto max-w-3xl bg-wz-black border-b border-wz-cream self-end">
     <a href="tel:1-704-966-1872" class="w-auto">
     <div id="call" class="border-r border-wz-cream ">
       <i class="fas fa-phone-alt text-wz-yellow inline-block mx-1"></i><label class="inline-block text-wz-cream">Call</label>:<h4 class="inline-block mr-1 text-wz-cream">704.966.1872</h4>
