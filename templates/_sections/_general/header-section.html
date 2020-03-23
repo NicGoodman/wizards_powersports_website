@@ -1,6 +1,8 @@
 {% block header %}
 <header id="header-desktop" class="hidden md:block flex flex-row justify-between items-center border-b border-wz-black pt-8">
-    {% include "_components/_general/logo-component" %}
+  <div class="w-64">
+        {% include "_components/_general/logo-component" %}
+  </div>
 <section class="flex flex-col">
   {% include "_components/_general/main-nav-component" %}
   <section id="contact-info" class="flex flex-row flex-wrap w-full lg:w-auto max-w-3xl bg-wz-black border-b border-wz-cream self-end mt-4">
