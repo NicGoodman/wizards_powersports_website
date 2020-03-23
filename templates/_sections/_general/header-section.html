@@ -1,13 +1,26 @@
 {% block header %}
-<header id="header" class="flex flex-row justify-between items-center p-4 md:p-8 border-b border-wz-black">
-  {% include "_components/_general/logo-component" %}
-  {% block logo %}
-  {% endblock %}
-  {% include "_components/_general/main-nav-component" %}
-  {% block main_nav %}
-  {% endblock %}
-  {% include "_components/_general/mobile-nav-button-component" %}
-  {% block mobile_nav_button %}
-  {% endblock %}
+<header id="header" class="flex flex-col">
+  <section class="flex flex-row justify-between items-center p-4 md:p-8 border-b border-wz-black w-full">
+    {% include "_components/_general/logo-component" %}
+    {% block logo %}
+    {% endblock %}
+    {% include "_components/_general/main-nav-component" %}
+    {% block main_nav %}
+    {% endblock %}
+    {% include "_components/_general/mobile-nav-button-component" %}
+    {% block mobile_nav_button %}
+    {% endblock %}
+  </section>
+  <section id="contact-info" class="flex flex-row flex-wrap w-full max-w-3xl bg-wz-black">
+    <div id="call" class="border-r border-wz-cream text-wz-cream">
+      <i class="fas fa-phone-alt" class="text-wz-yellow"></i><label>Call</label>:<h4>704.966.1872</h4>
+    </div>
+    <div id="email" class="">
+<i class="fas fa-envelope" class="text-wz-yellow"></i><label>Email</label>:<h4>sales@wizardspwc.com</h4>
+    </div>
+    <div id="address" class="border-t border-wz-cream w-full">
+<i class="fas fa-map-marker-alt" class="text-wz-yellow"></i><label>Visit</label>:<h4>6161 Denver Industrial Park Rd.</h4>
+    </div>
+  </section>
 </header>
 {% endblock %}
