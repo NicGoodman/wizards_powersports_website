@@ -1,7 +1,7 @@
 {% block nav_tile %}
 {% set icon = page.navigationIcon.one() %}
 {% set hero = page.heroImage.one() %}
-<a href="{{ page.url }}" class="hidden md:block w-1/4 h-64 transition-transform ease-in-out hover:scale-105 hover:shadow-lg transform">
+<a href="{{ page.url }}" class="hidden md:block w-1/4 h-64 transition-transform ease-in-out duration-75 hover:scale-105 hover:shadow-lg transform z-50">
   <div id="nav-tile-desktop" class="flex flex-col justify-end w-full h-full" style="background-image: url('{{ hero.url }}'); background-position: center; background-size: cover;">
     <img id="nav-icon" class="w-1/4 self-end px-4" src="{{ icon.url }}" alt="{{ icon.title }}">
     <header class="bg-{{ page.linkColor}} w-full px-2">
