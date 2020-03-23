@@ -14694,7 +14694,7 @@ button:active {
   font-size: 1rem;
 }
 
-.tab label::before {
+.tab label::after {
   content: "\002B";
   position: absolute;
   left: 10px;
@@ -14702,6 +14702,7 @@ button:active {
   display: block;
   transition: all 0.4s;
   color: #ab2739;
+  font-size: 3rem;
 }
 
 .tab input[type=checkbox]:checked + label::after,
