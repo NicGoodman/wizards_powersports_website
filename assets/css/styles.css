@@ -44,19 +44,19 @@ h2 {
 
 h3 {
   @apply font-wz-italic;
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 p {
   @apply font-sans;
-  @apply text-sm;
+  @apply text-base;
   @apply pb-3;
 }
 
 h4 {
   @apply font-sans;
   @apply font-bold;
-  @apply text-xs;
+  @apply text-sm;
 }
 
 label {
