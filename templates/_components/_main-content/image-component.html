@@ -1,7 +1,7 @@
 {% block image %}
 {% switch block.size %}
 {% case "fullWidth" %}
-<article class="my-2 w-full {{ block.alignment }}">
+<article class="my-2 w-full {{ block.alignment }} shadow-lg">
   {% set image = block.image.one() %}
   <img src="{{ image.url}}" alt="" class="w-full h-auto">
   {% if block.caption|length %}
