@@ -14686,20 +14686,22 @@ button:active {
 
 .tab label {
   display: block;
-  background: #2d5faf;
-  color: #fff;
+  color: #212a30;
   font-weight: bold;
+  font-family: sans-serif;
   padding: 10px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
-.tab label::after {
+.tab label::before {
   content: "\002B";
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 10px;
   display: block;
   transition: all 0.4s;
+  color: #ab2739;
 }
 
 .tab input[type=checkbox]:checked + label::after,
@@ -14711,7 +14713,6 @@ button:active {
 
 .tab-content {
   overflow: hidden;
-  background: #ccdef9;
   /* CSS animation will not work with auto height */
   /* This is why we use max-height */
   transition: max-height 0.4s;
