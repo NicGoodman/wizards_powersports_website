@@ -1,2 +1,9 @@
 {% block accordion %}
+<div class="tab">
+      <input id="tab-{{ loop.index }}" type="checkbox" name="tab">
+      <label for="tab-{{ loop.index }}">{{ block.question }}</label>
+      <div class="tab-content">
+        {{ block.answer }}
+      </div>
+    </div>
 {% endblock %}
