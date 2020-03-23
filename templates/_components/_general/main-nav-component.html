@@ -1,5 +1,5 @@
 {% block main_nav %}
-<nav id="main-nav-desktop" class="hidden md:block flex flex-row">
+<nav id="main-nav-desktop" class="hidden md:block flex flex-row pr-8">
   {% set pages = craft.app.sections.allSections() %}
 {% for page in pages if page.type =='single' %}
   {% set singleEntry = craft.entries.sectionId(page.id).one() %}
