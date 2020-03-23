@@ -56,7 +56,7 @@ p {
 h4 {
   @apply font-sans;
   @apply font-bold;
-  @apply text-sm;
+  @apply text-xs;
 }
 
 label {
