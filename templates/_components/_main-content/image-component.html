@@ -1,7 +1,7 @@
 {% block image %}
 {% switch block.size %}
 {% case "fullWidth" %}
-<article class="my-2 w-full {{ block.alignment }} shadow-lg">
+<article class="my-2 w-full {{ block.alignment }} shadow-lg {% if block.visibility.value =='desktop' %}hidden md:block{% elseif block.visibility.value =='mobile' %}block md:hidden{% elseif block.visibility.value =='both' %}block{% endif %}">
   {% set image = block.image.one() %}
   <img src="{{ image.url}}" alt="" class="w-full md:h-auto h-64 object-cover">
   {% if block.caption|length %}
@@ -9,7 +9,7 @@
   {% endif %}
 </article>
 {% case "halfWidth" %}
-<article class="my-2 w-1/2 {{ block.alignment }}">
+<article class="my-2 w-1/2 {{ block.alignment }} {% if block.visibility.value =='desktop' %}hidden md:block{% elseif block.visibility.value =='mobile' %}block md:hidden{% elseif block.visibility.value =='both' %}block{% endif %}">
   {% set image = block.image.one() %}
   <img src="{{ image.url}}" alt="" class="w-full h-auto">
   {% if block.caption|length %}
@@ -17,7 +17,7 @@
   {% endif %}
 </article>
 {% case "thirdWidth" %}
-<article class="my-2 w-1/2 md:w-1/3 {{ block.alignment }}">
+<article class="my-2 w-1/2 md:w-1/3 {{ block.alignment }} {% if block.visibility.value =='desktop' %}hidden md:block{% elseif block.visibility.value =='mobile' %}block md:hidden{% elseif block.visibility.value =='both' %}block{% endif %}">
   {% set image = block.image.one() %}
   <img src="{{ image.url}}" alt="" class="w-full h-auto">
   {% if block.caption|length %}

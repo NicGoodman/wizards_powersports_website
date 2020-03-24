@@ -7,15 +7,15 @@
     {% set image = block.image.one() %}
     <img src="{{ image.url}}" alt="" class="w-full h-auto mb-2">
     {% endif %}
-    <div id="text-wrapper" class="flex flex-col items-center">
+    <div id="text-wrapper" class="flex flex-col items-center p-2">
     {% if block.callOutText|length %}
-    <h1 class="mb-2 leading-none text-center">{{ block.callOutText }}</h1>
+    <h2 class="mb-2 leading-none text-center">{{ block.callOutText }}</h2>
     {% endif %}
     {% if block.heading|length %}
     <h3 class="mb-2">{{ block.heading }}</h3>
     {% endif %}
     {% if block.body|length %}
-    <p class="p-2">{{ block.body }}</p>
+{{ block.body }}
     {% endif %}
     </div>
     {% if block.price|length %}
