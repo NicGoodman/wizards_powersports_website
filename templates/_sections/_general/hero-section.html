@@ -1,7 +1,7 @@
 {% block hero %}
 {% set image = entry.heroImage.one() %}
 {% set icon = entry.navigationIcon.one() %}
-<section id="hero" class="flex flex-col justify-end  w-screen h-64 bg-hero text-wz-cream text-left border-b border-wz-black" style="background: linear-gradient(rgba{% if linkColor = 'wz-yellow' %}(40, 33, 32, .33),rgba(40, 33, 32, .66){% else %}(248, 230, 232, .33),rgba(248, 230, 232, .66){% endif %}), url('{{ image.url }}'); background-position: center; background-size: cover;">
+<section id="hero" class="flex flex-col justify-end  w-screen h-64 bg-hero text-wz-cream text-left border-b border-wz-black" style="background: linear-gradient(rgba{% if linkColor == 'wz-yellow' %}(40, 33, 32, .33),rgba(40, 33, 32, .66){% else %}(248, 230, 232, .33),rgba(248, 230, 232, .66){% endif %}), url('{{ image.url }}'); background-position: center; background-size: cover;">
   <header class="mt-8 h-20 flex flex-row items-center p-4 md:p-8 shadow-wrap">
     <img src="{{ icon.url }}" alt="" class="mr-2 h-10"><h1 class="text-{{ entry.linkColor }}">{{ entry.title }}</h1>
   </header>
