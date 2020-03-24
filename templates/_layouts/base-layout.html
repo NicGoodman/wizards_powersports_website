@@ -15,14 +15,12 @@
 			var x = document.getElementById("main-nav-mobile");
 			var y = document.body;
 			var z = document.getElementById("navIcon");
-			if (x.classList.contains("hidden")) {
-				x.classList.add("block");
-				x.classList.remove("hidden");
+			if (x.style.display === "none") {
+				x.style.display = "block";
 				z.classList.add("rotate-45");
 				y.style.overflow = "hidden";
 			} else {
-				x.classList.remove("block");
-				x.classList.add("hidden");
+				x.style.display = "none";
 				z.classList.remove("rotate-45");
 				y.style.overflow = "auto";
 			}
