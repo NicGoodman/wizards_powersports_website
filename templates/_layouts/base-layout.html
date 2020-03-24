@@ -16,11 +16,13 @@
 			var y = document.body;
 			var z = document.getElementById("navIcon");
 			if (x.style.display === "none") {
-				x.style.display = "block";
+				x.classList.add("block");
+				x.classList.remove("hidden");
 				y.style.overflow = "hidden";
 				z.classList.add("rotate-45");
 			} else {
-				x.style.display = "none";
+				x.classList.remove("block");
+				x.classList.add("hidden");
 				y.style.overflow = "auto";
 				z.classList.remove("rotate-45");
 			}
@@ -39,32 +41,6 @@
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
 	{% block body %}{% endblock %}
-	<!--
-	<script type="text/javascript">
-	var $grid = $('.grid').isotope({
-  itemSelector: '.grid-item',
-	layoutMode: 'packery',
-	packery: {
-	gutter: 10,
-},
-	originLeft: false
-});
-	$('.filters-button-group').on( 'click', 'button', function() {
-var filterValue = $( this ).attr('data-filter');
-$grid.isotope({ filter: filterValue });
-});
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
-});
-	</script>
-<script type="text/javascript">
-		ScrollReveal().reveal('.revealMe', { reset: true});
-	</script>
-  -->
 </body>
 
 </html>
