@@ -1,2 +1,6 @@
 {% block callToAction %}
+<section class="{% if block.alignment.value == 'leftAlign' %}text-left{% elseif block.alignment.value == 'rightAlign' %}text-right{% elseif block.alignment.value == 'centerAlign' %}text-center md:px-16{% endif %}">
+<h2 class="mb-4">{{ block.ctaStatement }}</h2>
+<a href="{{ block.ctaExternalLink }}" class="py-4 px-8 bg-wz-yellow"><h3>{{ block.ctaButtonText }}</h3</a>
+  </section>
 {% endblock %}
