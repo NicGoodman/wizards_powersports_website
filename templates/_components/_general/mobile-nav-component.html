@@ -1,0 +1,17 @@
+{% block mobile_nav %}
+<nav id="main-nav-mobile" class="md:hidden absolute flex flex-col w-screen h-full left-0 bottom-0 bg-wz-grid items-end" style="display: none; z-index:980;">
+  <header id="header" class="w-full flex flex-row justify-between items-center p-4 md:p-8 border-b border-wz-black">
+    {% include "_components/_general/logo-component" %}
+    {% block logo %}
+    {% endblock %}
+  </header>
+  {% set pages = craft.app.sections.allSections() %}
+  {% for page in pages if page.type =='single' %}
+    {% set singleEntry = craft.entries.sectionId(page.id).one() %}
+    <a href="{{ singleEntry.url }}" class="text-right block py-2 pr-8 text-3xl hover:font-bold font-normal hover:border-b hover:border-wz-red font-wz-italic hover:text-wz-red">{{ singleEntry.title }}</a>
+  {% endfor %}
+  {% for entry in craft.entries.section('clientAddedPages').all() %}
+    <a href="{{ entry.url }}" class="text-right block py-2 pr-8 text-3xl hover:font-bold font-normal hover:border-b hover:border-wz-red font-wz-italic hover:text-wz-red">{{ entry.title }}</a>
+  {% endfor %}
+</nav>
+{% endblock %}
