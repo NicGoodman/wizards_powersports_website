@@ -1,8 +1,22 @@
 {% block footer %}
 <footer id="footer-content" class="flex flex-row justify-between md:justify-end p-2 border-t border-wz-black bottom-0">
-  {% include "_components/_general/footer-nav-component" %}
-  {% block footer_nav %}
-  {% endblock %}
+  <section id="contact-info" class="flex flex-row flex-wrap w-full lg:w-auto max-w-3xl bg-wz-black border-b border-wz-cream self-end">
+    <a href="tel:1-704-966-1872" target="_blank" class="w-auto">
+    <div id="call" class="border-r border-wz-cream ">
+      <i class="fas fa-phone-alt text-wz-yellow inline-block mx-1"></i><label class="inline-block text-wz-cream">Call</label>:<h4 class="inline-block mr-1 text-wz-cream">704.966.1872</h4>
+    </div>
+    </a>
+    <a href="mailto:sales@wizardspwc.com" target="_blank" class="w-auto">
+    <div id="email">
+  <i class="fas fa-envelope text-wz-yellow inline-block mx-1"></i><label class="inline-block text-wz-cream">Email</label>:<h4 class="inline-block mr-1 text-wz-cream">sales@wizardspwc.com</h4>
+    </div>
+    </a>
+    <a href="https://www.google.com/maps/place/Wizards+Powersports/@35.5403101,-81.0430767,17z/data=!3m1!4b1!4m5!3m4!1s0x8856b307b9d8688b:0xd8a0697a3d1539c!8m2!3d35.5403101!4d-81.040888" target="_blank" class="w-full md:w-auto flex-grow">
+    <div id="address" class="border-t md:border-l md:border-t-0 border-wz-cream">
+  <i class="fas fa-map-marker-alt text-wz-yellow inline-block mx-1"></i><label class="inline-block text-wz-cream">Visit</label>:<h4 class="inline-block mr-1 text-wz-cream">6161 Denver Industrial Park Rd.</h4>
+    </div>
+    </a>
+  </section>
   {% include "_components/_general/wizard-component" %}
   {% block wizard %}
   {% endblock %}
