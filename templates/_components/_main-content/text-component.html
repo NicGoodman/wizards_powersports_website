@@ -1,5 +1,5 @@
 {% block text %}
-<article class="{% if block.alignment.value == 'leftAlign' %}text-left{% elseif block.alignment.value == 'rightAlign' %}text-right{% elseif block.alignment.value == 'centerAlign' %}text-center md:px-16{% endif %}">
+<article class="{% if block.alignment.value == 'leftAlign' %}text-left{% elseif block.alignment.value == 'rightAlign' %}text-left md:text-right{% elseif block.alignment.value == 'centerAlign' %}text-center md:px-16{% endif %}">
   {% if block.subHeading|length %}
   <h3>{{ block.subHeading }}</h3>
   {% endif %}
