@@ -3,7 +3,7 @@
 {% case "fullWidth" %}
 <article class="my-2 w-full {{ block.alignment }} shadow-lg">
   {% set image = block.image.one() %}
-  <img src="{{ image.url}}" alt="" class="w-full h-auto">
+  <img src="{{ image.url}}" alt="" class="w-full md:h-auto h-64 object-cover">
   {% if block.caption|length %}
   <h4 class="my-2">{{ block.caption }}</h4>
   {% endif %}
