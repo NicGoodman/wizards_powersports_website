@@ -35,16 +35,19 @@ src: url('../fonts/wadim_giant.woff') format('woff');
 h1 {
   @apply font-wz-heavy;
   @apply text-5xl;
+  @apply tracking-wider;
 }
 
 h2 {
   @apply font-wz-italic;
-  @apply text-3xl
+  @apply text-3xl;
+  @apply tracking-wider;
 }
 
 h3 {
   @apply font-wz-italic;
   @apply text-2xl;
+  @apply tracking-wider;
 }
 
 p {
@@ -56,12 +59,14 @@ p {
 h4 {
   @apply font-sans;
   @apply font-bold;
-  @apply text-xs;
+  @apply text-sm;
+  @apply tracking-wider;
 }
 
 label {
   @apply font-wz-italic;
   @apply text-base;
+  @apply tracking-wider;
 }
 
 button {

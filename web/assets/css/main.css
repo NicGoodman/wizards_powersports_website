@@ -638,16 +638,19 @@ video {
 h1 {
   font-family: SF WADIM GIANT Heavy, sans-serif;
   font-size: 3rem;
+  letter-spacing: 0.05em;
 }
 
 h2 {
   font-family: SF WADIM GIANT ITALIC, sans-serif;
-  font-size: 1.875rem
+  font-size: 1.875rem;
+  letter-spacing: 0.05em;
 }
 
 h3 {
   font-family: SF WADIM GIANT ITALIC, sans-serif;
   font-size: 1.5rem;
+  letter-spacing: 0.05em;
 }
 
 p {
@@ -659,12 +662,14 @@ p {
 h4 {
   font-family: Lato, sans-serif;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
 }
 
 label {
   font-family: SF WADIM GIANT ITALIC, sans-serif;
   font-size: 1rem;
+  letter-spacing: 0.05em;
 }
 
 button {
