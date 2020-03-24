@@ -10,22 +10,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/4b48b2c1b8.js" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-		jQuery(function($) {
-			$('input[type="checkbox"]').on('change', function() {
-				let state = $(this).is(':checked');
-				$('input[type="checkbox"]').prop('checked', false);
-				$(this).prop('checked', state);
-			});
-		});
-	</script>
-</head>
-
-<body class="bg-wz-grid flex flex-col justify-between min-h-screen">
-	{% block body %}{% endblock %}
 	<script>
 		function showNav() {
-			var x = document.getElementById("mainNavMobile");
+			var x = document.getElementById("main-nav-mobile");
 			var y = document.body;
 			var z = document.getElementById("navIcon");
 			if (x.classList.contains("hidden")) {
@@ -41,6 +28,19 @@
 			}
 		}
 	</script>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('input[type="checkbox"]').on('change', function() {
+				let state = $(this).is(':checked');
+				$('input[type="checkbox"]').prop('checked', false);
+				$(this).prop('checked', state);
+			});
+		});
+	</script>
+</head>
+
+<body class="bg-wz-grid flex flex-col justify-between min-h-screen">
+	{% block body %}{% endblock %}
 </body>
 
 </html>
