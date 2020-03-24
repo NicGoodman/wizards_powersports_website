@@ -1,6 +1,6 @@
 {% block footer %}
-<footer id="footer-content" class="flex flex-row justify-between md:justify-end p-2 border-t border-wz-black bottom-0">
-  <section id="contact-info" class="flex flex-row flex-wrap w-full lg:w-auto max-w-3xl bg-wz-black border-b border-wz-cream self-end">
+<footer id="footer-content" class="flex flex-row justify-between pr-4 border-t border-wz-black bottom-0">
+  <section id="contact-info" class="flex flex-row flex-wrap w-full lg:w-auto max-w-3xl bg-wz-black border-b border-wz-cream self-start">
     <a href="tel:1-704-966-1872" target="_blank" class="w-auto">
     <div id="call" class="border-r border-wz-cream ">
       <i class="fas fa-phone-alt text-wz-yellow inline-block mx-1"></i><label class="inline-block text-wz-cream">Call</label>:<h4 class="inline-block mr-1 text-wz-cream">704.966.1872</h4>
@@ -17,8 +17,11 @@
     </div>
     </a>
   </section>
-  {% include "_components/_general/wizard-component" %}
-  {% block wizard %}
-  {% endblock %}
+  <div class="py-4">
+    {% include "_components/_general/wizard-component" %}
+    {% block wizard %}
+    {% endblock %}
+  </div>
+
 </footer>
 {% endblock %}
