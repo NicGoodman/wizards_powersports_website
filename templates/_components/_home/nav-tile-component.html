@@ -11,7 +11,7 @@
 </a>
 <div id="nav-tile-mobile" class="md:hidden w-1/2 flex flex-col content-center px-4 py-4 justify-end shadow-wrap ransition-transform ease-in-out duration-300 hover:scale-105 transform z-40 hover:z-50">
   <a href="{{ page.url }}">
-    <img id="nav-icon" class="w-full" src="{{ icon.url }}" alt="{{ icon.title }}">
+    <img id="nav-icon" class="w-32 object-scale-down object-bottom" src="{{ icon.url }}" alt="{{ icon.title }}">
     <header class="bg-{{ page.linkColor}} w-full px-2 mt-4">
       <h3 class="{% if page.linkColor.value == 'wz-black' %}text-wz-cream{% else %}text-wz-black{% endif %}">{{ page.title }}</h3>
     </header>
