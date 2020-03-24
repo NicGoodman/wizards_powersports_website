@@ -1,6 +1,6 @@
 {% block callToAction %}
 <section class="{% if block.alignment.value == 'leftAlign' %}text-left{% elseif block.alignment.value == 'rightAlign' %}text-right{% elseif block.alignment.value == 'centerAlign' %}text-center md:px-16{% endif %}">
 <h2 class="mb-4">{{ block.ctaStatement }}</h2>
-<a href="{{ block.ctaExternalLink }}" class="py-4 px-8 bg-wz-yellow text-wz-black text-lg font-wz-italics">{{ block.ctaButtonText }}</a>
+<a href="{{ block.ctaExternalLink }}" class="py-4 px-8 bg-wz-yellow text-wz-black text-lg font-wz-italic shadow-lg transition-transform ease-in-out duration-300 hover:scale-105 transform z-40 hover:z-50 hover:shadow-xl">{{ block.ctaButtonText }}</a>
 </section>
 {% endblock %}
