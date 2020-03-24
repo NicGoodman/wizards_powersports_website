@@ -173,6 +173,7 @@ color: #ab2739;
 font-size: 3rem;
 vertical-align: top;
 line-height: .75;
+margin-left: -.75em;
 }
 .tab input[type=checkbox]:checked + label::after,
 .tab input[type=radio]:checked + label::after {

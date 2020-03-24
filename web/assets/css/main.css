@@ -14710,6 +14710,7 @@ button:active {
   font-size: 3rem;
   vertical-align: top;
   line-height: .75;
+  margin-left: -.75em;
 }
 
 .tab input[type=checkbox]:checked + label::after,
