@@ -2,7 +2,7 @@
 {% set icon = page.navigationIcon.one() %}
 {% set hero = page.heroImage.one() %}
 <a href="{{ page.url }}" class="hidden md:block w-1/4 h-64 transition-transform ease-in-out duration-300 hover:scale-105 hover:shadow-xl transform z-40 hover:z-50">
-  <div id="nav-tile-desktop" class="flex flex-col justify-end w-full h-full" style="background-image: url('{{ hero.url }}'); background-position: center; background-size: cover;">
+  <div id="nav-tile-desktop" class="flex flex-col justify-end w-full h-full" style="background: linear-gradient(rgba(248, 230, 232, .15),rgba(248, 230, 232, .33)), url('{{ hero.url }}'); background-position: center; background-size: cover;">
     <img id="nav-icon" class="w-1/4 self-end px-4" src="{{ icon.url }}" alt="{{ icon.title }}">
     <header class="bg-{{ page.linkColor}} w-full px-2">
       <h3 class="{% if page.linkColor.value == 'wz-black' %}text-wz-cream{% else %}text-wz-black{% endif %}">{{ page.title }}</h3>
