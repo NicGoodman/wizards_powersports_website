@@ -48,6 +48,7 @@ h3 {
   @apply font-wz-italic;
   @apply text-2xl;
   @apply tracking-wider;
+  @apply leading-none;
 }
 
 p {
