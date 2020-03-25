@@ -2140,21 +2140,21 @@
         },
         {
             "name": "mrclay/minify",
-            "version": "3.0.8",
+            "version": "3.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mrclay/minify.git",
-                "reference": "f0aa0aa7d7fa2215a9ebbbc6498304b6ce2598a6"
+                "reference": "d2a3e8c1d203958b45f56c0a399714ee8b478a12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mrclay/minify/zipball/f0aa0aa7d7fa2215a9ebbbc6498304b6ce2598a6",
-                "reference": "f0aa0aa7d7fa2215a9ebbbc6498304b6ce2598a6",
+                "url": "https://api.github.com/repos/mrclay/minify/zipball/d2a3e8c1d203958b45f56c0a399714ee8b478a12",
+                "reference": "d2a3e8c1d203958b45f56c0a399714ee8b478a12",
                 "shasum": ""
             },
             "require": {
                 "ext-pcre": "*",
-                "intervention/httpauth": "~2.0",
+                "intervention/httpauth": "^2.0|^3.0",
                 "marcusschwarz/lesserphp": "^0.5.1",
                 "monolog/monolog": "~1.1|~2.0",
                 "mrclay/jsmin-php": "~2",
@@ -2197,7 +2197,7 @@
             ],
             "description": "Minify is a PHP app that helps you follow several rules for client-side performance. It combines multiple CSS or Javascript files, removes unnecessary whitespace and comments, and serves them with gzip encoding and optimal client-side cache headers",
             "homepage": "https://github.com/mrclay/minify",
-            "time": "2020-03-19T16:42:53+00:00"
+            "time": "2020-03-24T19:30:43+00:00"
         },
         {
             "name": "mrclay/props-dic",
@@ -2501,16 +2501,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.2.48",
+            "version": "3.2.49",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "c35aad8da75d6da41b88eb4539c7b1d78eff32ba"
+                "reference": "82f4a25b28fd622393da6592dc9e5ccee7fc5be3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/c35aad8da75d6da41b88eb4539c7b1d78eff32ba",
-                "reference": "c35aad8da75d6da41b88eb4539c7b1d78eff32ba",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/82f4a25b28fd622393da6592dc9e5ccee7fc5be3",
+                "reference": "82f4a25b28fd622393da6592dc9e5ccee7fc5be3",
                 "shasum": ""
             },
             "require": {
@@ -2571,7 +2571,7 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2020-03-18T13:47:11+00:00"
+            "time": "2020-03-24T21:56:34+00:00"
         },
         {
             "name": "olivestudio/craft-olivemenus",
@@ -3201,16 +3201,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
-                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
                 "shasum": ""
             },
             "require": {
@@ -3244,7 +3244,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2019-11-01T11:05:21+00:00"
+            "time": "2020-03-23T09:12:05+00:00"
         },
         {
             "name": "psy/psysh",
