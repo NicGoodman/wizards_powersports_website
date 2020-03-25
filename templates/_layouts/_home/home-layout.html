@@ -2,16 +2,9 @@
 {% block body %}
 <div id="header-content-wrapper" class="">
   {% include "_sections/_general/header-section" %}
-  {% block header %}
-  {% endblock %}
   {% include "_sections/_home/tile-nav-section" %}
-  {% block tile_nav %}
-  {% endblock %}
+  {% include "_sections/_home/announcement-section" %}
   {% include "_sections/_general/main-content-section" %}
-  {% block main_content %}
-  {% endblock %}
 </div>
 {% include "_sections/_general/footer-section" %}
-{% block footer %}
-{% endblock %}
 {% endblock %}
