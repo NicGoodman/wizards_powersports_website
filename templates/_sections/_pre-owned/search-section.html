@@ -13,7 +13,7 @@
            					})
            				})
 
-           				.then(response => response.json())
+           				.then(r => r.json())
            				.then(data => jetSkis = data)">
   <h1 class="mt-0 mb-3 font-light text-3xl" x-text="title">
     <!-- title text -->
@@ -23,7 +23,7 @@
   </p>
   <div class="flex flex-wrap -mx-2 pb-8">
     <!-- begin: jetSki card -->
-    <template x-for="jetSki in jetSkis" :key="jetSki.id">
+    <template x-for="jetSki in jetSkis" :key="jetSki">
       <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 h-full font-light">
         <div class="flex bg-white rounded-lg shadow-md m-2 border-l-4 border-white hover:shadow-2xl hover:border-pink-500 cursor-pointer relative">
           <div class="p-4 pr-6 leading-normal">
