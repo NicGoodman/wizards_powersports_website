@@ -47,7 +47,7 @@
 				jetSkis: [],
 				inventorySearch() {
 			 	 var section = 'inventory';
-			 	 var query = `query inventoryQuery($section:String!) {
+			 	 var query = `query inventoryQuery($section:[String]) {
 			 entries (section: $section) {
 			  title
 			 }
