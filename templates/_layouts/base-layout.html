@@ -50,7 +50,7 @@ return {
 
 function inventorySearch() {
 	var section = 'inventory';
-var query = `query inventoryQuery($section:String!) {
+var query = `query inventoryQuery($section:[String]) {
 entries (section: $section) {
 title
 }
@@ -68,7 +68,9 @@ fetch('https://dev-craft3-b68bd90039ee.hyperlane.co/api', {
 				section
 			},
 		})
-	}).then(response => response.json())
+	})
+
+	.then(response => response.json())
 						 .then(data => jetSkis = data)
 }
 	</script>
