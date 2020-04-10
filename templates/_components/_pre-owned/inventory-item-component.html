@@ -1,5 +1,5 @@
 {% block inventoryItem %}
-<div class="grid-item {{ entry.price }} {{ entry.make }} {{ entry.model }} {{ entry.year }} {{ entry.hours }}">
+<div class="grid-item {{ entry.price }} {{ entry.make.title }} {{ entry.model.title }} {{ entry.year }} {{ entry.hours }}">
 <a href="{{ inventoryLink }}">
   <p>{{ inventoryTitle }}</p>
 </a>
