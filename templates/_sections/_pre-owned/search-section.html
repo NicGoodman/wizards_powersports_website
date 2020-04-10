@@ -13,6 +13,8 @@
   {% for entry in craft.entries().section('inventory').all() %}
   {% set inventoryLink = entry.url() %}
   {% set inventoryTitle = entry.title %}
+  {% set make = entry.make %}
+  {% set model = entry.model %}
   {% include "_components/_pre-owned/inventory-item-component" %}
   {% endfor %}
 </div>
