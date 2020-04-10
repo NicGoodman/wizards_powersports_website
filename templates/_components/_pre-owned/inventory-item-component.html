@@ -1,7 +1,11 @@
 {% block inventoryItem %}
-<div class="grid-item {{ entry.price }} {{ entry.make.title }} {{ entry.model.title }} {{ entry.year }} {{ entry.hours }}">
-<a href="{{ inventoryLink }}">
-  <p>{{ inventoryTitle }}</p>
-</a>
+<div class="grid-item">
+  <a href="{{ inventoryLink }}" class="inline">
+    <p class="year">{{ entry.year }}</p>
+    <p class="make">{{ entry.make.title }}</p>
+    <p class="model">{{ entry.model.title }}</p>
+    <p class="hours">{{ entry.hours }}</p>
+    <p class="price">{{ entry.price }}</p>
+  </a>
 </div>
 {% endblock %}
