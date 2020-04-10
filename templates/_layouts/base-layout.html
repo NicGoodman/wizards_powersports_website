@@ -41,17 +41,35 @@
 
 	<script type="text/javascript">
 	function alpineInstance() {
-		var section = 'inventory';
-var query = `query inventoryQuery($section:String!) {
-entries (section: $section) {
-title
-}
-}`;
 return {
 	title: 'jetski test',
 	intro: 'list of jetskis',
 	jetSkis: [],
 }
+}
+
+function inventorySearch() {
+	var section = 'inventory';
+var query = `query inventoryQuery($section:String!) {
+entries (section: $section) {
+title
+}
+}`;
+
+fetch('https://dev-craft3-b68bd90039ee.hyperlane.co/api', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'Accept': 'application/json',
+		},
+		body: JSON.stringify({
+			query,
+			variables: {
+				section
+			},
+		})
+	}).then(response => response.json())
+						 .then(data => jetSkis = data)
 }
 	</script>
 </head>
