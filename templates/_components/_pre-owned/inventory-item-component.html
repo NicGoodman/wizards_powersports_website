@@ -1,11 +1,11 @@
 {% block inventoryItem %}
 <div class="grid-item">
-  <a href="{{ inventoryLink }}" class="inline">
-    <p class="year">{{ entry.year }}</p>
-    <p class="make">{{ entry.make.title }}</p>
-    <p class="model">{{ entry.model.title }}</p>
-    <p class="hours">{{ entry.hours }}</p>
-    <p class="price">{{ entry.price }}</p>
+  <a href="{{ inventoryLink }}" class="flex flex-row">
+    <p class="mr-2 year">{{ entry.year }}</p>
+    <p class="mr-2 make">{{ entry.make.title }}</p>
+    <p class="mr-2 model">{{ entry.model.title }}</p>
+    <p class="mr-2 hours">{{ entry.hours }}</p>
+    <p class="mr-2 price">{{ entry.price }}</p>
   </a>
 </div>
 {% endblock %}
