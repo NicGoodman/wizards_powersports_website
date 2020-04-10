@@ -41,6 +41,12 @@
 
 	<script type="text/javascript">
 	function alpineInstance() {
+		var section = 'inventory';
+var query = `query inventoryQuery($section:String!) {
+entries (section: $section) {
+title
+}
+}`;
 return {
 	title: 'jetski test',
 	intro: 'list of jetskis',
