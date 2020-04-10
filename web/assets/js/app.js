@@ -1,57 +1,22 @@
-const Home = {
-  template: `<main-content></main-content>`
-}
+function inventorySearch() {
+  var section = 'inventory';
+  var query = `query inventoryQuery($section:String!) {
+  entries (section: $section) {
+    title
+  }
+}`;
 
-const Parts = {
-  template: `<main-content></main-content>`
-}
-
-const PreOwned = {
-  template: `<main-content></main-content>`
-}
-
-const Rentals = {
-  template: `<main-content></main-content>`
-}
-
-const Salvage = {
-  template: `<main-content></main-content>`
-}
-
-const Service = {
-  template: `<main-content></main-content>`
-}
-
-const router = new VueRouter({
-  routes: [{
-    path: '/',
-    component: Home
-  }, {
-    path: '/parts',
-    component: Parts
-  }, {
-    path: '/pre-owned',
-    component: PreOwned
-  }, {
-    path: '/rentals',
-    component: Rentals
-  }, {
-    path: '/salvage',
-    component: Salvage
-  }, {
-    path: '/service',
-    component: Service
-  }]
-});
-
-Vue.component('main-content', {
-
-});
-
-window.onload = function() {
-  const app = new Vue({
-    el: '#app',
-    delimiters: ['${', '}'],
-    router
-  });
+  fetch('/api', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify({
+      query,
+      variables: {
+        section
+      },
+    })
+  })
 }
