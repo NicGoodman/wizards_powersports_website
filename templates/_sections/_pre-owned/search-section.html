@@ -1,5 +1,6 @@
 {% block search %}
-<div id="filters" class="w-64">
+<div class="w-full flex flex-col items-center justify-center">
+<div id="" class="w-full flex flex-row justify-center filters">
   <div class="ui-group">
     <h2>Price</h2>
     <div class="button-group">
@@ -34,5 +35,6 @@
   {% set model = entry.model.one() %}
   {% include "_components/_pre-owned/inventory-item-component" %}
   {% endfor %}
+</div>
 </div>
 {% endblock %}
