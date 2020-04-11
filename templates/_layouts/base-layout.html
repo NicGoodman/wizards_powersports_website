@@ -64,10 +64,10 @@ var filterFns = {
   }
 };
 var filters = {};
-$('.filters').on( 'click', '.option', function( event ) {
+$('.filters-select').on( 'click', '.option', function( event ) {
   var $option = $( event.currentTarget );
   // get group key
-  var $filtersSelect = $button.parents('.filters-select');
+  var $optionGroup = $option.parents('.optionGroup');
   var filterGroup = $filtersSelect.attr('data-filter-group');
   // set filter for group
   filters[ filterGroup ] = $option.attr('data-filter');
