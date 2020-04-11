@@ -66,15 +66,15 @@ var filterFns = {
 // store filter for each group
 var filters = {};
 
-$('.filters-select').on( 'change', function( event ) {
-  var $button = $( event.currentTarget );
+$('.filters').on( 'change', function( event ) {
+  var $select = $( event.target );
   // get group key
-  var $buttonGroup = $button.parents('.button-group');
-  var filterGroup = $buttonGroup.attr('data-filter-group');
+  var filterGroup = $select.attr('value-group');
   // set filter for group
-  filters[ filterGroup ] = $button.attr('data-filter');
+  filters[ filterGroup ] = event.target.value;
   // combine filters
   var filterValue = concatValues( filters );
+	filterValue = filterFns[ filterValue ] || filterValue;
   // set filter for Isotope
   $grid.isotope({ filter: filterValue });
 });
