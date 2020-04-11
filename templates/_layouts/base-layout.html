@@ -14,7 +14,7 @@
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="assets/css/multirange.css">
-	<script src="assets/js/multirange.js"></script>
+	<script src="assets/js/magnusthemes.combofilters.js"></script>
 
 
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
@@ -128,67 +128,38 @@ margin-right: 1px;
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
 	{% block body %}{% endblock %}
-	<script type="text/javascript">
-		var $grid = $('.grid').isotope({
-			itemSelector: '.grid-item',
-			layoutMode: 'vertical'
-		});
-		// store filter for each group
-		var filters = [];
-
-$('.filters').on( 'click', '.button', function( event ) {
-  var $target = $( event.currentTarget );
-  $target.toggleClass('is-checked');
-  var isChecked = $target.hasClass('is-checked');
-  var filter = $target.attr('data-filter');
-  if ( isChecked ) {
-    addFilter( filter );
-  } else {
-    removeFilter( filter );
-  }
-  // get group key
-  var $buttonGroup = filter.parents('.button-group');
-  var filterGroup = $buttonGroup.attr('data-filter-group');
-  // set filter for group
-  filters[ filterGroup ] = $target.attr('data-filter');
-  // combine filters
-  var filterValue = concatValues( filters );
-  // set filter for Isotope
-  $grid.isotope({ filter: filterValue });
+	<script>
+$(document).ready(function() {
+ var $container = $(".grid"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $grid = $container.isotope({
+	 itemSelector: ".grid-item", // the elements to filter
+	 layoutMode: 'vertical'
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
 });
-
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function( event ) {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    var $target = $( event.currentTarget );
-    $target.addClass('is-checked');
-  });
-});
-
-// flatten object by concatting values
-function concatValues( obj ) {
-  var value = '';
-  for ( var prop in obj ) {
-    value += obj[ prop ];
-  }
-  return value;
-}
-
-function addFilter( filter ) {
-  if ( filters.indexOf( filter ) == -1 ) {
-    filters.push( filter );
-  }
-}
-
-function removeFilter( filter ) {
-  var index = filters.indexOf( filter);
-  if ( index != -1 ) {
-    filters.splice( index, 1 );
-  }
-}
-	</script>
+</script>
 </body>
 
 </html>
