@@ -1,16 +1,12 @@
 {% block search %}
 <div id="filters" class="w-64">
   <select id="filter-select" multiple="multiple" class="w-64 filters-select">
-    <optgroup label="Year">
-      <div value-group="age" class="button-group">
-        <option value="before2010">2010 and Older</option>
-      </div>
+    <optgroup label="Year" value-group="age">
+      <option value="before2010">2010 and Older</option>
     </optgroup>
-    <optgroup label="Make">
-      <div value-group="brand" class="button-group">
-        <option value=".Honda">Honda</option>
-        <option value=".Sea-Doo">Sea-Doo</option>
-      </div>
+    <optgroup label="Make" value-group="brand">
+      <option value=".Honda">Honda</option>
+      <option value=".Sea-Doo">Sea-Doo</option>
     </optgroup>
   </select>
 </div>
