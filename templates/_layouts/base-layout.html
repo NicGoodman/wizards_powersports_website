@@ -50,19 +50,19 @@
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
 	{% block body %}{% endblock %}
-	<script type="text/javascript">
+<script type="text/javascript">
 var $grid = $('.grid').isotope({
 itemSelector: '.grid-item',
-layoutMode: 'vertical',
+layoutMode: 'vertical'
 });
 var filterFns = {
   // show if number is greater than 50
   before2010: function() {
     var number = $(this).find('.number').text();
     return parseInt( number, 10 ) < 2010;
-  },
+  }
 };
-$('#filter-select').on( 'change', function() {
+$('.filters-select').on( 'change', function() {
   // get filter value from option value
   var filterValue = this.value;
   // use filterFn if matches value
