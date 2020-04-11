@@ -74,7 +74,6 @@ $('.filters-select').on( 'change', function( event ) {
   filters[ filterGroup ] = event.target.value;
   // combine filters
   var filterValue = concatValues( filters );
-	filterValue = filterFns[ filterValue ] || filterValue;
   // set filter for Isotope
   $grid.isotope({ filter: filterValue });
 });
