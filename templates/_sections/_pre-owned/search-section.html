@@ -3,32 +3,30 @@
 <div class="w-full flex flex-row justify-center filters">
   <div class="ui-group">
     <h2>Price</h2>
-    <div class="button-group" data-filter-group="price">
-      <button class="button is-checked" data-filter-value="">any</button>
-      <button class="button" data-filter-value=".cheap">$</button>
-      <button class="button" data-filter-value=".affordable">$$</button>
-      <button class="button" data-filter-value=".pricy">$$$</button>
-      <button class="button" data-filter-value=".expensive">$$$$</button>
-    </div>
+    <ul class="filter option-set" data-filter-group="price">
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".cheap">&</a></li>
+     <li><a href="#" data-filter-value=".affordable">$$</a></li>
+     <li><a href="#" data-filter-value=".pricy">$$$</a></li>
+     <li><a href="#" data-filter-value=".expensive">$$$$</a></li>
+   </ul>
+       </div>
+       <div class="ui-group">
+   <ul class="filter option-set" data-filter-group="hours">
+    <li><a href="#" data-filter-value="" class="selected">All</a></li>
+    <li><a href="#" data-filter-value=".low">&</a></li>
+    <li><a href="#" data-filter-value=".medium">$$</a></li>
+    <li><a href="#" data-filter-value=".high">$$$</a></li>
+  </ul>
   </div>
   <div class="ui-group">
-    <h2>Hours</h2>
-    <div class="button-group" data-filter-group="hours">
-      <button class="button is-checked" data-filter-value="">any</button>
-      <button class="button" data-filter-value=".low">Low Hours</button>
-      <button class="button" data-filter-value=".medium">Medium Hours</button>
-      <button class="button" data-filter-value=".high">High Hours</button>
-    </div>
-  </div>
-  <div class="ui-group">
-    <h2>Make</h2>
-    <div class="button-group" data-filter-group="make">
-      <button class="button is-checked" data-filter-value="">any</button>
-      <button class="button" data-filter-value=".Honda">Honda</button>
-      <button class="button" data-filter-value=".Sea-Doo">Sea-Doo</button>
-      <button class="button" data-filter-value=".Yamaha">Yamaha</button>
-    </div>
-  </div>
+  <ul class="filter option-set" data-filter-group="make">
+   <li><a href="#" data-filter-value="" class="selected">All</a></li>
+   <li><a href="#" data-filter-value=".Honda">Honda</a></li>
+   <li><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
+   <li><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
+ </ul>
+ </div>
 </div>
 <div class="grid self-center w-2/3">
   {% for entry in craft.entries().section('inventory').all() %}
