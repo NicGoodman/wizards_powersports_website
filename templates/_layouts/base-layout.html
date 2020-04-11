@@ -58,8 +58,8 @@ layoutMode: 'vertical'
 var filterFns = {
   // show if number is greater than 50
   before2010: function() {
-    var number = $(this).find('.number').text();
-    return parseInt( number, 10 ) < 2010;
+    var year = $(this).find('.year').text();
+    return parseInt( year, 10 ) < 2010;
   }
 };
 $('.filters-select').on( 'change', function() {
