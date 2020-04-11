@@ -55,6 +55,7 @@ var $grid = $('.grid').isotope({
 itemSelector: '.grid-item',
 layoutMode: 'vertical'
 });
+
 var filterFns = {
   // show if number is greater than 50
   before2010: function() {
@@ -62,13 +63,22 @@ var filterFns = {
     return parseInt( year, 10 ) < 2010;
   }
 };
-$('.filters-select').on( 'change', function() {
-  // get filter value from option value
-  var filterValue = this.value;
-  // use filterFn if matches value
-  filterValue = filterFns[ filterValue ] || filterValue;
+var filters = {};
+$('.filters').on( 'click', '.option', function( event ) {
+  var $option = $( event.currentTarget );
+  // get group key
+  var $filtersSelect = $button.parents('.filters-select');
+  var filterGroup = $filtersSelect.attr('data-filter-group');
+  // set filter for group
+  filters[ filterGroup ] = $option.attr('data-filter');
+  // combine filters
+  var filterValue = concatValues( filters );
+  // set filter for Isotope
+
+	filterValue = filterFns[ filterValue ] || filterValue;
   $grid.isotope({ filter: filterValue });
 });
+
 </script>
 </body>
 
