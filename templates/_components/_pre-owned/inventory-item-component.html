@@ -1,6 +1,6 @@
 {% block inventoryItem %}
-<div class="grid-item">
-  <a href="{{ inventoryLink }}" class="flex flex-row {{ make.title }}">
+<div class="grid-item {{ make.title }}">
+  <a href="{{ inventoryLink }}" class="flex flex-row">
     <p class="mr-2 year">{{ entry.year }}</p>
     <p class="mr-2 make">{{ make.title }}</p>
     <p class="mr-2 model">{{ model.title }}</p>
