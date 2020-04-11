@@ -66,7 +66,7 @@ var filterFns = {
 // store filter for each group
 var filters = {};
 
-$('.filters-select').on( 'change', '.button', function( event ) {
+$('.filters-select').on( 'change', function( event ) {
   var $button = $( event.currentTarget );
   // get group key
   var $buttonGroup = $button.parents('.button-group');
