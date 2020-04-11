@@ -62,7 +62,7 @@ var filterFns = {
     return parseInt( number, 10 ) < 2010;
   },
 };
-$('.filters-select').on( 'change', function() {
+$('#filter-select').on( 'change', function() {
   // get filter value from option value
   var filterValue = this.value;
   // use filterFn if matches value
