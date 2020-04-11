@@ -1,5 +1,5 @@
 {% block inventoryItem %}
-<div class="grid-item {{ make.title }}">
+<div class="grid-item {{ make.title }} {% if entry.price <= 4750 %}cheap{% elseif entry.price > 4750 and entry.price <= 7000 %}affordable{% elseif entry.price > 7000 %}expensive{% endif %} {% if entry.hours <= 100 %}low{% elseif entry.hours > 100 and entry.hours <= 200 %}medium{% elseif entry.hours > 200 %}high{% endif %}">
   <a href="{{ inventoryLink }}" class="flex flex-row">
     <p class="mr-2 year">{{ entry.year }}</p>
     <p class="mr-2 make">{{ make.title }}</p>

@@ -1,20 +1,21 @@
 {% block search %}
 <div id="filters" class="w-64">
-  <input type="range" multiple value="0,100" />
   <select id="filter-select" multiple="multiple" class="w-64 filters-select">
-    <optgroup label="Price" value-group="price">
-      <option value="zeroTo3999">3999 and Cheaper</option>
-      <option value="4000to7999">7999 and Cheaper</option>
+    <optgroup label="Price Range" value-group="price">
+      <option value=".cheap">$</option>
+      <option value=".affordable">$$</option>
+      <option value=".pricy">$$$</option>
+      <option value=".expensive">$$$$</option>
     </optgroup>
     <optgroup label="Hours" value-group="hours">
-      <option value=".Honda">Honda</option>
-      <option value=".Sea-Doo">Sea-Doo</option>
+      <option value=".low">Low Hours</option>
+      <option value=".medium">Medium Hours</option>
+      <option value=".high">High Hours</option>
     </optgroup>
-  </select>
-  <select id="filter-select" multiple="multiple" class="w-64 filters-select">
     <optgroup label="Make" value-group="make">
       <option value=".Honda">Honda</option>
       <option value=".Sea-Doo">Sea-Doo</option>
+      <option value=".Yamaha">Yamaha</option>
     </optgroup>
   </select>
 </div>

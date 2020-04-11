@@ -60,14 +60,6 @@ var $grid = $('.grid').isotope({
 itemSelector: '.grid-item',
 layoutMode: 'vertical'
 });
-
-var filterFns = {
-  // show if number is greater than 50
-  before2010: function() {
-    var year = $(this).find('.year').text();
-    return parseInt( year, 10 ) < 2010;
-  }
-};
 // store filter for each group
 var filters = {};
 
@@ -79,7 +71,6 @@ $('.filters-select').on( 'change', function( event ) {
   filters[ filterGroup ] = event.target.value;
   // combine filters
   var filterValue = concatValues( filters );
-	filterValue = filterFns[ filterValue ] || filterValue;
   // set filter for Isotope
   $grid.isotope({ filter: filterValue });
 });
