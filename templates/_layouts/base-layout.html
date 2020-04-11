@@ -64,19 +64,25 @@ var filterFns = {
   }
 };
 var filters = {};
-$('.filters-select').on( 'change', '.option', function( event ) {
+$('.filters-select').on( 'click', '.option', function( event ) {
   var $option = $( event.currentTarget );
   // get group key
   var $optionGroup = $option.parents('.optionGroup');
-  var filterGroup = $filtersSelect.attr('data-filter-group');
+  var filterGroup = $optionGroup.attr('data-filter-group');
   // set filter for group
   filters[ filterGroup ] = $option.attr('data-filter');
   // combine filters
   var filterValue = concatValues( filters );
   // set filter for Isotope
-
-	filterValue = filterFns[ filterValue ] || filterValue;
   $grid.isotope({ filter: filterValue });
+// flatten object by concatting values
+	function concatValues( obj ) {
+  var value = '';
+  for ( var prop in obj ) {
+    value += obj[ prop ];
+  }
+  return value;
+}
 });
 
 </script>
