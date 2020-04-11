@@ -137,12 +137,20 @@ margin-right: 1px;
 		var filters = {};
 
 $('.filters').on( 'click', '.button', function( event ) {
-  var $button = $( event.currentTarget );
+  var $target = $( event.currentTarget );
+  $target.toggleClass('is-checked');
+  var isChecked = $target.hasClass('is-checked');
+  var filter = $target.attr('data-filter');
+  if ( isChecked ) {
+    addFilter( filter );
+  } else {
+    removeFilter( filter );
+  }
   // get group key
-  var $buttonGroup = $button.parents('.button-group');
+  var $buttonGroup = $target.parents('.button-group');
   var filterGroup = $buttonGroup.attr('data-filter-group');
   // set filter for group
-  filters[ filterGroup ] = $button.attr('data-filter');
+  filters[ filterGroup ] = $target.attr('data-filter');
   // combine filters
   var filterValue = concatValues( filters );
   // set filter for Isotope
@@ -166,6 +174,19 @@ function concatValues( obj ) {
     value += obj[ prop ];
   }
   return value;
+}
+
+function addFilter( filter ) {
+  if ( filters.indexOf( filter ) == -1 ) {
+    filters.push( filter );
+  }
+}
+
+function removeFilter( filter ) {
+  var index = filters.indexOf( filter);
+  if ( index != -1 ) {
+    filters.splice( index, 1 );
+  }
 }
 	</script>
 </body>
