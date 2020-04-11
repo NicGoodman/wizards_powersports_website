@@ -17,7 +17,7 @@
 	<script src="assets/js/multirange.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
 	<script>
 		function showNav() {
@@ -47,12 +47,12 @@
 		});
 	</script>
 	<script type="text/javascript">
-	$(document).ready(function() {
-	$('#filter-select').select2();
-});
+		$(document).ready(function() {
+			$('#filter-select').select2();
+		});
 	</script>
 	<style media="screen">
-	.button {
+		.button {
 display: inline-block;
 padding: 0.5em 1.0em;
 background: #EEE;
@@ -122,43 +122,45 @@ margin-right: 1px;
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
 	{% block body %}{% endblock %}
-<script type="text/javascript">
-var $grid = $('.grid').isotope({
-itemSelector: '.grid-item',
-layoutMode: 'vertical'
-});
-// store filter for each group
-var filters = [];
+	<script type="text/javascript">
+		var $grid = $('.grid').isotope({
+			itemSelector: '.grid-item',
+			layoutMode: 'vertical'
+		});
+		// store filter for each group
+		var filters = [];
 
-// change is-checked class on buttons
-$('.filters').on( 'click', 'button', function( event ) {
-  var $target = $( event.currentTarget );
-  $target.toggleClass('is-checked');
-  var isChecked = $target.hasClass('is-checked');
-  var filter = $target.attr('data-filter');
-  if ( isChecked ) {
-    addFilter( filter );
-  } else {
-    removeFilter( filter );
-  }
-  // filter isotope
-  // group filters together, inclusive
-  $grid.isotope({ filter: filters.join(',') });
-});
+		// change is-checked class on buttons
+		$('.filters').on('click', 'button', function(event) {
+			var $target = $(event.currentTarget);
+			$target.toggleClass('is-checked');
+			var isChecked = $target.hasClass('is-checked');
+			var filter = $target.attr('data-filter');
+			if (isChecked) {
+				addFilter(filter);
+			} else {
+				removeFilter(filter);
+			}
+			// filter isotope
+			// group filters together, inclusive
+			$grid.isotope({
+				filter: filters.join(',')
+			});
+		});
 
-function addFilter( filter ) {
-  if ( filters.indexOf( filter ) == -1 ) {
-    filters.push( filter );
-  }
-}
+		function addFilter(filter) {
+			if (filters.indexOf(filter) == -1) {
+				filters.push(filter);
+			}
+		}
 
-function removeFilter( filter ) {
-  var index = filters.indexOf( filter);
-  if ( index != -1 ) {
-    filters.splice( index, 1 );
-  }
-}
-</script>
+		function removeFilter(filter) {
+			var index = filters.indexOf(filter);
+			if (index != -1) {
+				filters.splice(index, 1);
+			}
+		}
+	</script>
 </body>
 
 </html>

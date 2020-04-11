@@ -27,7 +27,7 @@
     </div>
   </div>
 </div>
-<div class="grid max-w-screen-xl">
+<div class="grid self-center w-2/3">
   {% for entry in craft.entries().section('inventory').all() %}
   {% set inventoryLink = entry.url() %}
   {% set inventoryTitle = entry.title %}
