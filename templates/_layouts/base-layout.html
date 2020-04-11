@@ -134,7 +134,7 @@ margin-right: 1px;
 			layoutMode: 'vertical'
 		});
 		// store filter for each group
-		var filters = {};
+		var filters = [];
 
 $('.filters').on( 'click', '.button', function( event ) {
   var $target = $( event.currentTarget );
@@ -162,8 +162,8 @@ $('.button-group').each( function( i, buttonGroup ) {
   var $buttonGroup = $( buttonGroup );
   $buttonGroup.on( 'click', 'button', function( event ) {
     $buttonGroup.find('.is-checked').removeClass('is-checked');
-    var $button = $( event.currentTarget );
-    $button.addClass('is-checked');
+    var $target = $( event.currentTarget );
+    $target.addClass('is-checked');
   });
 });
 
