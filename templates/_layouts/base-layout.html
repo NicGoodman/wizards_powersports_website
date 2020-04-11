@@ -147,7 +147,7 @@ $('.filters').on( 'click', '.button', function( event ) {
     removeFilter( filter );
   }
   // get group key
-  var $buttonGroup = $target.parents('.button-group');
+  var $buttonGroup = filter.parents('.button-group');
   var filterGroup = $buttonGroup.attr('data-filter-group');
   // set filter for group
   filters[ filterGroup ] = $target.attr('data-filter');
