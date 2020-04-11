@@ -63,28 +63,30 @@ var filterFns = {
     return parseInt( year, 10 ) < 2010;
   }
 };
+// store filter for each group
 var filters = {};
-$('.filters-select').on( 'change', '.option', function( event ) {
-  var $option = $( event.currentTarget );
+
+$('.filters-select').on( 'click', '.button', function( event ) {
+  var $button = $( event.currentTarget );
   // get group key
-  var $optionGroup = $option.parents('.optionGroup');
-  var filterGroup = $optionGroup.attr('data-filter-group');
+  var $buttonGroup = $button.parents('.button-group');
+  var filterGroup = $buttonGroup.attr('data-filter-group');
   // set filter for group
-  filters[ filterGroup ] = $option.attr('data-filter');
+  filters[ filterGroup ] = $button.attr('data-filter');
   // combine filters
   var filterValue = concatValues( filters );
   // set filter for Isotope
   $grid.isotope({ filter: filterValue });
+});
+
 // flatten object by concatting values
-	function concatValues( obj ) {
+function concatValues( obj ) {
   var value = '';
   for ( var prop in obj ) {
     value += obj[ prop ];
   }
   return value;
 }
-});
-
 </script>
 </body>
 
