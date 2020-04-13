@@ -14,8 +14,8 @@
     <p class="mr-2 make">{{ make.title }} | </p>
     <p class="mr-2 model">{{ model.title }} | </p>
     <p class="mr-2 hours">{{ entry.hours }}hrs | </p>
-    <p class="mr-2 stroke">{% if entry.stroke == 2Stroke %}2-Stroke{% else %}4-Stroke{% endif %} | </p>
-    <p class="mr-2 turboSc">{% if entry.turboSc == turbo %}Turbo{% elseif entry.turboSc == supercharged %}Supercharged{% elseif entry.turboSc == naturallyAspirated %}Naturally Aspirated{% endif %} | </p>
+    <p class="mr-2 stroke">{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %} | </p>
+    <p class="mr-2 turboSc">{% if entry.turboSc == 'turbo' %}Turbo{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}Naturally Aspirated{% endif %} | </p>
     <p class="mr-2 horsepower">${{ entry.horsepower }}hp  | </p>
     <p class="mr-2 price">${{ entry.price }}</p>
   </a>
