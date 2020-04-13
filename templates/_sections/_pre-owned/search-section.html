@@ -1,43 +1,55 @@
 {% block search %}
 <div class="w-full flex flex-col items-center justify-center">
-<div class="w-full flex flex-row justify-center filters mb-4">
-  <div class="ui-group">
-    <h2>Price</h2>
-    <ul class="filter option-set flex flex-row" data-filter-group="price">
-     <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
-     <li class="mr-2"><a href="#" data-filter-value=".cheap">$</a></li>
-     <li class="mr-2"><a href="#" data-filter-value=".affordable">$$</a></li>
-     <li class="mr-2"><a href="#" data-filter-value=".pricy">$$$</a></li>
-     <li class="mr-2"><a href="#" data-filter-value=".expensive">$$$$</a></li>
-   </ul>
-       </div>
-       <div class="ui-group">
-             <h2>Hours</h2>
-   <ul class="filter option-set flex flex-row flex flex-row" data-filter-group="hours">
-    <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
-    <li class="mr-2"><a href="#" data-filter-value=".low">Low Hours</a></li>
-    <li class="mr-2"><a href="#" data-filter-value=".medium">Medium Hours</a></li>
-    <li class="mr-2"><a href="#" data-filter-value=".high">High Hours</a></li>
-  </ul>
+  <div class="w-full flex flex-row justify-center filters mb-4">
+    <div class="ui-group">
+      <h2>Make</h2>
+      <ul class="filter option-set flex flex-row" data-filter-group="make">
+        <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Honda">Honda</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Other">Other</a></li>
+      </ul>
+    </div>
+    <div class="ui-group">
+      <h2>Stroke</h2>
+      <ul class="filter option-set flex flex-row flex flex-row" data-filter-group="stroke">
+        <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".2-stroke">2-Stroke</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".4-stroke">4-Stroke</a></li>
+      </ul>
+    </div>
+    <div class="ui-group">
+      <h2>Turbo/SC</h2>
+      <ul class="filter option-set flex flex-row" data-filter-group="turboSc">
+        <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Turbo">Turbo</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Supercharged">Supercharged</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".NaturallyAspirated">Naturally Aspirated</a></li>
+      </ul>
+    </div>
+    <div class="ui-group">
+      <h2>HP</h2>
+      <ul class="filter option-set flex flex-row" data-filter-group="price">
+        <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".Under-110">Under 110</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".110-130">110-130</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".140-185">140-185</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".210-230">210-230</a></li>
+        <li class="mr-2"><a href="#" data-filter-value=".250-310">250-310</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="ui-group">
-        <h2>Make</h2>
-  <ul class="filter option-set flex flex-row" data-filter-group="make">
-   <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
-   <li class="mr-2"><a href="#" data-filter-value=".Honda">Honda</a></li>
-   <li class="mr-2"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
-   <li class="mr-2"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
- </ul>
- </div>
-</div>
-<div class="grid self-center w-2/3">
-  {% for entry in craft.entries().section('inventory').all() %}
-  {% set inventoryLink = entry.url() %}
-  {% set inventoryTitle = entry.title %}
-  {% set make = entry.make.one() %}
-  {% set model = entry.model.one() %}
-  {% include "_components/_pre-owned/inventory-item-component" %}
-  {% endfor %}
-</div>
+  <div class="grid self-center w-2/3">
+    {% for entry in craft.entries().section('inventory').all() %}
+    {% set inventoryLink = entry.url() %}
+    {% set inventoryTitle = entry.title %}
+    {% set make = entry.make.one() %}
+    {% set model = entry.model.one() %}
+    {% include "_components/_pre-owned/inventory-item-component" %}
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}

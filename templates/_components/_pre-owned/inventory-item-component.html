@@ -1,10 +1,22 @@
 {% block inventoryItem %}
-<div class="grid-item {{ make.title }} {% if entry.price <= 4750 %}cheap{% elseif entry.price > 4750 and entry.price <= 7000 %}affordable{% elseif entry.price > 7000 %}expensive{% endif %} {% if entry.hours <= 100 %}low{% elseif entry.hours > 100 and entry.hours <= 200 %}medium{% elseif entry.hours > 200 %}high{% endif %}">
+<div class="grid-item {% if not make.title == 'Sea-Doo' or make.title == 'Yamaha' or make.title == 'Kawasaki' or make.title == 'Honda' or make.title == 'Polaris' %}Other{% else %}{{ make.title }}{% endif %}
+
+{% if entry.horsepower < 110 %}Under-110{% elseif entry.horsepower >= 110 and entry.horsepower <= 130 %}110-130{% elseif entry.horsepower >= 140 and entry.horsepower <= 185 %}140-185{% elseif entry.horsepower >= 210 and entry.horsepower <= 230 %}210-230{% elseif entry.horsepower >= 250 and entry.horsepower <= 310 %}250-310{% endif %}
+
+{% if entry.stroke == 2Stroke %}2-2troke{% else %}4-stroke{% endif %}
+
+{% if entry.turboSc == turbo %}Turbo{% elseif entry.turboSc == supercharged %}Supercharged{% elseif entry.turboSc == naturallyAspirated %}NaturallyAspirated{% endif %}
+
+
+">
   <a href="{{ inventoryLink }}" class="flex flex-row">
-    <p class="mr-2 year">{{ entry.year }}</p>
-    <p class="mr-2 make">{{ make.title }}</p>
-    <p class="mr-2 model">{{ model.title }}</p>
-    <p class="mr-2 hours">{{ entry.hours }}hrs</p>
+    <p class="mr-2 year">{{ entry.year }} | </p>
+    <p class="mr-2 make">{{ make.title }} | </p>
+    <p class="mr-2 model">{{ model.title }} | </p>
+    <p class="mr-2 hours">{{ entry.hours }}hrs | </p>
+    <p class="mr-2 stroke">{% if entry.stroke == 2Stroke %}2-Stroke{% else %}4-Stroke{% endif %} | </p>
+    <p class="mr-2 turboSc">{% if entry.turboSc == turbo %}Turbo{% elseif entry.turboSc == supercharged %}Supercharged{% elseif entry.turboSc == naturallyAspirated %}Naturally Aspirated{% endif %} | </p>
+    <p class="mr-2 horsepower">${{ entry.horsepower }}hp  | </p>
     <p class="mr-2 price">${{ entry.price }}</p>
   </a>
 </div>
