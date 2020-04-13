@@ -43,11 +43,9 @@
     </div>
   </div>
   <div class="sort-by-button-group">
-    <ul class="option-set">
-    <li class="button" data-sort-value="year">Year</li>
-  <li class="button" data-sort-value="hours">Hours</li>
-  <li class="button" data-sort-value="price">Price</li>
-      </ul>
+    <button class="button" data-sort-value="year">Year</button>
+  <button class="button" data-sort-value="hours">Hours</button>
+  <button class="button" data-sort-value="price">Price</button>
   </div>
   <div class="grid self-center w-2/3">
     {% for entry in craft.entries().section('inventory').all() %}
