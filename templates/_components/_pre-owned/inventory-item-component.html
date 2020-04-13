@@ -1,5 +1,5 @@
 {% block inventoryItem %}
-<div class="grid-item {% if not (make.title == 'Sea-Doo') or (make.title == 'Yamaha') or (make.title == 'Kawasaki') or (make.title == 'Honda') or (make.title == 'Polaris') %}Other{% else %}{{ make.title }}{% endif %}
+<div class="grid-item {% if not make.title in [Sea-Doo', 'Yamaha', 'Kawasaki', 'Honda', 'Polaris'] %}Other{% else %}{{ make.title }}{% endif %}
 
 {% if entry.horsepower < 110 %}Under-110{% elseif entry.horsepower >= 110 and entry.horsepower <= 130 %}110-130{% elseif entry.horsepower >= 140 and entry.horsepower <= 185 %}140-185{% elseif entry.horsepower >= 210 and entry.horsepower <= 230 %}210-230{% elseif entry.horsepower >= 250 and entry.horsepower <= 310 %}250-310{% endif %}
 
