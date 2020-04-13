@@ -81,7 +81,12 @@ $(document).ready(function() {
  /* --- read the documentation on isotope.metafizzy.co for more options --- */
  var $grid = $container.isotope({
 	 itemSelector: ".grid-item", // the elements to filter
-	 layoutMode: 'vertical'
+	 layoutMode: 'vertical',
+	 getSortData: {
+    year: '.year parseInt',
+		hours: '.hours parseInt',
+		price: '.price parseInt'
+  }
  });
  $(".option-set a").click(function(e) {
    var $this = $(this); // cache the clicked link
@@ -104,6 +109,19 @@ $(document).ready(function() {
    $this.toggleClass(activeClass);
    e.preventDefault();
  });
+});
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortValue = $(this).attr('data-sort-value');
+  $grid.isotope({ sortBy: sortValue });
+});
+
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.selected').removeClass('selected');
+    $( this ).addClass('selected');
+  });
 });
 </script>
 </body>
