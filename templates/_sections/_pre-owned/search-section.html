@@ -1,6 +1,28 @@
 {% block search %}
 <div class="w-full flex flex-col items-center justify-center">
   <div class="w-full flex flex-row justify-center filters mb-4">
+    <select class="test-filter">
+      <optgroup label="Make" class="filter option-set" data-filter-group="make2">
+        <option data-filter-value="">All</option>
+        <option data-filter-value=".Sea-Doo">Sea-Doo</option>
+        <option data-filter-value=".Yamaha">Yamaha</option>
+        <option data-filter-value=".Kawasaki">Kawasaki</option>
+        <option data-filter-value=".Honda">Honda</option>
+        <option data-filter-value=".Polaris">Polaris</option>
+        <option data-filter-value=".Other">Other</option>
+      </optgroup>
+      <optgroup label="Stroke" class="filter option-set" data-filter-group="stroke2">
+        <option data-filter-value="">All</option>
+        <option data-filter-value=".2-stroke">2-Stroke</option>
+        <option data-filter-value=".4-stroke">4-Stroke</option>
+      </optgroup>
+      <optgroup label="Turbo/SC" class="filter option-set" data-filter-group="turboSc2">
+        <option data-filter-value="">All</option>
+        <option data-filter-value=".Turbo">Sea-Doo</option>
+        <option data-filter-value=".Supercharged">Supercharged</option>
+        <option data-filter-value=".NaturallyAspirated">Naturally Aspirated</option>
+      </optgroup>
+    </select>
     <div class="ui-group">
       <h2>Make</h2>
       <ul class="filter option-set flex flex-row" data-filter-group="make">
