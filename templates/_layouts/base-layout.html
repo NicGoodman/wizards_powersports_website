@@ -99,7 +99,7 @@
 				if (!filterGroup) {
 					filterGroup = filters[group] = [];
 				}
-				var $selectAll = $optionSet.find('a[' + filterAttr + '=""]'); // the 'select all' button in the current group
+				var $selectAll = $optionSet.find('option[' + filterAttr + '=""]'); // the 'select all' button in the current group
 				var activeClass = "selected", // the class for active links
 					exclClass = "exclusive"; // the class for exclusive groups
 				comboFiltering($this, filters, filterAttr, filterValue, $optionSet, group, $selectAll, activeClass, exclClass);
