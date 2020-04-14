@@ -89,7 +89,7 @@
 					price: '.price parseInt'
 				}
 			});
-			$(".option-set option").change(function(e) {
+			$(".option-set a").click(function(e) {
 				var $this = $(this); // cache the clicked link
 				var filterAttr = "data-filter-value";
 				var filterValue = $this.attr(filterAttr); // cache the filter
@@ -99,7 +99,7 @@
 				if (!filterGroup) {
 					filterGroup = filters[group] = [];
 				}
-				var $selectAll = $optionSet.find('option[' + filterAttr + '=""]'); // the 'select all' button in the current group
+				var $selectAll = $optionSet.find('a[' + filterAttr + '=""]'); // the 'select all' button in the current group
 				var activeClass = "selected", // the class for active links
 					exclClass = "exclusive"; // the class for exclusive groups
 				comboFiltering($this, filters, filterAttr, filterValue, $optionSet, group, $selectAll, activeClass, exclClass);
@@ -135,7 +135,7 @@
   });
 	  });
 		$(document).ready(function() {
-    $('.test-filter').select2();
+    $('.ui-group').select2();
 });
 	</script>
 </body>
