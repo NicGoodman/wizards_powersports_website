@@ -89,7 +89,7 @@
 					price: '.price parseInt'
 				}
 			});
-			$(".option-set").change(function(e) {
+			$(".option-set option").change(function(e) {
 				var $this = $(this); // cache the clicked link
 				var filterAttr = "data-filter-value";
 				var filterValue = $this.attr(filterAttr); // cache the filter
