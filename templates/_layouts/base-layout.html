@@ -52,79 +52,90 @@
 		});
 	</script>
 	<style media="screen">
-	.selected {
-  color: red;
-  font-weight: bold;
-}
-.ui-group {
-  display: inline-block;
-	margin-right: 1em;
-}
+		.selected {
+			color: red;
+			font-weight: bold;
+		}
 
-.ui-group h2 {
-  display: block;
-}
+		.ui-group {
+			display: inline-block;
+			margin-right: 1em;
+		}
 
-.ui-group .button-group {
-  display: inline-block;
-  margin-right: 20px;
-}
+		.ui-group h2 {
+			display: block;
+		}
+
+		.ui-group .button-group {
+			display: inline-block;
+			margin-right: 20px;
+		}
 	</style>
 </head>
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
 	{% block body %}{% endblock %}
 	<script>
-$(document).ready(function() {
- var $container = $(".grid"); // the container with all the elements to filter inside
- var filters = {}; //should be outside the scope of the filtering function
- /* --- read the documentation on isotope.metafizzy.co for more options --- */
- var $grid = $container.isotope({
-	 itemSelector: ".grid-item", // the elements to filter
-	 layoutMode: 'vertical',
-	 getSortData: {
-    year: '.year parseInt',
-		hours: '.hours parseInt',
-		price: '.price parseInt'
-  }
- });
- $(".option-set a").click(function(e) {
-   var $this = $(this); // cache the clicked link
-   var filterAttr = "data-filter-value";
-   var filterValue = $this.attr(filterAttr); // cache the filter
-   var $optionSet = $this.parents(".option-set"); // cache the parent element
-   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
-   var filterGroup = filters[group];
-   if (!filterGroup) {
-     filterGroup = filters[group] = [];
-   }
-   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
-   var activeClass = "selected", // the class for active links
-     exclClass = "exclusive"; // the class for exclusive groups
- comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
-   var comboFilter = getComboFilter(filters);
-   $grid.isotope({
-     filter: comboFilter
-   });
-   $this.toggleClass(activeClass);
-   e.preventDefault();
- });
- $('.sort-by-button-group').on( 'click', 'button', function() {
-   var sortValue = $(this).attr('data-sort-value');
-   $grid.isotope({ sortBy: sortValue });
- });
+		$(document).ready(function() {
+			var $container = $(".grid"); // the container with all the elements to filter inside
+			var filters = {}; //should be outside the scope of the filtering function
+			/* --- read the documentation on isotope.metafizzy.co for more options --- */
+			var $grid = $container.isotope({
+				itemSelector: ".grid-item", // the elements to filter
+				layoutMode: 'vertical',
+				sortBy: 'number',
+				sortAscending: false,
+				getSortData: {
+					year: '.year parseInt',
+					hours: '.hours parseInt',
+					price: '.price parseInt'
+				}
+			});
+			$(".option-set a").click(function(e) {
+				var $this = $(this); // cache the clicked link
+				var filterAttr = "data-filter-value";
+				var filterValue = $this.attr(filterAttr); // cache the filter
+				var $optionSet = $this.parents(".option-set"); // cache the parent element
+				var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+				var filterGroup = filters[group];
+				if (!filterGroup) {
+					filterGroup = filters[group] = [];
+				}
+				var $selectAll = $optionSet.find('a[' + filterAttr + '=""]'); // the 'select all' button in the current group
+				var activeClass = "selected", // the class for active links
+					exclClass = "exclusive"; // the class for exclusive groups
+				comboFiltering($this, filters, filterAttr, filterValue, $optionSet, group, $selectAll, activeClass, exclClass);
+				var comboFilter = getComboFilter(filters);
+				$grid.isotope({
+					filter: comboFilter
+				});
+				$this.toggleClass(activeClass);
+				e.preventDefault();
+			});
 
- // change is-checked class on buttons
- $('.button-group').each( function( i, buttonGroup ) {
-   var $buttonGroup = $( buttonGroup );
-   $buttonGroup.on( 'click', 'button', function() {
-     $buttonGroup.find('.selected').removeClass('selected');
-     $( this ).addClass('selected');
-   });
- });
-});
+			// bind sort button click
+  $('.sort-by-button-group').on( 'click', 'button', function() {
 
-</script>
+    /* Get the element name to sort */
+    var sortValue = $(this).attr('data-sort-value');
+
+    /* Get the sorting direction: asc||desc */
+    var direction = $(this).attr('data-sort-direction');
+
+    /* convert it to a boolean */
+    var isAscending = (direction == 'asc');
+    var newDirection = (isAscending) ? 'desc' : 'asc';
+
+    /* pass it to isotope */
+    $grid.isotope({ sortBy: sortValue, sortAscending: isAscending });
+
+    $(this).attr('data-sort-direction', newDirection);
+
+    var span = $(this).find('.glyphicon');
+    span.toggleClass('glyphicon-chevron-up glyphicon-chevron-down');
+
+  });
+	</script>
 </body>
 
 </html>
