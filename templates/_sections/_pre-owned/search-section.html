@@ -1,7 +1,6 @@
 {% block search %}
 <div class="w-full flex flex-col items-center justify-center">
-  <select class="test-filter w-64 filter option-set" multiple="multiple">
-    <optgroup label="Make" class="" data-filter-group="make2">
+  <select class="test-filter w-64 filter option-set" data-filter-group="make2" multiple="multiple">
       <option data-filter-value="">All</option>
       <option data-filter-value=".Sea-Doo">Sea-Doo</option>
       <option data-filter-value=".Yamaha">Yamaha</option>
@@ -9,22 +8,17 @@
       <option data-filter-value=".Honda">Honda</option>
       <option data-filter-value=".Polaris">Polaris</option>
       <option data-filter-value=".Other">Other</option>
-    </optgroup>
   </select>
-  <select class="test-filter w-64 filter option-set" multiple="multiple">
-    <optgroup label="Stroke" class="" data-filter-group="stroke2">
+  <select class="test-filter w-64 filter option-set" data-filter-group="stroke2" multiple="multiple">
       <option data-filter-value="">All</option>
       <option data-filter-value=".2-stroke">2-Stroke</option>
       <option data-filter-value=".4-stroke">4-Stroke</option>
-    </optgroup>
   </select>
-  <select class="test-filter w-64 filter option-set" multiple="multiple">
-    <optgroup label="Turbo/SC" class="" data-filter-group="turboSc2">
+  <select class="test-filter w-64 filter option-set" data-filter-group="turboSc2" multiple="multiple">
       <option data-filter-value="">All</option>
-      <option data-filter-value=".Turbo">Sea-Doo</option>
+      <option data-filter-value=".Turbo">Turbo</option>
       <option data-filter-value=".Supercharged">Supercharged</option>
       <option data-filter-value=".NaturallyAspirated">Naturally Aspirated</option>
-    </optgroup>
   </select>
   <div class="w-full flex flex-row justify-center filters mb-4">
     <div class="ui-group">
