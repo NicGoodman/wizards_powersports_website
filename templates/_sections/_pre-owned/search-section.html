@@ -7,24 +7,28 @@
     <button id="alpine-test" class="mr-6" :class="{ 'active': tab === 'foo' }" @click="tab = 'make2'">
       <h2>Make2</h2>
     </button>
-    <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make" x-show.transition="tab === 'make1'">
-      <li class="mr-4"><a href="#" data-filter-value="" class="selected">make1</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
-    </ul>
-    <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make" x-show.transition="tab === 'make2'">
-      <li class="mr-4"><a href="#" data-filter-value="" class="selected">make2</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
-    </ul>
+    <div class="" x-show.transition="tab === 'make1'">
+      <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make">
+        <li class="mr-4"><a href="#" data-filter-value="" class="selected">make1</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
+      </ul>
+    </div>
+    <div class="" x-show.transition="tab === 'make2'">
+      <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make">
+        <li class="mr-4"><a href="#" data-filter-value="" class="selected">make2</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
+        <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 <div class="filter-ui-group w-full flex flex-row justify-start filters mb-4">
