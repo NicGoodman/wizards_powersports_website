@@ -1,5 +1,6 @@
 {% block search %}
 <div class="w-full max-w-screen-lg mx-auto flex flex-col items-start">
+  <div class="flex flex-row">
   <div class="" x-data="{ open: false }">
       <button id="alpine-test" class="mr-6" @click="open = true"><h2>Make</h2></button>
   <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make" x-show.transition="open" @click.away="open = false">
@@ -12,6 +13,19 @@
     <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
   </ul>
     </div>
+      <div class="" x-data="{ open: false }">
+          <button id="alpine-test" class="mr-6" @click="open = true"><h2>Make</h2></button>
+      <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make" x-show.transition="open" @click.away="open = false">
+      <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
+    </ul>
+      </div>
+</div>
   <div class="filter-ui-group w-full flex flex-row justify-start filters mb-4">
     <button id="makeFilter" onclick="showFilters(this.id)" class="mr-6"><h2>Make</h2></button>
     <button id="strokeFilter" onclick="showFilters(this.id)" class="mr-6"><h2>Stroke</h2></button>
