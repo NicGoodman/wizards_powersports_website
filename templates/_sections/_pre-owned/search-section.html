@@ -1,13 +1,13 @@
 {% block search %}
 <div class="w-full max-w-screen-lg mx-auto flex flex-col items-start">
   <div class="flex flex-col" x-data="{ tab: make1 }">
-    <button id=" alpine-test" class="mr-6" :class="{ 'active': tab === 'foo' }" @click="tab = 'make1'">
+    <button id=" alpine-test" class="mr-6" :class="{ 'active': tab === 'make1' }" @click="tab = 'make1'">
       <h2>Make1</h2>
     </button>
-    <button id="alpine-test" class="mr-6" :class="{ 'active': tab === 'foo' }" @click="tab = 'make2'">
+    <button id="alpine-test" class="mr-6" :class="{ 'active': tab === 'make2' }" @click="tab = 'make2'">
       <h2>Make2</h2>
     </button>
-    <div class="" x-show="tab === 'make1'">
+    <div class="" x-show.transition="tab === 'make1'">
       <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make">
         <li class="mr-4"><a href="#" data-filter-value="" class="selected">make1</a></li>
         <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
@@ -18,7 +18,7 @@
         <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
       </ul>
     </div>
-    <div class="" x-show="tab === 'make2'">
+    <div class="" x-show.transition="tab === 'make2'">
       <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make">
         <li class="mr-4"><a href="#" data-filter-value="" class="selected">make2</a></li>
         <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
