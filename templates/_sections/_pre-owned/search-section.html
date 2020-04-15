@@ -3,16 +3,16 @@
 </div>
 <div id="filters" class="">
   <div class="filter-ui-group w-full flex flex-row justify-start filters mb-4" x-data="{ filter: 'make' }">
-    <button id="makeFilter" onclick="showFilters(this.id)" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
+    <button id="makeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
       <h2>Make</h2>
     </button>
-    <button id="strokeFilter" onclick="showFilters(this.id)" class="mr-6" :class="{ 'text-wz-red': filter === 'stroke' }" @click="filter = 'stroke'">
+    <button id="strokeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'stroke' }" @click="filter = 'stroke'">
       <h2>Stroke</h2>
     </button>
-    <button id="turboFilter" onclick="showFilters(this.id)" class="mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
+    <button id="turboFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
       <h2>Turbo/SC</h2>
     </button>
-    <button id="hpFilter" onclick="showFilters(this.id)" class="mr-6" :class="{ 'text-wz-red': filter === 'hp' }" @click="filter = 'hp'">
+    <button id="hpFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'hp' }" @click="filter = 'hp'">
       <h2>HP</h2>
     </button>
   </div>
