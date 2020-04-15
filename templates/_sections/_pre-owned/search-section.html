@@ -1,9 +1,48 @@
 {% block search %}
 <div class="w-full max-w-screen-lg mx-auto flex flex-col items-start">
-  <div class="flex flex-row">
-  <div class="" x-data="{ open: false }">
-      <button id="alpine-test" class="mr-6" @click="open = true"><h2>Make</h2></button>
-  <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make" x-show.transition="open" @click.away="open = false">
+  <div class="flex flex-row" x-data="{ tab: make1 }>
+  <div class="">
+      <button id=" alpine-test" class="mr-6" :class="{ 'active': tab === 'foo' }" @click="tab = 'make1'">
+    <h2>Make1</h2></button>
+    <button id="alpine-test" class="mr-6" :class="{ 'active': tab === 'foo' }" @click="tab = 'make2'">
+      <h2>Make2</h2>
+    </button>
+    <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make" x-show.transition="tab === 'make1'">
+      <li class="mr-4"><a href="#" data-filter-value="" class="selected">make1</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
+    </ul>
+    <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make" x-show.transition="tab === 'make2'">
+      <li class="mr-4"><a href="#" data-filter-value="" class="selected">make2</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
+      <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
+    </ul>
+  </div>
+</div>
+<div class="filter-ui-group w-full flex flex-row justify-start filters mb-4">
+  <button id="makeFilter" onclick="showFilters(this.id)" class="mr-6">
+    <h2>Make</h2>
+  </button>
+  <button id="strokeFilter" onclick="showFilters(this.id)" class="mr-6">
+    <h2>Stroke</h2>
+  </button>
+  <button id="turboFilter" onclick="showFilters(this.id)" class="mr-6">
+    <h2>Turbo/SC</h2>
+  </button>
+  <button id="hpFilter" onclick="showFilters(this.id)" class="mr-6">
+    <h2>HP</h2>
+  </button>
+</div>
+<div class="filter-dropdown-group flex flex-col justify-center filters mb-4">
+  <ul id="makeFilter-filters" class="filter option-set flex flex-row" data-filter-group="make" style="display: none;">
     <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
@@ -12,56 +51,26 @@
     <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
   </ul>
-    </div>
-      <div class="" x-data="{ open: false }">
-          <button id="alpine-test" class="mr-6" @click="open = true"><h2>Make</h2></button>
-      <ul id="alpine-test" class="filter option-set flex flex-row" data-filter-group="make" x-show.transition="open" @click.away="open = false">
-      <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
-    </ul>
-      </div>
+  <ul id="strokeFilter-filters" class="filter option-set flex flex-row" data-filter-group="stroke" style="display: none;">
+    <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".2-stroke">2-Stroke</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".4-stroke">4-Stroke</a></li>
+  </ul>
+  <ul id="turboFilter-filters" class="filter option-set flex flex-row" data-filter-group="turboSc" style="display: none;">
+    <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".Turbo">Turbo</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".Supercharged">Supercharged</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".NaturallyAspirated">Naturally Aspirated</a></li>
+  </ul>
+  <ul id="hpFilter-filters" class="filter option-set flex flex-row" data-filter-group="price" style="display: none;">
+    <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".Under-110">Under 110</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".110-130">110-130</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".140-185">140-185</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".210-230">210-230</a></li>
+    <li class="mr-4"><a href="#" data-filter-value=".250-310">250-310</a></li>
+  </ul>
 </div>
-  <div class="filter-ui-group w-full flex flex-row justify-start filters mb-4">
-    <button id="makeFilter" onclick="showFilters(this.id)" class="mr-6"><h2>Make</h2></button>
-    <button id="strokeFilter" onclick="showFilters(this.id)" class="mr-6"><h2>Stroke</h2></button>
-    <button id="turboFilter" onclick="showFilters(this.id)" class="mr-6"><h2>Turbo/SC</h2></button>
-    <button id="hpFilter" onclick="showFilters(this.id)" class="mr-6"><h2>HP</h2></button>
-  </div>
-  <div class="filter-dropdown-group flex flex-col justify-center filters mb-4">
-    <ul id="makeFilter-filters" class="filter option-set flex flex-row" data-filter-group="make" style="display: none;">
-      <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
-    </ul>
-    <ul id="strokeFilter-filters" class="filter option-set flex flex-row" data-filter-group="stroke" style="display: none;">
-      <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".2-stroke">2-Stroke</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".4-stroke">4-Stroke</a></li>
-    </ul>
-    <ul id="turboFilter-filters" class="filter option-set flex flex-row" data-filter-group="turboSc" style="display: none;">
-      <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Turbo">Turbo</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Supercharged">Supercharged</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".NaturallyAspirated">Naturally Aspirated</a></li>
-    </ul>
-    <ul id="hpFilter-filters" class="filter option-set flex flex-row" data-filter-group="price" style="display: none;">
-      <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".Under-110">Under 110</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".110-130">110-130</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".140-185">140-185</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".210-230">210-230</a></li>
-      <li class="mr-4"><a href="#" data-filter-value=".250-310">250-310</a></li>
-    </ul>
-  </div>
 <div class="sort-by-button-group mb-4">
   <button class="button mr-6 font-sans font-bold" data-sort-value="year" data-sort-direction="asc">YEAR <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
   <button class="button mr-6 font-sans font-bold" data-sort-value="hours" data-sort-direction="asc">HOURS <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
