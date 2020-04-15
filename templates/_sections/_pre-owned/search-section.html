@@ -1,10 +1,10 @@
 {% block search %}
 <div class="w-full flex flex-col items-center justify-center">
   <div class="filter-ui-group w-full flex flex-row justify-center filters mb-4">
-    <button id="makeFilter" onclick="showFilters(this.id)"><h2>Make</h2></button>
-    <button id="strokeFilter" onclick="showFilters(this.id)"><h2>Stroke</h2></button>
-    <button id="turboFilter" onclick="showFilters(this.id)"><h2>Turbo/SC</h2></button>
-    <button id="hpFilter" onclick="showFilters(this.id)"><h2>HP</h2></button>
+    <button id="makeFilter" onclick="showFilters(this.id)" class="mr-2"><h2>Make</h2></button>
+    <button id="strokeFilter" onclick="showFilters(this.id)" class="mr-2"><h2>Stroke</h2></button>
+    <button id="turboFilter" onclick="showFilters(this.id)" class="mr-2"><h2>Turbo/SC</h2></button>
+    <button id="hpFilter" onclick="showFilters(this.id)" class="mr-2"><h2>HP</h2></button>
   </div>
   <div class="filter-dropdown-group w-full flex flex-col justify-center filters mb-4">
     <ul id="makeFilter-filters" class="filter option-set flex flex-row" data-filter-group="make" style="display: none;">
