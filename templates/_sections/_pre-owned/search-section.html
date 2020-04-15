@@ -2,8 +2,8 @@
 <div class="w-full flex flex-col items-center justify-center">
   <div class="w-full flex flex-row justify-center filters mb-4">
     <div class="ui-group">
-      <h2>Make</h2>
-      <ul class="filter option-set flex flex-row" data-filter-group="make">
+      <h2 id="filterButton" onclick="showFilters()">Make</h2>
+      <ul class="filter option-set flex flex-row hidden" data-filter-group="make">
         <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
@@ -14,16 +14,16 @@
       </ul>
     </div>
     <div class="ui-group">
-      <h2>Stroke</h2>
-      <ul class="filter option-set flex flex-row flex flex-row" data-filter-group="stroke">
+      <h2 id="filterButton" onclick="showFilters()">Stroke</h2>
+      <ul id="filters" class="filter option-set flex flex-row flex flex-row hidden" data-filter-group="stroke">
         <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".2-stroke">2-Stroke</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".4-stroke">4-Stroke</a></li>
       </ul>
     </div>
     <div class="ui-group">
-      <h2>Turbo/SC</h2>
-      <ul class="filter option-set flex flex-row" data-filter-group="turboSc">
+      <h2 id="filterButton" onclick="showFilters()">Turbo/SC</h2>
+      <ul id="filters" class="filter option-set flex flex-row hidden" data-filter-group="turboSc">
         <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".Turbo">Turbo</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".Supercharged">Supercharged</a></li>
@@ -31,8 +31,8 @@
       </ul>
     </div>
     <div class="ui-group">
-      <h2>HP</h2>
-      <ul class="filter option-set flex flex-row" data-filter-group="price">
+      <h2 id="filterButton" onclick="showFilters()">HP</h2>
+      <ul id="filters" class="filter option-set flex flex-row hidden" data-filter-group="price">
         <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".Under-110">Under 110</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".110-130">110-130</a></li>

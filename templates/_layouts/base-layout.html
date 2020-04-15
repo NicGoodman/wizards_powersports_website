@@ -33,6 +33,16 @@
 			}
 		}
 	</script>
+	<script type="text/javascript">
+		function showFilters() {
+			var filters = document.getElementById("filters");
+			if (filters.style.display === "none") {
+				filters.style.display === "block";
+			} else {
+				filters.style.display === "none";
+			}
+		}
+	</script>
 
 
 	<script type="text/javascript">
@@ -112,28 +122,31 @@
 			});
 
 			// bind sort button click
-  $('.sort-by-button-group').on( 'click', 'button', function() {
+			$('.sort-by-button-group').on('click', 'button', function() {
 
-    /* Get the element name to sort */
-    var sortValue = $(this).attr('data-sort-value');
+				/* Get the element name to sort */
+				var sortValue = $(this).attr('data-sort-value');
 
-    /* Get the sorting direction: asc||desc */
-    var direction = $(this).attr('data-sort-direction');
+				/* Get the sorting direction: asc||desc */
+				var direction = $(this).attr('data-sort-direction');
 
-    /* convert it to a boolean */
-    var isAscending = (direction == 'asc');
-    var newDirection = (isAscending) ? 'desc' : 'asc';
+				/* convert it to a boolean */
+				var isAscending = (direction == 'asc');
+				var newDirection = (isAscending) ? 'desc' : 'asc';
 
-    /* pass it to isotope */
-    $grid.isotope({ sortBy: sortValue, sortAscending: isAscending });
+				/* pass it to isotope */
+				$grid.isotope({
+					sortBy: sortValue,
+					sortAscending: isAscending
+				});
 
-    $(this).attr('data-sort-direction', newDirection);
+				$(this).attr('data-sort-direction', newDirection);
 
-    var span = $(this).find('.fa-chevron-down');
-    span.toggleClass('rotate-180');
+				var span = $(this).find('.fa-chevron-down');
+				span.toggleClass('rotate-180');
 
-  });
-	  });
+			});
+		});
 	</script>
 </body>
 
