@@ -36,7 +36,8 @@
     <li class="mr-4"><a href="#" data-filter-value=".Supercharged">Supercharged</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".NaturallyAspirated">Naturally Aspirated</a></li>
   </ul>
-  <ul class="filter option-set flex flex-row" data-filter-group="price" x-show="filter === 'hp'">
+  <div x-show="filter === 'hp'">
+  <ul class="filter option-set flex flex-row" data-filter-group="price">
     <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Under-110">Under 110</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".110-130">110-130</a></li>
@@ -44,6 +45,7 @@
     <li class="mr-4"><a href="#" data-filter-value=".210-230">210-230</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".250-310">250-310</a></li>
   </ul>
+    </div>
 </div>
 <div class="sort-by-button-group mb-4">
   <button class="button mr-6 font-sans font-bold" data-sort-value="year" data-sort-direction="asc">YEAR <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
