@@ -1,8 +1,8 @@
 {% block search %}
 <div class="w-full max-w-screen-lg mx-auto flex flex-col items-start">
 </div>
-<div id="filters" class="">
-  <div class="filter-ui-group w-full flex flex-row justify-start filters mb-4" x-data="{ filter: 'make' }">
+<div id="filters" x-data="{ filter: 'make' }">
+  <div class="filter-ui-group w-full flex flex-row justify-start filters mb-4">
     <button id="makeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
       <h2>Make</h2>
     </button>
@@ -16,7 +16,7 @@
       <h2>HP</h2>
     </button>
   </div>
-  <ul class="filter option-set flex flex-row" data-filter-group="make" x-show="filter === 'make'">
+  <ul class="filter option-set flex flex-row" data-filter-group="make" x-show.transition.opacity="filter === 'make'">
     <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
@@ -25,19 +25,18 @@
     <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
   </ul>
-  <ul class="filter option-set flex flex-row" data-filter-group="stroke" x-show="filter === 'stroke'">
+  <ul class="filter option-set flex flex-row" data-filter-group="stroke" x-show.transition.opacity="filter === 'stroke'">
     <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".2-stroke">2-Stroke</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".4-stroke">4-Stroke</a></li>
   </ul>
-  <ul class="filter option-set flex flex-row" data-filter-group="turboSc" x-show="filter === 'turbo'">
+  <ul class="filter option-set flex flex-row" data-filter-group="turboSc" x-show.transition.opacity="filter === 'turbo'">
     <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Turbo">Turbo</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Supercharged">Supercharged</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".NaturallyAspirated">Naturally Aspirated</a></li>
   </ul>
-  <div x-show="filter === 'hp'">
-  <ul class="filter option-set flex flex-row" data-filter-group="price">
+  <ul class="filter option-set flex flex-row" data-filter-group="price" x-show.transition.opacity="filter === 'hp'">
     <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".Under-110">Under 110</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".110-130">110-130</a></li>
@@ -45,7 +44,6 @@
     <li class="mr-4"><a href="#" data-filter-value=".210-230">210-230</a></li>
     <li class="mr-4"><a href="#" data-filter-value=".250-310">250-310</a></li>
   </ul>
-    </div>
 </div>
 <div class="sort-by-button-group mb-4">
   <button class="button mr-6 font-sans font-bold" data-sort-value="year" data-sort-direction="asc">YEAR <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
