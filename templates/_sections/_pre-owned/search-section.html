@@ -1,8 +1,8 @@
 {% block search %}
 <div class="w-full flex flex-col items-center justify-center">
   <div class="w-full flex flex-row justify-center filters mb-4">
-    <div class="ui-group">
-      <button id="filterButton" onclick="showFilters()">Make</button>
+    <div class="ui-group" onclick="showFilters()">
+      <h2 id="filterButton">Make</h2>
       <ul id="filters" class="filter option-set flex flex-row" data-filter-group="make" style="display: none;">
         <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
@@ -13,8 +13,8 @@
         <li class="mr-2"><a href="#" data-filter-value=".Other">Other</a></li>
       </ul>
     </div>
-    <div class="ui-group">
-      <h2 id="filterButton" onclick="showFilters()">Stroke</h2>
+    <div class="ui-group"onclick="showFilters()">
+      <h2 id="filterButton">Stroke</h2>
       <ul id="filters" class="filter option-set flex flex-row" data-filter-group="stroke" style="display: none;">
         <li class="mr-2"><a href="#" data-filter-value="" class="selected">All</a></li>
         <li class="mr-2"><a href="#" data-filter-value=".2-stroke">2-Stroke</a></li>
