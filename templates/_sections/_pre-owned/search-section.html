@@ -50,7 +50,7 @@
   <button class="button mr-6 font-sans font-bold" data-sort-value="hours" data-sort-direction="asc">HOURS <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
   <button class="button mr-6 font-sans font-bold" data-sort-value="price" data-sort-direction="asc">PRICE <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
 </div>
-<div class="grid w-2/3">
+<div class="grid w-2/3" x-data="">
   {% for entry in craft.entries().section('inventory').all() %}
   {% set inventoryLink = entry.url() %}
   {% set inventoryTitle = entry.title %}

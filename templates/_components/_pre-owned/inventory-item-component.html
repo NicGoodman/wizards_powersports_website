@@ -8,7 +8,7 @@
 {% if entry.turboSc == 'turbo' %}Turbo{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}NaturallyAspirated{% endif %}
 
 
-">
+" id="{{ loop.index }}">
   <a href="{{ inventoryLink }}" class="flex flex-row">
     <p class="mr-2"><span class="year">{{ entry.year }}</span> | </p>
     <p class="mr-2 make">{{ make.title }} | </p>
