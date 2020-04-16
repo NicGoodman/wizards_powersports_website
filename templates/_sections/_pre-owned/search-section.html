@@ -29,12 +29,6 @@
     <label>Other</label>
     <input type="checkbox" value=".Other" class="mr-4"/>
   </fieldset>
-  <fieldset data-filter-group x-show="filter === 'stroke'">
-    <label>2-Stroke</label>
-    <input type="checkbox" value=".2stroke" class="mr-4"/>
-    <label>4-Stroke</label>
-    <input type="checkbox" value=".4stroke" class="mr-4"/>
-  </fieldset>
   <fieldset data-filter-group x-show="filter === 'turbo'">
     <label>Turbo</label>
     <input type="checkbox" value=".Turbo" class="mr-4"/>
@@ -42,6 +36,24 @@
     <input type="checkbox" value=".Supercharged" class="mr-4"/>
     <label>Naturally Aspirated</label>
     <input type="checkbox" value=".NaturallyAspirated" class="mr-4"/>
+  </fieldset>
+  <fieldset data-filter-group x-show="filter === 'stroke'">
+    <label>2-Stroke</label>
+    <input type="checkbox" value=".2stroke" class="mr-4"/>
+    <label>4-Stroke</label>
+    <input type="checkbox" value=".4stroke" class="mr-4"/>
+  </fieldset>
+  <fieldset data-filter-group x-show="filter === 'hp'">
+    <label>Under 110</label>
+    <input type="checkbox" value=".Underto110" class="mr-4"/>
+    <label>110-130</label>
+    <input type="checkbox" value=".110to130" class="mr-4"/>
+    <label>140-185</label>
+    <input type="checkbox" value=".140to185" class="mr-4"/>
+    <label>210-230</label>
+    <input type="checkbox" value=".210to230" class="mr-4"/>
+    <label>250-310</label>
+    <input type="checkbox" value=".250to310" class="mr-4"/>
   </fieldset>
 </div>
 <div class="sort-by-button-group mb-4">
