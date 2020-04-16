@@ -1,7 +1,7 @@
 {% block search %}
-<div class="w-full max-w-screen-lg mx-auto flex flex-col items-start">
+<div class="w-ffieldsetl max-w-screen-lg mx-auto flex flex-col items-start">
 <div id="filters" x-data="{ filter: 'make' }" class="mb-4">
-  <div class="filter-ui-group w-full flex flex-row justify-start filters bg-wz-black text-wz-cream text-lg font-wz-italic">
+  <div class="filter-ui-group w-ffieldsetl flex flex-row justify-start filters bg-wz-black text-wz-cream text-lg font-wz-italic">
     <button id="makeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
       <h2>Make</h2>
     </button>
@@ -15,34 +15,54 @@
       <h2>HP</h2>
     </button>
   </div>
-  <ul class="filter option-set flex flex-row" data-filter-group="make" x-show="filter === 'make'">
-    <li class="mr-4"><a href="#" data-filter="" class="selected">All</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Sea-Doo">Sea-Doo</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Yamaha">Yamaha</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Kawasaki">Kawasaki</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Honda">Honda</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Polaris">Polaris</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Other">Other</a></li>
-  </ul>
-  <ul class="filter option-set flex flex-row" data-filter-group="stroke" x-show="filter === 'stroke'">
-    <li class="mr-4"><a href="#" data-filter="" class="selected">All</a></li>
-    <li class="mr-4"><a href="#" data-filter=".2-stroke">2-Stroke</a></li>
-    <li class="mr-4"><a href="#" data-filter=".4-stroke">4-Stroke</a></li>
-  </ul>
-  <ul class="filter option-set flex flex-row" data-filter-group="turboSc" x-show="filter === 'turbo'">
-    <li class="mr-4"><a href="#" data-filter="" class="selected">All</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Turbo">Turbo</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Supercharged">Supercharged</a></li>
-    <li class="mr-4"><a href="#" data-filter=".NaturallyAspirated">Naturally Aspirated</a></li>
-  </ul>
-  <ul class="filter option-set flex flex-row" data-filter-group="price" x-show="filter === 'hp'">
-    <li class="mr-4"><a href="#" data-filter="" class="selected">All</a></li>
-    <li class="mr-4"><a href="#" data-filter=".Under-110">Under 110</a></li>
-    <li class="mr-4"><a href="#" data-filter=".110-130">110-130</a></li>
-    <li class="mr-4"><a href="#" data-filter=".140-185">140-185</a></li>
-    <li class="mr-4"><a href="#" data-filter=".210-230">210-230</a></li>
-    <li class="mr-4"><a href="#" data-filter=".250-310">250-310</a></li>
-  </ul>
+  <fieldset data-filter-group x-show="filter === 'make'">
+    <label>All</label>
+    <input type="checkbox" value=""/>
+    <label>Sea-Doo</label>
+    <input type="checkbox" value=".Sea-Doo"/>
+    <label>Yamaha</label>
+    <input type="checkbox" value=".Yamaha"/>
+    <label>Kawasaki</label>
+    <input type="checkbox" value=".Kawasaki"/>
+    <label>Honda</label>
+    <input type="checkbox" value=".Honda"/>
+    <label>Polaris</label>
+    <input type="checkbox" value=".Polaris"/>
+    <label>Other</label>
+    <input type="checkbox" value=".Other"/>
+  </fieldset>
+  <fieldset class="flex flex-row" data-filter-group x-show="filter === 'stroke'">
+    <label>All</label>
+    <input type="checkbox" value=""/>
+    <label>2-Stroke</label>
+    <input type="checkbox" value=".2-stroke"/>
+    <label>4-Stroke</label>
+    <input type="checkbox" value=".4-stroke"/>
+  </fieldset>
+  <fieldset class="flex flex-row" data-filter-group x-show="filter === 'turbo'">
+    <label>All</label>
+    <input type="checkbox" value=""/>
+    <label>Turbo</label>
+    <input type="checkbox" value=".Turbo"/>
+    <label>Supercharged</label>
+    <input type="checkbox" value=".Supercharged"/>
+    <label>Naturally Aspirated</label>
+    <input type="checkbox" value=".NaturallyAspirated"/>
+  </fieldset>
+  <fieldset class="flex flex-row" data-filter-group x-show="filter === 'hp'">
+    <label>All</label>
+    <input type="checkbox" value=""/>
+    <label>Under 110</label>
+    <input type="checkbox" value=".Under-110"/>
+    <label>110-130</label>
+    <input type="checkbox" value=".110-130"/>
+    <label>140-185</label>
+    <input type="checkbox" value=".140-185"/>
+    <label>210-230</label>
+    <input type="checkbox" value=".210-230"/>
+    <label>250-310</label>
+    <input type="checkbox" value=".250-310"/>
+  </fieldset>
 </div>
 <div class="sort-by-button-group mb-4">
   <button class="button mr-6 font-sans font-bold" data-sort="year">YEAR <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
