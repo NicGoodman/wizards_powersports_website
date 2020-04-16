@@ -43,14 +43,7 @@ $(function(){
       $container = $('.inventoryList'),
       $toggleSort = $('.toggle-sort');
 
-  $container.mixItUp() {
-		multifilter: {
-					enable: true // enable the multifilter extension for the mixer
-			},
-		pagination: {
-				limit: 3 // impose a limit of 8 targets per page
-		}
-	};
+  $container.mixItUp();
 
   $toggleSort.on('click', function() {
     switch (sortOrder) {
@@ -66,6 +59,14 @@ $(function(){
 
     $container.mixItUp('sort', 'myorder:' + sortOrder);
   });
+});
+var mixer = mixitup('.inventoryList', {
+	multifilter: {
+        enable: true // enable the multifilter extension for the mixer
+    },
+	pagination: {
+			limit: 3 // impose a limit of 8 targets per page
+	}
 });
 </script>
 </body>
