@@ -57,9 +57,9 @@
   </fieldset>
 </div>
 <div class="sort-by-button-group mb-4">
-  <button class="button mr-6 font-sans font-bold" data-sort="year">YEAR <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
-  <button class="button mr-6 font-sans font-bold" data-sort="hours">HOURS <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
-  <button class="button mr-6 font-sans font-bold" data-sort="price">PRICE <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
+  <button class="toggle-sort mr-6 font-sans font-bold" data-sort="year">YEAR <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
+  <button class="toggle-sort mr-6 font-sans font-bold" data-sort="hours">HOURS <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
+  <button class="toggle-sort mr-6 font-sans font-bold" data-sort="price">PRICE <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
 </div>
 <div class="inventoryList w-2/3" x-data="">
   {% for entry in craft.entries().section('inventory').all() %}
