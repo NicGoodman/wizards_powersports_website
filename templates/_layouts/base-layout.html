@@ -46,23 +46,21 @@
 				limit: 3 // impose a limit of 8 targets per page
 			}
 		});
-		$(function() {
-			var sortOrder = 'asc',
-				$container = $('.inventoryList'),
-				$toggleSort = $('.toggle-sort');
-			$toggleSort.on('click', function() {
-				switch (sortOrder) {
-					case 'asc':
-						sortOrder = 'desc';
+		$('.toggle-sort').on('click', function () {
+var sort_value = $(this).data('sort');
 
-						break;
-					case 'desc':
-						sortOrder = 'asc';
+if (sort_value == "year:desc") {
+$('#container').mixItUp('sort', sort_value);
+$(this).data('sort','year:asc');
+var sort_value = $(this).data('sort');
+}
 
-						break;
-				}
-			});
-		});
+else if (sort_value == "year:asc") {
+$('#container').mixItUp('sort', sort_value);
+$(this).data('sort','year:desc');
+var sort_value = $(this).data('sort');
+}
+});
 	</script>
 </body>
 
