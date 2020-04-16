@@ -11,10 +11,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<link href="{{ siteUrl }}assets/css/multiselect.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/4b48b2c1b8.js" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="assets/css/multirange.css">
-	<script src="assets/js/magnusthemes.combofilters.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
@@ -43,135 +39,13 @@
 			});
 		});
 	</script>
-	<style media="screen">
-		.selected {
-			color: red;
-			font-weight: bold;
-		}
-	</style>
 </head>
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
 	{% block body %}{% endblock %}
-	<script>
-		$(document).ready(function() {
-			var $container = $(".grid"); // the container with all the elements to filter inside
-			var filters = {}; //should be outside the scope of the filtering function
-			/* --- read the documentation on isotope.metafizzy.co for more options --- */
-			var $grid = $container.isotope({
-				itemSelector: ".grid-item", // the elements to filter
-				layoutMode: 'vertical',
-				sortBy: 'number',
-				sortAscending: false,
-				getSortData: {
-					year: '.year parseInt',
-					hours: '.hours parseInt',
-					price: '.price parseInt'
-				}
-			});
-			$(".option-set a").click(function(e) {
-				var $this = $(this); // cache the clicked link
-				var filterAttr = "data-filter-value";
-				var filterValue = $this.attr(filterAttr); // cache the filter
-				var $optionSet = $this.parents(".option-set"); // cache the parent element
-				var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
-				var filterGroup = filters[group];
-				if (!filterGroup) {
-					filterGroup = filters[group] = [];
-				}
-				var $selectAll = $optionSet.find('a[' + filterAttr + '=""]'); // the 'select all' button in the current group
-				var activeClass = "selected", // the class for active links
-					exclClass = "exclusive"; // the class for exclusive groups
-				comboFiltering($this, filters, filterAttr, filterValue, $optionSet, group, $selectAll, activeClass, exclClass);
-				var comboFilter = getComboFilter(filters);
-				$grid.isotope({
-					filter: comboFilter
-				});
-				$this.toggleClass(activeClass);
-				e.preventDefault();
-			});
-
-			// bind sort button click
-			$('.sort-by-button-group').on('click', 'button', function() {
-
-				/* Get the element name to sort */
-				var sortValue = $(this).attr('data-sort-value');
-
-				/* Get the sorting direction: asc||desc */
-				var direction = $(this).attr('data-sort-direction');
-
-				/* convert it to a boolean */
-				var isAscending = (direction == 'asc');
-				var newDirection = (isAscending) ? 'desc' : 'asc';
-
-				/* pass it to isotope */
-				$grid.isotope({
-					sortBy: sortValue,
-					sortAscending: isAscending
-				});
-
-				$(this).attr('data-sort-direction', newDirection);
-
-				var span = $(this).find('.fa-chevron-down');
-				span.toggleClass('rotate-180');
-
-			});
-
-			//****************************
-	            // Isotope Load more button
-	            //****************************
-
-	            var initShow = 3; //number of images loaded on init & onclick load more button
-	            var counter = initShow; //counter for load more button
-	            var iso = $container.data('isotope'); // get Isotope instance
-	            //console.log(iso.elemCount);
-
-	            loadMore(initShow); //execute function onload
-
-	            function loadMore(toShow) {
-
-	                $container.find(".hidden").removeClass("hidden");
-
-	                var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
-	                    //console.log(item.element);
-	                return item.element;
-	                });
-	                $(hiddenElems).addClass('hidden');
-	                $container.isotope('layout');
-
-	                //when no more to load, hide show more button
-	                if (hiddenElems.length == 0) {
-	                $("#load-more").hide();
-	                }
-	                else {
-	                $("#load-more").show();
-	                };
-
-	            }
-
-
-	            //append load more button
-	            $container.after('<div class=""><a href="#" id="load-more">Load More</a></div>');
-
-	            //when load more button clicked
-	             $(document).on("click", "#load-more", function(e) {
-	                e.preventDefault();
-
-	                if ($('#filters').data('clicked')) {
-	                //when filter button clicked, set initial value for counter
-	                counter = initShow;
-	                j$('#filters').data('clicked', false);
-	                } else {
-	                counter = counter;
-	                };
-
-	                counter = counter + initShow;
-
-	                loadMore(counter);
-	            });
-		});
-
-	</script>
+<script src="assets/js/mixitup.min.js"></script>
+<script src="assets/js/mixitup-pagination.min.js"></script>
+<script src="assets/js/mixitup-multifilter.min.js"></script>
 </body>
 
 </html>
