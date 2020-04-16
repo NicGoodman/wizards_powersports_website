@@ -30,15 +30,6 @@
 			}
 		}
 	</script>
-	<script type="text/javascript">
-		jQuery(function($) {
-			$('input[type="checkbox"]').on('change', function() {
-				let state = $(this).is(':checked');
-				$('input[type="checkbox"]').prop('checked', false);
-				$(this).prop('checked', state);
-			});
-		});
-	</script>
 </head>
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
