@@ -34,41 +34,38 @@
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
 	{% block body %}{% endblock %}
-<script src="assets/js/mixitup.min.js"></script>
-<script src="assets/js/mixitup-pagination.min.js"></script>
-<script src="assets/js/mixitup-multifilter.min.js"></script>
-<script type="text/javascript">
-$(function(){
-  var sortOrder = 'asc',
-      $container = $('.inventoryList'),
-      $toggleSort = $('.toggle-sort');
+	<script src="assets/js/mixitup.min.js"></script>
+	<script src="assets/js/mixitup-pagination.min.js"></script>
+	<script src="assets/js/mixitup-multifilter.min.js"></script>
+	<script type="text/javascript">
+		var mixer = mixitup('.inventoryList', {
+			multifilter: {
+				enable: true // enable the multifilter extension for the mixer
+			},
+			pagination: {
+				limit: 3 // impose a limit of 8 targets per page
+			}
+		});
+		$(function() {
+			var sortOrder = 'asc',
+				$container = $('.inventoryList'),
+				$toggleSort = $('.toggle-sort');
+			$toggleSort.on('click', function() {
+				switch (sortOrder) {
+					case 'asc':
+						sortOrder = 'desc';
 
-  $container.mixItUp();
+						break;
+					case 'desc':
+						sortOrder = 'asc';
 
-  $toggleSort.on('click', function() {
-    switch (sortOrder) {
-      case 'asc':
-        sortOrder = 'desc';
+						break;
+				}
 
-        break;
-      case 'desc':
-        sortOrder = 'asc';
-
-        break;
-    }
-
-    $container.mixItUp('sort', 'myorder:' + sortOrder);
-  });
-});
-var mixer = mixitup('.inventoryList', {
-	multifilter: {
-        enable: true // enable the multifilter extension for the mixer
-    },
-	pagination: {
-			limit: 3 // impose a limit of 8 targets per page
-	}
-});
-</script>
+				$container.mixItUp('sort', 'myorder:' + sortOrder);
+			});
+		});
+	</script>
 </body>
 
 </html>
