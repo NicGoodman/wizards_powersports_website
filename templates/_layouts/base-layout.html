@@ -117,6 +117,60 @@
 
 			});
 		});
+
+		//****************************
+            // Isotope Load more button
+            //****************************
+
+            var initShow = 3; //number of images loaded on init & onclick load more button
+            var counter = initShow; //counter for load more button
+            var iso = $container.data('isotope'); // get Isotope instance
+            //console.log(iso.elemCount);
+
+            loadMore(initShow); //execute function onload
+
+            function loadMore(toShow) {
+
+                $container.find(".hidden").removeClass("hidden");
+
+                var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
+                    //console.log(item.element);
+                return item.element;
+                });
+                $(hiddenElems).addClass('hidden');
+                $container.isotope('layout');
+
+                //when no more to load, hide show more button
+                if (hiddenElems.length == 0) {
+                $("#load-more").hide();
+                }
+                else {
+                $("#load-more").show();
+                };
+
+            }
+
+
+            //append load more button
+            $container.after('<div class=""><a href="#" id="load-more">Load More</a></div>');
+
+            //when load more button clicked
+             $(document).on("click", "#load-more", function(e) {
+                e.preventDefault();
+
+                if ($('#filters').data('clicked')) {
+                //when filter button clicked, set initial value for counter
+                counter = initShow;
+                j$('#filters').data('clicked', false);
+                } else {
+                counter = counter;
+                };
+
+                counter = counter + initShow;
+
+                loadMore(counter);
+            });
+        });
 	</script>
 </body>
 
