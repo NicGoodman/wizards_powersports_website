@@ -16,8 +16,6 @@
     </button>
   </div>
   <fieldset data-filter-group x-show="filter === 'make'">
-    <label>All</label>
-    <input type="checkbox" value="" class="mr-4" class="mr-4"/>
     <label>Sea-Doo</label>
     <input type="checkbox" value=".Sea-Doo" class="mr-4"/>
     <label>Yamaha</label>
@@ -31,17 +29,13 @@
     <label>Other</label>
     <input type="checkbox" value=".Other" class="mr-4"/>
   </fieldset>
-  <fieldset class="flex flex-row" data-filter-group x-show="filter === 'stroke'">
-    <label>All</label>
-    <input type="checkbox" value="" class="mr-4"/>
+  <fieldset data-filter-group x-show="filter === 'stroke'">
     <label>2-Stroke</label>
     <input type="checkbox" value=".2-stroke" class="mr-4"/>
     <label>4-Stroke</label>
     <input type="checkbox" value=".4-stroke" class="mr-4"/>
   </fieldset>
-  <fieldset class="flex flex-row" data-filter-group x-show="filter === 'turbo'">
-    <label>All</label>
-    <input type="checkbox" value="" class="mr-4"/>
+  <fieldset data-filter-group x-show="filter === 'turbo'">
     <label>Turbo</label>
     <input type="checkbox" value=".Turbo" class="mr-4"/>
     <label>Supercharged</label>
@@ -49,9 +43,7 @@
     <label>Naturally Aspirated</label>
     <input type="checkbox" value=".NaturallyAspirated" class="mr-4"/>
   </fieldset>
-  <fieldset class="flex flex-row" data-filter-group x-show="filter === 'hp'">
-    <label>All</label>
-    <input type="checkbox" value="" class="mr-4"/>
+  <fieldset data-filter-group x-show="filter === 'hp'">
     <label>Under 110</label>
     <input type="checkbox" value=".Under-110" class="mr-4"/>
     <label>110-130</label>
