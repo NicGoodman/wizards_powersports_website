@@ -1,5 +1,5 @@
 {% block inventoryItem %}
-<div class="grid-item {% if not make.title in ['Sea-Doo', 'Yamaha', 'Kawasaki', 'Honda', 'Polaris'] %}Other{% else %}{{ make.title }}{% endif %}
+<div class="mix {% if not make.title in ['Sea-Doo', 'Yamaha', 'Kawasaki', 'Honda', 'Polaris'] %}Other{% else %}{{ make.title }}{% endif %}
 
 {% if entry.horsepower < 110 %}Under-110{% elseif entry.horsepower >= 110 and entry.horsepower <= 130 %}110-130{% elseif entry.horsepower >= 140 and entry.horsepower <= 185 %}140-185{% elseif entry.horsepower >= 210 and entry.horsepower <= 230 %}210-230{% elseif entry.horsepower >= 250 and entry.horsepower <= 310 %}250-310{% endif %}
 
@@ -8,7 +8,7 @@
 {% if entry.turboSc == 'turbo' %}Turbo{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}NaturallyAspirated{% endif %}
 
 
-" id="{{ loop.index }}">
+" id="{{ loop.index }}" data-year="{{ entry.year }}" data-price="{{ entry.price }}" data-hours="{{ entry.hours }}">
   <a href="{{ inventoryLink }}" class="flex flex-row">
     <p class="mr-2"><span class="year">{{ entry.year }}</span> | </p>
     <p class="mr-2 make">{{ make.title }} | </p>

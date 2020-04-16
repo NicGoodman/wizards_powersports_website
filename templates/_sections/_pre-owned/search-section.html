@@ -17,40 +17,40 @@
     </button>
   </div>
   <ul class="filter option-set flex flex-row" data-filter-group="make" x-show="filter === 'make'">
-    <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Sea-Doo">Sea-Doo</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Yamaha">Yamaha</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Kawasaki">Kawasaki</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Honda">Honda</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Polaris">Polaris</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Other">Other</a></li>
+    <li class="mr-4"><a href="#" data-filter="" class="selected">All</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Sea-Doo">Sea-Doo</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Yamaha">Yamaha</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Kawasaki">Kawasaki</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Honda">Honda</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Polaris">Polaris</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Other">Other</a></li>
   </ul>
   <ul class="filter option-set flex flex-row" data-filter-group="stroke" x-show="filter === 'stroke'">
-    <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".2-stroke">2-Stroke</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".4-stroke">4-Stroke</a></li>
+    <li class="mr-4"><a href="#" data-filter="" class="selected">All</a></li>
+    <li class="mr-4"><a href="#" data-filter=".2-stroke">2-Stroke</a></li>
+    <li class="mr-4"><a href="#" data-filter=".4-stroke">4-Stroke</a></li>
   </ul>
   <ul class="filter option-set flex flex-row" data-filter-group="turboSc" x-show="filter === 'turbo'">
-    <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Turbo">Turbo</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Supercharged">Supercharged</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".NaturallyAspirated">Naturally Aspirated</a></li>
+    <li class="mr-4"><a href="#" data-filter="" class="selected">All</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Turbo">Turbo</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Supercharged">Supercharged</a></li>
+    <li class="mr-4"><a href="#" data-filter=".NaturallyAspirated">Naturally Aspirated</a></li>
   </ul>
   <ul class="filter option-set flex flex-row" data-filter-group="price" x-show="filter === 'hp'">
-    <li class="mr-4"><a href="#" data-filter-value="" class="selected">All</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".Under-110">Under 110</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".110-130">110-130</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".140-185">140-185</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".210-230">210-230</a></li>
-    <li class="mr-4"><a href="#" data-filter-value=".250-310">250-310</a></li>
+    <li class="mr-4"><a href="#" data-filter="" class="selected">All</a></li>
+    <li class="mr-4"><a href="#" data-filter=".Under-110">Under 110</a></li>
+    <li class="mr-4"><a href="#" data-filter=".110-130">110-130</a></li>
+    <li class="mr-4"><a href="#" data-filter=".140-185">140-185</a></li>
+    <li class="mr-4"><a href="#" data-filter=".210-230">210-230</a></li>
+    <li class="mr-4"><a href="#" data-filter=".250-310">250-310</a></li>
   </ul>
 </div>
 <div class="sort-by-button-group mb-4">
-  <button class="button mr-6 font-sans font-bold" data-sort-value="year" data-sort-direction="asc">YEAR <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
-  <button class="button mr-6 font-sans font-bold" data-sort-value="hours" data-sort-direction="asc">HOURS <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
-  <button class="button mr-6 font-sans font-bold" data-sort-value="price" data-sort-direction="asc">PRICE <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
+  <button class="button mr-6 font-sans font-bold" data-sort="year">YEAR <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
+  <button class="button mr-6 font-sans font-bold" data-sort="hours">HOURS <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
+  <button class="button mr-6 font-sans font-bold" data-sort="price">PRICE <i class="fas fa-chevron-down transition-transform duration-300 transform"></i></button>
 </div>
-<div class="grid w-2/3" x-data="">
+<div class="inventoryList w-2/3" x-data="">
   {% for entry in craft.entries().section('inventory').all() %}
   {% set inventoryLink = entry.url() %}
   {% set inventoryTitle = entry.title %}
