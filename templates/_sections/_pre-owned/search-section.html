@@ -73,11 +73,11 @@
     </div>
     <div class="mixitup-page-list"></div>
     <div class="mixitup-page-stats"></div>
-    <div style="background-color: rgba(0, 0, 0, .5)" class="mx-auto absolute top-0 left-0 w-full h-full flex items-center shadow-lg overflow-y-auto" x-show="isOpen">
+    <div style="background-color: rgba(0, 0, 0, .5)" class="mx-auto absolute top-0 left-0 w-screen h-screen flex items-center shadow-lg overflow-y-auto" x-show="isOpen">
       <div class="inventoryItemContent">
         <p>stuff</p>
       </div>
-      <button class="bg-blue-700 text-white px-4 py-3 mt-4 text-sm rounded" @click="isOpen = false"  x-ref="modalCloseButton">Close Modal</button>
+      <button class="bg-blue-700 text-white px-4 py-3 mt-4 text-sm rounded" @click="isOpen = false">Close Modal</button>
     </div>
   </div>
 </div>
