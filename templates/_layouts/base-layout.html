@@ -48,13 +48,11 @@
 		});
 		$('.toggle-sort').on('click', function() {
 			var sort_value = $(this).data('sort');
-
+			mixer.sort('sort', sort_value);
 			if (sort_value == "year:desc") {
-
 				$(this).data('sort', 'year:asc');
 				var sort_value = $(this).data('sort');
 			} else if (sort_value == "year:asc") {
-
 				$(this).data('sort', 'year:desc');
 				var sort_value = $(this).data('sort');
 			}
