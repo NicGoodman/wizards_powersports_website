@@ -15643,6 +15643,21 @@ button:active {
   border-color: #7b7b7b;
 }
 
+.text-input-wrapper {
+  display: inline-block;
+  padding: .5rem;
+  background: #2a2a2a;
+  margin-left: .75rem;
+  vertical-align: top;
+}
+
+.text-input-wrapper input {
+  font-size: .9rem;
+  padding: .5em;
+  border-radius: 2px;
+  border: 0;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

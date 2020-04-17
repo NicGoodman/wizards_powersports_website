@@ -274,3 +274,18 @@ button:active {}
 .control-checkbox input:disabled~.control_indicator:after {
   border-color: #7b7b7b;
 }
+
+.text-input-wrapper {
+    display: inline-block;
+    padding: .5rem;
+    background: #2a2a2a;
+    margin-left: .75rem;
+    vertical-align: top;
+}
+
+.text-input-wrapper input {
+    font-size: .9rem;
+    padding: .5em;
+    border-radius: 2px;
+    border: 0;
+}
