@@ -61,7 +61,7 @@
     <button class="toggle-sort-hours mr-6 font-sans font-bold">HOURS <i id="chevron-hour" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
     <button class="toggle-sort-price mr-6 font-sans font-bold">PRICE <i id="chevron-price" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
   </div>
-  <div class="" x-data="{ isOpen: false }">
+  <div x-data="{ open: false }">
     <div class="inventoryList w-full">
       {% for entry in craft.entries().section('inventory').all() %}
       {% set inventoryLink = entry.url() %}
@@ -73,11 +73,11 @@
     </div>
     <div class="mixitup-page-list"></div>
     <div class="mixitup-page-stats"></div>
-    <div style="background-color: rgba(0, 0, 0, .5)" class="mx-auto absolute top-0 left-0 w-screen h-screen flex items-center shadow-lg overflow-y-auto" x-show="isOpen">
+    <div class="" x-show="open" @click.away="open = false">
       <div class="inventoryItemContent">
         <p>stuff</p>
       </div>
-      <button class="bg-blue-700 text-white px-4 py-3 mt-4 text-sm rounded" @click="isOpen = false">Close Modal</button>
+      <button class="bg-blue-700 text-white px-4 py-3 mt-4 text-sm rounded" @click="open = false">Close Modal</button>
     </div>
   </div>
 </div>
