@@ -12,8 +12,7 @@
 	<link href="{{ siteUrl }}assets/css/multiselect.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/4b48b2c1b8.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-
+	<script src="assets/js/responsiveslides.min.js"></script>
 	<script>
 		function showNav() {
 			var x = document.getElementById("main-nav-mobile");
@@ -30,6 +29,11 @@
 			}
 		}
 	</script>
+	<script>
+		$(function() {
+			$(".rslides").responsiveSlides();
+		});
+	</script>
 </head>
 
 <body class="bg-wz-grid flex flex-col justify-between min-h-screen">
@@ -37,7 +41,6 @@
 	<script src="assets/js/mixitup.min.js"></script>
 	<script src="assets/js/mixitup-pagination.min.js"></script>
 	<script src="assets/js/mixitup-multifilter.min.js"></script>
-	<script src="assets/js/responsiveslides.min.js"></script>
 	<script type="text/javascript">
 		var chevronYear = document.getElementById("chevron-year");
 		var chevronHour = document.getElementById("chevron-hour");
@@ -115,17 +118,13 @@
 				}
 			});
 		}
+
 		function refreshInventory(html) {
 			// Update the .inventoryItemContent DOM element with new HTML
 			var $html = $('<div />').append(html);
 			$('.inventoryItemContent').html($html.find('.inventoryItemContent').html());
 		}
 	</script>
-	<script>
-  $(function() {
-    $(".rslides").responsiveSlides();
-  });
-</script>
 </body>
 
 </html>
