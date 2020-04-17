@@ -1,79 +1,84 @@
 {% block search %}
 <div class="w-ffieldsetl max-w-screen-lg mx-auto flex flex-col items-start">
-<div id="filters" x-data="{ filter: 'make' }" class="mb-4">
-  <div class="filter-ui-group w-ffieldsetl flex flex-row justify-start filters bg-wz-black text-wz-cream text-lg font-wz-italic">
-    <button id="makeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
-      <h3>Make</h3>
-    </button>
-    <button id="strokeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'stroke' }" @click="filter = 'stroke'">
-      <h3>Stroke</h3>
-    </button>
-    <button id="turboFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
-      <h3>Turbo/SC</h3>
-    </button>
-    <button id="hpFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'hp' }" @click="filter = 'hp'">
-      <h3>HP</h3>
-    </button>
+  <div id="filters" x-data="{ filter: 'make' }" class="mb-4">
+    <div class="filter-ui-group w-ffieldsetl flex flex-row justify-start filters bg-wz-black text-wz-cream text-lg font-wz-italic">
+      <button id="makeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
+        <h3>Make</h3>
+      </button>
+      <button id="strokeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'stroke' }" @click="filter = 'stroke'">
+        <h3>Stroke</h3>
+      </button>
+      <button id="turboFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
+        <h3>Turbo/SC</h3>
+      </button>
+      <button id="hpFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'hp' }" @click="filter = 'hp'">
+        <h3>HP</h3>
+      </button>
+    </div>
+    <fieldset data-filter-group x-show="filter === 'make'">
+      <label>Sea-Doo</label>
+      <input type="checkbox" value=".Sea-Doo" class="mr-4" />
+      <label>Yamaha</label>
+      <input type="checkbox" value=".Yamaha" class="mr-4" />
+      <label>Kawasaki</label>
+      <input type="checkbox" value=".Kawasaki" class="mr-4" />
+      <label>Honda</label>
+      <input type="checkbox" value=".Honda" class="mr-4" />
+      <label>Polaris</label>
+      <input type="checkbox" value=".Polaris" class="mr-4" />
+      <label>Other</label>
+      <input type="checkbox" value=".Other" class="mr-4" />
+    </fieldset>
+    <fieldset data-filter-group x-show="filter === 'turbo'">
+      <label>Turbo</label>
+      <input type="checkbox" value=".Turbo" class="mr-4" />
+      <label>Supercharged</label>
+      <input type="checkbox" value=".Supercharged" class="mr-4" />
+      <label>Naturally Aspirated</label>
+      <input type="checkbox" value=".NaturallyAspirated" class="mr-4" />
+    </fieldset>
+    <fieldset data-filter-group x-show="filter === 'stroke'">
+      <label>2-Stroke</label>
+      <input type="checkbox" value=".TwoStroke" class="mr-4" />
+      <label>4-Stroke</label>
+      <input type="checkbox" value=".FourStroke" class="mr-4" />
+    </fieldset>
+    <fieldset data-filter-group x-show="filter === 'hp'">
+      <label>Under 110</label>
+      <input type="checkbox" value=".Underto110" class="mr-4" />
+      <label>110-130</label>
+      <input type="checkbox" value=".HP110to130" class="mr-4" />
+      <label>140-185</label>
+      <input type="checkbox" value=".HP140to185" class="mr-4" />
+      <label>210-230</label>
+      <input type="checkbox" value=".HP210to230" class="mr-4" />
+      <label>250-310</label>
+      <input type="checkbox" value=".HP250to310" class="mr-4" />
+    </fieldset>
   </div>
-  <fieldset data-filter-group x-show="filter === 'make'">
-    <label>Sea-Doo</label>
-    <input type="checkbox" value=".Sea-Doo" class="mr-4"/>
-    <label>Yamaha</label>
-    <input type="checkbox" value=".Yamaha" class="mr-4"/>
-    <label>Kawasaki</label>
-    <input type="checkbox" value=".Kawasaki" class="mr-4"/>
-    <label>Honda</label>
-    <input type="checkbox" value=".Honda" class="mr-4"/>
-    <label>Polaris</label>
-    <input type="checkbox" value=".Polaris" class="mr-4"/>
-    <label>Other</label>
-    <input type="checkbox" value=".Other" class="mr-4"/>
-  </fieldset>
-  <fieldset data-filter-group x-show="filter === 'turbo'">
-    <label>Turbo</label>
-    <input type="checkbox" value=".Turbo" class="mr-4"/>
-    <label>Supercharged</label>
-    <input type="checkbox" value=".Supercharged" class="mr-4"/>
-    <label>Naturally Aspirated</label>
-    <input type="checkbox" value=".NaturallyAspirated" class="mr-4"/>
-  </fieldset>
-  <fieldset data-filter-group x-show="filter === 'stroke'">
-    <label>2-Stroke</label>
-    <input type="checkbox" value=".TwoStroke" class="mr-4"/>
-    <label>4-Stroke</label>
-    <input type="checkbox" value=".FourStroke" class="mr-4"/>
-  </fieldset>
-  <fieldset data-filter-group x-show="filter === 'hp'">
-    <label>Under 110</label>
-    <input type="checkbox" value=".Underto110" class="mr-4"/>
-    <label>110-130</label>
-    <input type="checkbox" value=".HP110to130" class="mr-4"/>
-    <label>140-185</label>
-    <input type="checkbox" value=".HP140to185" class="mr-4"/>
-    <label>210-230</label>
-    <input type="checkbox" value=".HP210to230" class="mr-4"/>
-    <label>250-310</label>
-    <input type="checkbox" value=".HP250to310" class="mr-4"/>
-  </fieldset>
-</div>
-<div class="sort-by-button-group mb-4">
-  <button class="toggle-sort-year mr-6 font-sans font-bold">YEAR <i id="chevron-year" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
-  <button class="toggle-sort-hours mr-6 font-sans font-bold">HOURS <i id="chevron-hour" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
-  <button class="toggle-sort-price mr-6 font-sans font-bold">PRICE <i id="chevron-price" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
-</div>
-<div class="inventoryList w-full" x-data="">
-  {% for entry in craft.entries().section('inventory').all() %}
-  {% set inventoryLink = entry.url() %}
-  {% set inventoryTitle = entry.title %}
-  {% set make = entry.make.one() %}
-  {% set model = entry.model.one() %}
-  {% include "_components/_pre-owned/inventory-item-component" %}
-  {% endfor %}
-</div>
-<div class="mixitup-page-list"></div>
-<div class="mixitup-page-stats"></div>
-<div class="inventoryItemContent">
-  <p>stuff</p>
-</div>
+  <div class="sort-by-button-group mb-4">
+    <button class="toggle-sort-year mr-6 font-sans font-bold">YEAR <i id="chevron-year" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
+    <button class="toggle-sort-hours mr-6 font-sans font-bold">HOURS <i id="chevron-hour" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
+    <button class="toggle-sort-price mr-6 font-sans font-bold">PRICE <i id="chevron-price" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
+  </div>
+  <div class="" x-data="{ isOpen: false }">
+    <div class="inventoryList w-full">
+      {% for entry in craft.entries().section('inventory').all() %}
+      {% set inventoryLink = entry.url() %}
+      {% set inventoryTitle = entry.title %}
+      {% set make = entry.make.one() %}
+      {% set model = entry.model.one() %}
+      {% include "_components/_pre-owned/inventory-item-component" %}
+      {% endfor %}
+    </div>
+    <div class="mixitup-page-list"></div>
+    <div class="mixitup-page-stats"></div>
+    <div style="background-color: rgba(0, 0, 0, .5)" class="mx-auto absolute top-0 left-0 w-full h-full flex items-center shadow-lg overflow-y-auto" x-show="isOpen">
+      <div class="inventoryItemContent">
+        <p>stuff</p>
+      </div>
+      <button class="bg-blue-700 text-white px-4 py-3 mt-4 text-sm rounded" @click="isOpen = false"  x-ref="modalCloseButton">Close Modal</button>
+    </div>
+  </div>
 </div>
 {% endblock %}
