@@ -61,7 +61,7 @@
   <button class="toggle-sort-hours mr-6 font-sans font-bold">HOURS <i id="chevron-hour" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
   <button class="toggle-sort-price mr-6 font-sans font-bold">PRICE <i id="chevron-price" class="fas fa-chevron-up transition-transform duration-300 transform"></i></button>
 </div>
-<div class="inventoryList w-2/3" x-data="">
+<div class="inventoryList w-full" x-data="">
   {% for entry in craft.entries().section('inventory').all() %}
   {% set inventoryLink = entry.url() %}
   {% set inventoryTitle = entry.title %}
