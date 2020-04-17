@@ -42,7 +42,7 @@
 
 		$(function() {
 			var sortOrder = 'asc',
-			$chevronYear = document.getElementById("chevron-year");
+			var chevronYear = document.getElementById("chevron-year");
 				$toggleSortYear = $('.toggle-sort-year');
 				$toggleSortHours = $('.toggle-sort-hours');
 				$toggleSortPrice = $('.toggle-sort-price');
@@ -59,11 +59,11 @@
 				switch (sortOrder) {
 					case 'asc':
 						sortOrder = 'desc';
-						$chevronYear.classList.add("rotate-180");
+						chevronYear.classList.add("rotate-180");
 						break;
 					case 'desc':
 						sortOrder = 'asc';
-						$chevronYear.classList.remove("rotate-180");
+						chevronYear.classList.remove("rotate-180");
 						break;
 				}
 				mixer.sort('sort', 'year:' + sortOrder);
