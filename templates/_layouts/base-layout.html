@@ -38,22 +38,35 @@
 	<script src="assets/js/mixitup-pagination.min.js"></script>
 	<script src="assets/js/mixitup-multifilter.min.js"></script>
 	<script type="text/javascript">
-		var mixer = mixitup('.inventoryList', {
-			multifilter: {
-				enable: true // enable the multifilter extension for the mixer
-			},
-			pagination: {
-				limit: 3 // impose a limit of 8 targets per page
-			}
-		});
 
-		$('.toggle-sort').on('click', function() {
-			var sort_value = $(this).data('sort');
-			if (sort_value == "year:desc") {
-				$(this).data('sort', 'year:asc');
-			} else if (sort_value == "year:asc") {
-				$(this).data('sort', 'year:desc');
-			}
+
+		$(function() {
+			var sortOrder = 'asc',
+				$toggleSort = $('.toggle-sort');
+
+				var mixer = mixitup('.inventoryList', {
+					multifilter: {
+						enable: true // enable the multifilter extension for the mixer
+					},
+					pagination: {
+						limit: 3 // impose a limit of 8 targets per page
+					}
+				});
+
+			$toggleSort.on('click', function() {
+				switch (sortOrder) {
+					case 'asc':
+						sortOrder = 'desc';
+
+						break;
+					case 'desc':
+						sortOrder = 'asc';
+
+						break;
+				}
+
+				mixer.sort('sort', 'myorder:' + sortOrder);
+			});
 		});
 	</script>
 </body>
