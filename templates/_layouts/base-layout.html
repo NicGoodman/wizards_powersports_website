@@ -38,24 +38,23 @@
 	<script src="assets/js/mixitup-pagination.min.js"></script>
 	<script src="assets/js/mixitup-multifilter.min.js"></script>
 	<script type="text/javascript">
-
-			var chevronYear = document.getElementById("chevron-year");
-			var chevronHour = document.getElementById("chevron-hour");
-			var chevronPrice = document.getElementById("chevron-price");
+		var chevronYear = document.getElementById("chevron-year");
+		var chevronHour = document.getElementById("chevron-hour");
+		var chevronPrice = document.getElementById("chevron-price");
 		$(function() {
 			var sortOrder = 'asc',
 				$toggleSortYear = $('.toggle-sort-year');
-				$toggleSortHours = $('.toggle-sort-hours');
-				$toggleSortPrice = $('.toggle-sort-price');
+			$toggleSortHours = $('.toggle-sort-hours');
+			$toggleSortPrice = $('.toggle-sort-price');
 
-				var mixer = mixitup('.inventoryList', {
-					multifilter: {
-						enable: true // enable the multifilter extension for the mixer
-					},
-					pagination: {
-						limit: 25 // impose a limit of 8 targets per page
-					}
-				});
+			var mixer = mixitup('.inventoryList', {
+				multifilter: {
+					enable: true // enable the multifilter extension for the mixer
+				},
+				pagination: {
+					limit: 25 // impose a limit of 8 targets per page
+				}
+			});
 			$toggleSortYear.on('click', function() {
 				switch (sortOrder) {
 					case 'asc':
@@ -98,43 +97,28 @@
 		});
 	</script>
 	<script type="text/javascript">
-	// Check if the browser supports HTML5 history
-var historySupport = !!(window.history && history.pushState);
+		// Add an event listener for filter clicks
+		$(function() {
+			$('body').on('click', '.inventory-item', onInventoryClick);
+		});
 
-// Add an event listener for filter clicks
-$(function () {
-	$('body').on('click', '.inventory-item', onInventoryClick);
-});
-
-// Event handler for the filter click
-function onInventoryClick (e)
-{
-	e.preventDefault();
-	var $filter = $(e.currentTarget);
-	var href = $filter.attr('href');
-	if (historySupport) {
-			// Update the browser's address bar
-			history.pushState(null, null, href);
-	}
-	$.ajax($filter.attr('href'), {
-			dataType : 'html',
-			success : function (response) {
+		// Event handler for the filter click
+		function onInventoryClick(e) {
+			e.preventDefault();
+			var $inventoryItem = $(e.currentTarget);
+			var href = $inventoryItem.attr('href');
+			$.ajax($inventoryItem.attr('href'), {
+				dataType: 'html',
+				success: function(response) {
 					refreshInventory(response);
-			}
-	});
-}
-
-function refreshInventory (html)
-{
-
-	// Update the <title> tag
-	document.title = $(html).filter('title').text();
-
-	// Update the .projects DOM element with new HTML
-	var $html = $('<div />').append(html);
-	$('.inventoryItemContent').html($html.find('.inventoryItemContent').html());
-
-}
+				}
+			});
+		}
+		function refreshInventory(html) {
+			// Update the .inventoryItemContent DOM element with new HTML
+			var $html = $('<div />').append(html);
+			$('.inventoryItemContent').html($html.find('.inventoryItemContent').html());
+		}
 	</script>
 </body>
 
