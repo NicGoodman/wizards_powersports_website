@@ -103,7 +103,7 @@ var historySupport = !!(window.history && history.pushState);
 
 // Add an event listener for filter clicks
 $(function () {
-	$('body').on('click', '.inventory-item a', onInventoryClick);
+	$('body').on('click', '.inventory-item', onInventoryClick);
 });
 
 // Event handler for the filter click
