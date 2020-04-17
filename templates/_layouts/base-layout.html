@@ -58,9 +58,11 @@
 				switch (sortOrder) {
 					case 'asc':
 						sortOrder = 'desc';
+						$toggleSortYear.classList.add("rotate-180");
 						break;
 					case 'desc':
 						sortOrder = 'asc';
+						$toggleSortYear.classList.remove("rotate-180");
 						break;
 				}
 				mixer.sort('sort', 'year:' + sortOrder);
