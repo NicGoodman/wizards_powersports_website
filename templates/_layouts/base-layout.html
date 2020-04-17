@@ -42,7 +42,9 @@
 
 		$(function() {
 			var sortOrder = 'asc',
-				$toggleSort = $('.toggle-sort');
+				$toggleSortYear = $('.toggle-sort-year');
+				$toggleSortHours = $('.toggle-sort-hours');
+				$toggleSortPrice = $('.toggle-sort-price');
 
 				var mixer = mixitup('.inventoryList', {
 					multifilter: {
@@ -52,20 +54,38 @@
 						limit: 3 // impose a limit of 8 targets per page
 					}
 				});
-
-			$toggleSort.on('click', function() {
+			$toggleSortYear.on('click', function() {
 				switch (sortOrder) {
 					case 'asc':
 						sortOrder = 'desc';
-
 						break;
 					case 'desc':
 						sortOrder = 'asc';
-
 						break;
 				}
-
 				mixer.sort('sort', 'year:' + sortOrder);
+			});
+			$toggleSortHours.on('click', function() {
+				switch (sortOrder) {
+					case 'asc':
+						sortOrder = 'desc';
+						break;
+					case 'desc':
+						sortOrder = 'asc';
+						break;
+				}
+				mixer.sort('sort', 'hours:' + sortOrder);
+			});
+			$toggleSortPrice.on('click', function() {
+				switch (sortOrder) {
+					case 'asc':
+						sortOrder = 'desc';
+						break;
+					case 'desc':
+						sortOrder = 'asc';
+						break;
+				}
+				mixer.sort('sort', 'price:' + sortOrder);
 			});
 		});
 	</script>
