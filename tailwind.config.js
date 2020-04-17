@@ -21,6 +21,7 @@ module.exports = {
 },
   variants: {
    zIndex: ['responsive', 'hover', 'focus'],
+   textColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [],
 }
