@@ -1,16 +1,6 @@
 <div class="inventoryItemContent">
   <p>{{ entry.title }}</p>
-  <div class="flex flex-row">
-    <div class="p-1 font-sans font-bold w-20 text-center border-r border-wz-black">{{ entry.year }}</div>
-    <div class="p-1 font-sans font-bold w-24 text-center border-r border-wz-black">{{ make.title }}</div>
-    <div class="p-1 font-sans font-bold w-40 text-center border-r border-wz-black">{{ model.title }}</div>
-    <div class="p-1 font-sans font-bold w-20 text-center border-r border-wz-black">{{ entry.hours }}hrs</div>
-    <div class="p-1 font-sans font-bold w-20 text-center border-r border-wz-black">{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}</div>
-    <div class="p-1 font-sans font-bold w-40 text-center border-r border-wz-black">{% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}Naturally
-      Aspirated{% endif %}</div>
-    <div class="p-1 font-sans font-bold w-20 text-center border-r border-wz-black">{{ entry.horsepower }}hp</div>
-    <div class="p-1 font-sans font-bold w-20 text-center">${{ entry.price }}</div>
-  </div>
+
   {% for image in entry.images %}
 
   {% endfor %}
