@@ -14714,8 +14714,8 @@ button:active {
   margin-left: -.75em;
 }
 
-.tab input[type=checkbox]:checked + label::after,
-.tab input[type=radio]:checked + label::after {
+.tab input[type=checkbox]:checked+label::after,
+.tab input[type=radio]:checked+label::after {
   transform: rotate(45deg);
 }
 
@@ -14733,7 +14733,7 @@ button:active {
   margin: 20px;
 }
 
-.tab input:checked ~ .tab-content {
+.tab input:checked~.tab-content {
   /* Set the max-height to a large number */
   /* Or 100% viewport height */
   max-height: 100vh;
@@ -14772,7 +14772,6 @@ button:active {
 }
 
 .control {
-  font-family: arial;
   display: block;
   position: relative;
   padding-left: 30px;
@@ -14799,21 +14798,21 @@ button:active {
   border-radius: 0px;
 }
 
-.control:hover input ~ .control_indicator,
-  .control input:focus ~ .control_indicator {
+.control:hover input~.control_indicator,
+.control input:focus~.control_indicator {
   background: #0e1418;
 }
 
-.control input:checked ~ .control_indicator {
+.control input:checked~.control_indicator {
   background: #212A30;
 }
 
-.control:hover input:not([disabled]):checked ~ .control_indicator,
-  .control input:checked:focus ~ .control_indicator {
+.control:hover input:not([disabled]):checked~.control_indicator,
+.control input:checked:focus~.control_indicator {
   background: #0e6647d;
 }
 
-.control input:disabled ~ .control_indicator {
+.control input:disabled~.control_indicator {
   background: #e6e6e6;
   opacity: 0.6;
   pointer-events: none;
@@ -14826,7 +14825,7 @@ button:active {
   display: none;
 }
 
-.control input:checked ~ .control_indicator:after {
+.control input:checked~.control_indicator:after {
   display: block;
 }
 
@@ -14840,7 +14839,7 @@ button:active {
   transform: rotate(45deg);
 }
 
-.control-checkbox input:disabled ~ .control_indicator:after {
+.control-checkbox input:disabled~.control_indicator:after {
   border-color: #7b7b7b;
 }
 

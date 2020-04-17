@@ -1,36 +1,32 @@
 @tailwind base;
 
 @font-face {
-font-family: 'SF WADIM GIANT ITALIC';
-font-style: normal;
-font-weight: normal;
-src: url('../fonts/wadim_giant_italic.woff') format('woff');
+  font-family: 'SF WADIM GIANT ITALIC';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/wadim_giant_italic.woff') format('woff');
 }
-
 
 @font-face {
-font-family: 'SF WADIM GIANT LINES';
-font-style: normal;
-font-weight: normal;
-src: url('../fonts/wadim_giant_lines.woff') format('woff');
+  font-family: 'SF WADIM GIANT LINES';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/wadim_giant_lines.woff') format('woff');
 }
-
 
 @font-face {
-font-family: 'SF WADIM GIANT OUTLINE';
-font-style: normal;
-font-weight: normal;
-src: url('../fonts/wadim_giant_outline.woff') format('woff');
+  font-family: 'SF WADIM GIANT OUTLINE';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/wadim_giant_outline.woff') format('woff');
 }
-
 
 @font-face {
-font-family: 'SF WADIM GIANT Heavy';
-font-style: normal;
-font-weight: normal;
-src: url('../fonts/wadim_giant.woff') format('woff');
+  font-family: 'SF WADIM GIANT Heavy';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/wadim_giant.woff') format('woff');
 }
-
 
 h1 {
   @apply font-wz-heavy;
@@ -70,67 +66,39 @@ label {
   @apply tracking-wider;
 }
 
-button {
+button {}
 
-}
+button:hover {}
 
-button:hover {
-
-}
-
-button:active {
-
-}
+button:active {}
 
 @screen md {
-  h1 {
+  h1 {}
 
-  }
+  h2 {}
 
-  h2 {
+  h3 {}
 
-  }
+  p {}
 
-  h3 {
-
-  }
-
-  p {
-
-  }
-
-  h4 {
-
-  }
+  h4 {}
 }
 
-@screen lg {
-
-}
+@screen lg {}
 
 @screen xl {
-  h1 {
+  h1 {}
 
-  }
+  h2 {}
 
-  h2 {
+  h3 {}
 
-  }
+  p {}
 
-  h3 {
-
-  }
-
-  p {
-
-  }
-
-  h4 {
-
-  }
+  h4 {}
 }
-@tailwind components;
 
+@tailwind components;
 @tailwind utilities;
 
 .bg-wz-grid {
@@ -154,6 +122,7 @@ button:active {
 .tab input {
   display: none;
 }
+
 .tab label {
   display: block;
   color: #212a30;
@@ -164,20 +133,22 @@ button:active {
   font-size: 1rem;
   margin-left: 1.5em;
 }
+
 .tab label::after {
-content: "\002B";
-position: absolute;
-top: 0px;
-display: block;
-transition: all 0.4s;
-color: #ab2739;
-font-size: 3rem;
-vertical-align: top;
-line-height: .75;
-margin-left: -.75em;
+  content: "\002B";
+  position: absolute;
+  top: 0px;
+  display: block;
+  transition: all 0.4s;
+  color: #ab2739;
+  font-size: 3rem;
+  vertical-align: top;
+  line-height: .75;
+  margin-left: -.75em;
 }
-.tab input[type=checkbox]:checked + label::after,
-.tab input[type=radio]:checked + label::after {
+
+.tab input[type=checkbox]:checked+label::after,
+.tab input[type=radio]:checked+label::after {
   transform: rotate(45deg);
 }
 
@@ -189,10 +160,12 @@ margin-left: -.75em;
   transition: max-height 0.4s;
   max-height: 0;
 }
+
 .tab-content p {
   margin: 20px;
 }
-.tab input:checked ~ .tab-content {
+
+.tab input:checked~.tab-content {
   /* Set the max-height to a large number */
   /* Or 100% viewport height */
   max-height: 100vh;
@@ -205,7 +178,7 @@ margin-left: -.75em;
   width: 100%;
   padding: 0;
   margin: 0;
-  }
+}
 
 .rslides li {
   -webkit-backface-visibility: hidden;
@@ -214,13 +187,13 @@ margin-left: -.75em;
   width: 100%;
   left: 0;
   top: 0;
-  }
+}
 
 .rslides li:first-child {
   position: relative;
   display: block;
   float: left;
-  }
+}
 
 .rslides img {
   display: block;
@@ -228,68 +201,76 @@ margin-left: -.75em;
   float: left;
   width: 100%;
   border: 0;
-  }
+}
 
-  .control {
-      font-family: arial;
-      display: block;
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 5px;
-      padding-top: 3px;
-      cursor: pointer;
-      font-size: 16px;
-  }
-      .control input {
-          position: absolute;
-          z-index: -1;
-          opacity: 0;
-      }
-  .control_indicator {
-      position: absolute;
-      top: 2px;
-      left: 0;
-      height: 25px;
-      width: 25px;
-      background: #404b53;
-      border: 0px solid #000000;
-      border-radius: 0px;
-  }
-  .control:hover input ~ .control_indicator,
-  .control input:focus ~ .control_indicator {
-      background: #0e1418;
-  }
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-  .control input:checked ~ .control_indicator {
-      background: #212A30;
-  }
-  .control:hover input:not([disabled]):checked ~ .control_indicator,
-  .control input:checked:focus ~ .control_indicator {
-      background: #0e6647d;
-  }
-  .control input:disabled ~ .control_indicator {
-      background: #e6e6e6;
-      opacity: 0.6;
-      pointer-events: none;
-  }
-  .control_indicator:after {
-      box-sizing: unset;
-      content: '';
-      position: absolute;
-      display: none;
-  }
-  .control input:checked ~ .control_indicator:after {
-      display: block;
-  }
-  .control-checkbox .control_indicator:after {
-      left: 10px;
-      top: 5px;
-      width: 3px;
-      height: 10px;
-      border: solid #F2C58C;
-      border-width: 0 3px 3px 0;
-      transform: rotate(45deg);
-  }
-  .control-checkbox input:disabled ~ .control_indicator:after {
-      border-color: #7b7b7b;
-  }
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background: #404b53;
+  border: 0px solid #000000;
+  border-radius: 0px;
+}
+
+.control:hover input~.control_indicator,
+.control input:focus~.control_indicator {
+  background: #0e1418;
+}
+
+.control input:checked~.control_indicator {
+  background: #212A30;
+}
+
+.control:hover input:not([disabled]):checked~.control_indicator,
+.control input:checked:focus~.control_indicator {
+  background: #0e6647d;
+}
+
+.control input:disabled~.control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.control input:checked~.control_indicator:after {
+  display: block;
+}
+
+.control-checkbox .control_indicator:after {
+  left: 10px;
+  top: 5px;
+  width: 3px;
+  height: 10px;
+  border: solid #F2C58C;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.control-checkbox input:disabled~.control_indicator:after {
+  border-color: #7b7b7b;
+}
