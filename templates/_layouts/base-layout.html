@@ -50,13 +50,13 @@
 var sort_value = $(this).data('sort');
 
 if (sort_value == "year:desc") {
-$('.invetoryList').mixItUp('sort', sort_value);
+$mixer.mixItUp('sort', sort_value);
 $(this).data('sort','year:asc');
 var sort_value = $(this).data('sort');
 }
 
 else if (sort_value == "year:asc") {
-$('.inventoryList').mixItUp('sort', sort_value);
+$mixer.mixItUp('sort', sort_value);
 $(this).data('sort','year:desc');
 var sort_value = $(this).data('sort');
 }
