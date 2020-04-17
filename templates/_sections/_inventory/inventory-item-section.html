@@ -1,4 +1,9 @@
 <div class="inventoryItemContent">
+  <script>
+    $(function() {
+      $(".rslides").responsiveSlides();
+    });
+  </script>
   <p>{{ entry.title }}</p>
   <ul class="rslides">
     {% for image in entry.images.all() %}
