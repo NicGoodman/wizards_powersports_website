@@ -1,7 +1,8 @@
-<div class="inventoryItemContent p-8">
+<div class="inventoryItemContent p-8 flex flex-col items-center">
   <p>{{ entry.title }}</p>
-
-  {% for image in entry.images %}
-
-  {% endfor %}
+  <ul class="rslides">
+    {% for image in entry.images %}
+    <li><img src="{{ image.Url }}" alt=""></li>
+    {% endfor %}
+  </ul>
 </div>
