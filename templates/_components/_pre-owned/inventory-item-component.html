@@ -1,14 +1,14 @@
 {% block inventoryItem %}
-<div class="mix {% if not make.title in ['Sea-Doo', 'Yamaha', 'Kawasaki', 'Honda', 'Polaris'] %}Other{% else %}{{ make.title }}{% endif %} {% if entry.horsepower < 110 %}Underto110{% elseif entry.horsepower >= 110 and entry.horsepower <= 130 %}HP110to130{% elseif entry.horsepower >= 140 and entry.horsepower <= 185 %}HP140to185{% elseif entry.horsepower >= 210 and entry.horsepower <= 230 %}HP210to230{% elseif entry.horsepower >= 250 and entry.horsepower <= 310 %}HP250to310{% endif %} {% if entry.stroke == '2Stroke' %}TwoStroke{% else %}FourStroke{% endif %} {% if entry.turboSc == 'turbo' %}Turbo{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}NaturallyAspirated{% endif %} mb-4" id="{{ loop.index }}" data-year="{{ entry.year }}" data-price="{{ entry.price }}" data-hours="{{ entry.hours }}">
+<div class="mix {% if not make.title in ['Sea-Doo', 'Yamaha', 'Kawasaki', 'Honda', 'Polaris'] %}Other{% else %}{{ make.title }}{% endif %} {% if entry.horsepower < 110 %}Underto110{% elseif entry.horsepower >= 110 and entry.horsepower <= 130 %}HP110to130{% elseif entry.horsepower >= 140 and entry.horsepower <= 185 %}HP140to185{% elseif entry.horsepower >= 210 and entry.horsepower <= 230 %}Hp-210to230{% elseif entry.horsepower >= 250 and entry.horsepower <= 310 %}Hp-250to310{% endif %} {% if entry.stroke == '2Stroke' %}TwoStroke{% else %}FourStroke{% endif %} {% if entry.turboSc == 'turbo' %}Turbo{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}NaturallyAspirated{% endif %} mb-4" id="{{ loop.index }}" data-year="{{ entry.year }}" data-price="{{ entry.price }}" data-hours="{{ entry.hours }}">
   <a href="{{ inventoryLink }}" class="flex flex-row">
-    <div class="py-4 px-8 border-r border-wz-black">{{ entry.year }}</div>
-    <div class="py-4 px-8 border-r border-wz-black">{{ make.title }}</div>
-    <div class="py-4 px-8 border-r border-wz-black">{{ model.title }}</div>
-    <div class="py-4 px-8 border-r border-wz-black">{{ entry.hours }}hrs</div>
-    <div class="py-4 px-8 border-r border-wz-black">{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}</div>
-    <div class="py-4 px-8 border-r border-wz-black">{% if entry.turboSc == 'turbo' %}Turbo{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}Naturally Aspirated{% endif %}</div>
-    <div class="py-4 px-8 border-r border-wz-black">{{ entry.horsepower }}hp</div>
-    <div class="py-4 px-8">${{ entry.price }}</div>
+    <div class="p-2 text-center border-r border-wz-black">{{ entry.year }}</div>
+    <div class="p-2 text-center border-r border-wz-black">{{ make.title }}</div>
+    <div class="p-2 text-center border-r border-wz-black">{{ model.title }}</div>
+    <div class="p-2 text-center border-r border-wz-black">{{ entry.hours }}hrs</div>
+    <div class="p-2 text-center border-r border-wz-black">{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}</div>
+    <div class="p-2 text-center border-r border-wz-black">{% if entry.turboSc == 'turbo' %}Turbo{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}Naturally Aspirated{% endif %}</div>
+    <div class="p-2 text-center border-r border-wz-black">{{ entry.horsepower }}hp</div>
+    <div class="p-2 text-center">${{ entry.price }}</div>
   </a>
 </div>
 {% endblock %}
