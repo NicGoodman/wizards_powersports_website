@@ -3,16 +3,16 @@
 <div id="filters" x-data="{ filter: 'make' }" class="mb-4">
   <div class="filter-ui-group w-ffieldsetl flex flex-row justify-start filters bg-wz-black text-wz-cream text-lg font-wz-italic">
     <button id="makeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
-      <h2>Make</h2>
+      <h3>Make</h3>
     </button>
     <button id="strokeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'stroke' }" @click="filter = 'stroke'">
-      <h2>Stroke</h2>
+      <h3>Stroke</h3>
     </button>
     <button id="turboFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
-      <h2>Turbo/SC</h2>
+      <h3>Turbo/SC</h3>
     </button>
     <button id="hpFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'hp' }" @click="filter = 'hp'">
-      <h2>HP</h2>
+      <h3>HP</h3>
     </button>
   </div>
   <fieldset data-filter-group x-show="filter === 'make'">
