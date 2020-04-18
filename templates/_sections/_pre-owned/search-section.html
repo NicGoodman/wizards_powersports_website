@@ -2,7 +2,7 @@
 <div class="max-w-screen-lg mx-auto flex flex-col items-start">
   <div id="filters" x-data="{ filter: 'make' }" class="mb-4 w-full flex flex-row flex-wrap">
     <div class="filter-ui-group w-full p-2 mb-1 flex flex-row justify-between filters bg-wz-black text-wz-cream text-lg font-wz-italic">
-      <div class="">
+      <div class="ml-3">
       <button id="makeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
         <h3>Make</h3>
       </button>
