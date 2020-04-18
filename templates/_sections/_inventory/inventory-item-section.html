@@ -9,12 +9,12 @@
   <h2>{{ entry.title }}</h2>
   <div class="my-4">
     <div class="flex flex-row">
-      <ul class="rslides w-3/5 pr-2">
+      <ul class="rslides w-3/5">
         {% for image in entry.images.all() %}
-        <li><img class="object-cover object-center" src="{{ image.Url }}" alt=""></li>
+        <li><img class="" src="{{ image.Url }}" alt=""></li>
         {% endfor %}
       </ul>
-      <ul class="w-2/5 border-l border-wz-red pl-2">
+      <ul class="w-2/5 pl-2">
         <h3 class="mb-2">Technical Specs</h3>
         <li class=" font-sans font-bold text-left">Year: {{ entry.year }}</li>
         <li class=" font-sans font-bold text-left ">Make: {{ make.title }}</li>
