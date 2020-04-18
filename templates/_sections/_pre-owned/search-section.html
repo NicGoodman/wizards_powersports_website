@@ -67,7 +67,7 @@
     </fieldset>-->
   </div>
   <div x-data="{ open: false }">
-    <div class="inventoryList w-full min-h-full h-64">
+    <div class="inventoryList w-full min-h-full h-64 pt-4 border-t border-wz-yellow">
       {% for entry in craft.entries().section('inventory').all() %}
       {% set inventoryLink = entry.url() %}
       {% set inventoryTitle = entry.title %}
@@ -76,9 +76,9 @@
       {% include "_components/_pre-owned/inventory-item-component" %}
       {% endfor %}
     </div>
-    <div class="mixitup-page-list font-wz-italic text-wz-teal p-4 border-t border-yellow"></div>
+    <div class="mixitup-page-list font-wz-italic text-wz-teal p-4 border-t border-wz-yellow"></div>
     <div class="fixed top-0 left-0 w-screen h-screen flex flex-col items-center justify-start" style="background-color: rgba(33, 42, 48, 0.33);" x-show="open">
-      <div class="bg-wz-grid shadow-lg w-full max-w-screen-md flex flex-col items-end mt-10" @click.away="open = false">
+      <div class="bg-wz-grid shadow-lg w-full max-w-screen-md flex flex-col items-end my-8" @click.away="open = false">
         <i class="fas fa-times m-2 text-wz-red text-xl cursor-pointer" @click="open = false"></i>
         <div class="inventoryItemContent p-8 flex flex-col items-start">
         </div>
