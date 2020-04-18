@@ -1,14 +1,32 @@
 <div class="inventoryItemContent">
+  {% set make = entry.make.one() %}
+  {% set model = entry.model.one() %}
   <script>
     $(function() {
       $(".rslides").responsiveSlides();
     });
   </script>
   <h2>{{ entry.title }}</h2>
-  <ul class="rslides mb-4">
+  <ul class="rslides">
     {% for image in entry.images.all() %}
     <li><img src="{{ image.Url }}" alt=""></li>
     {% endfor %}
   </ul>
+  <div class="my-4">
+  <h3>Technical Specs</h3>
+  <div class="flex flex-row">
+  <ul class="w-1/3 border-r border-wz-red">
+    <li class="p-1 font-sans font-bold w-16 text-left">{{ entry.year }}</li>
+    <li class="p-1 font-sans font-bold w-24 text-left ">{{ make.title }}</li>
+    <li class="p-1 font-sans font-bold w-40 text-left ">{{ model.title }}</li>
+    <li class="p-1 font-sans font-bold w-20 text-left ">{{ entry.hours }}hrs</li>
+    <li class="p-1 font-sans font-bold w-20 text-left ">{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}</li>
+    <li class="p-1 font-sans font-bold w-40 text-left ">{% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}Naturally Aspirated{% endif %}</li>
+    <li class="p-1 font-sans font-bold w-20 text-left ">{{ entry.horsepower }}hp</li>
+    <li class="p-1 font-sans font-bold w-20 text-left">${{ entry.price }}</li>
+  </ul>
+  <div class="w-2/3 p-1">{{ entry.description }}</div>
+  </div>
+    </div>
 <a href="tel:1-828.966-1872"class="py-4 px-8 bg-wz-yellow text-wz-black text-lg font-wz-italic shadow-lg transition-transform ease-in-out duration-300 hover:scale-105 transform z-40 hover:z-50 hover:shadow-xl self-center">Call Now!</a>
 </div>
