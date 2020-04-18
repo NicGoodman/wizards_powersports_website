@@ -8,7 +8,6 @@
   </script>
   <h2>{{ entry.title }}</h2>
   <div class="my-4">
-    <h3>Technical Specs</h3>
     <div class="flex flex-row">
       <ul class="rslides w-2/3 pr-2">
         {% for image in entry.images.all() %}
@@ -16,6 +15,7 @@
         {% endfor %}
       </ul>
       <ul class="w-1/3 border-r border-wz-red">
+            <h3>Technical Specs</h3>
         <li class="p-2 font-sans font-bold text-left">Year:  {{ entry.year }}</li>
         <li class="p-2 font-sans font-bold text-left ">Make:  {{ make.title }}</li>
         <li class="p-2 font-sans font-bold text-left ">Model:  {{ model.title }}</li>
