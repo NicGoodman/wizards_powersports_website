@@ -5,7 +5,7 @@
     });
   </script>
   <h2>{{ entry.title }}</h2>
-  <ul class="rslides">
+  <ul class="rslides mb-4">
     {% for image in entry.images.all() %}
     <li><img src="{{ image.Url }}" alt=""></li>
     {% endfor %}
