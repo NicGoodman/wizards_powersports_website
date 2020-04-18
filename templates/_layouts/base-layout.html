@@ -55,6 +55,8 @@
 				}
 			});
 			$toggleSortYear.on('click', function() {
+				$('button').removeClass('text-wz-yellow');
+				$(this).addClass('text-wz-yellow');
 				switch (sortOrder) {
 					case 'asc':
 						sortOrder = 'desc';
@@ -68,6 +70,8 @@
 				mixer.sort('sort', 'year:' + sortOrder);
 			});
 			$toggleSortHours.on('click', function() {
+				$('button').removeClass('text-wz-yellow');
+				$(this).addClass('text-wz-yellow');
 				switch (sortOrder) {
 					case 'asc':
 						sortOrder = 'desc';
@@ -81,6 +85,8 @@
 				mixer.sort('sort', 'hours:' + sortOrder);
 			});
 			$toggleSortPrice.on('click', function() {
+				$('button').removeClass('text-wz-yellow');
+				$(this).addClass('text-wz-yellow');
 				switch (sortOrder) {
 					case 'asc':
 						sortOrder = 'desc';
