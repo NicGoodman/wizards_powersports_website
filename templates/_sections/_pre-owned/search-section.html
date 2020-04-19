@@ -67,7 +67,7 @@
     </fieldset>-->
   </div>
   <div class="h-full" x-data="{ open: false }">
-    <div class="inventoryList w-full h-64 pt-4 border-t border-wz-yellow">
+    <div class="inventoryList w-full h-full pt-4 border-t border-wz-yellow">
       {% for entry in craft.entries().section('inventory').all() %}
       {% set thumbnail = entry.thumbnail.one().optimizedImages %}
       {% set inventoryLink = entry.url() %}
