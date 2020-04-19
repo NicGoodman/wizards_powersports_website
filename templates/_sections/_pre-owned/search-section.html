@@ -1,5 +1,5 @@
 {% block search %}
-<div class="max-w-screen-lg mx-auto flex flex-col items-start">
+<div class="max-w-screen-lg mx-auto flex flex-col h-full items-start">
   <div id="filters" x-data="{ filter: 'make' }" class="mb-4 w-full flex flex-row flex-wrap">
     <div class="filter-ui-group w-full p-2 mb-1 flex flex-row justify-between filters bg-wz-black text-wz-cream text-lg font-wz-italic">
       <div class="ml-3">
@@ -66,8 +66,8 @@
         <input type="text" data-search-attribute="data-model" placeholder="Search by Model"/>
     </fieldset>-->
   </div>
-  <div x-data="{ open: false }">
-    <div class="inventoryList w-full min-h-full h-64 pt-4 border-t border-wz-yellow">
+  <div class="h-full" x-data="{ open: false }">
+    <div class="inventoryList w-full h-64 pt-4 border-t border-wz-yellow">
       {% for entry in craft.entries().section('inventory').all() %}
       {% set thumbnail = entry.thumbnail.one().optimizedImages %}
       {% set inventoryLink = entry.url() %}
