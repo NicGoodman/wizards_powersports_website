@@ -6,9 +6,9 @@
       $(".rslides").responsiveSlides();
     });
   </script>
-  <div class="flex flex-row justify-between">
+  <div class="flex flex-row justify-between w-full">
   <h2>{{ entry.title }}</h2>
-  <i class="fas fa-times m-2 text-wz-red text-xl cursor-pointer z-50" @click="open = false"></i>
+  <i class="fas fa-times text-wz-red text-2xl cursor-pointer z-50" @click="open = false"></i>
     </div>
   <div class="my-4 w-full">
     <div class="flex flex-col">
@@ -17,7 +17,7 @@
         <li><img class="object-cover object-center" src="{{ image.Url }}" alt=""></li>
         {% endfor %}
       </ul>
-      <div class="w-full p-4">
+      <div class="w-full">
         <h3 class="mb-2">Technical Specs</h3>
         <h4 class="text-sm font-bold w-full">{{ entry.year }}&nbsp;&nbsp;{{ make.title }}&nbsp;&nbsp;{{ model.title }}</h4>
         <h4 class="text-wz-teal w-full">{{ entry.hours }}hrs&nbsp;&nbsp;{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}&nbsp;&nbsp;{% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc ==

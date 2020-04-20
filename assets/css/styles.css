@@ -197,7 +197,7 @@ button:active {}
 
 .rslides img {
   display: block;
-  height: auto;
+  height: 20rem;
   float: left;
   width: 100%;
   border: 0;
