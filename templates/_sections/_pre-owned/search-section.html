@@ -2,24 +2,24 @@
 <div class="max-w-screen-lg px-4 md:px-8 mx-auto flex flex-col h-full items-start">
   <div id="filters" x-data="{ filter: 'make' }" class="mb-4 w-full flex flex-row flex-wrap">
     <div class="filter-ui-group w-full p-2 mb-1 flex flex-row justify-between filters bg-wz-black text-wz-cream text-lg font-wz-italic">
-      <div class="ml-3">
-        <button id="makeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
+      <div class="ml-3 flex flex-row flex-wrap">
+        <button id="makeFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'make' }" @click="filter = 'make'">
           <h3>Make</h3>
         </button>
-        <button id="strokeFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'stroke' }" @click="filter = 'stroke'">
+        <button id="strokeFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'stroke' }" @click="filter = 'stroke'">
           <h3>Stroke</h3>
         </button>
-        <button id="turboFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
+        <button id="turboFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
           <h3>Turbo/SC</h3>
         </button>
-        <button id="hpFilter" class="mr-6" :class="{ 'text-wz-red': filter === 'hp' }" @click="filter = 'hp'">
+        <button id="hpFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'hp' }" @click="filter = 'hp'">
           <h3>HP</h3>
         </button>
       </div>
-      <div class="sort-by-button-group">
-        <button class="toggle-sort-year mr-6 text-wz-cream text-lg font-wz-italic active:text-wz-yellow">YEAR <i id="chevron-year" class="fas fa-chevron-up transition-transform duration-300 transform text-wz-cream text-lg"></i></button>
-        <button class="toggle-sort-hours mr-6 text-wz-cream text-lg font-wz-italic active:text-wz-yellow">HOURS <i id="chevron-hour" class="fas fa-chevron-up transition-transform duration-300 transform text-wz-cream text-lg"></i></button>
-        <button class="toggle-sort-price mr-6 text-wz-cream text-lg font-wz-italic text-wz-yellow">PRICE <i id="chevron-price" class="fas fa-chevron-down transition-transform duration-300 transform text-wz-cream text-lg"></i></button>
+      <div class="sort-by-button-group flex flex-row flex-wrap justify-end">
+        <button class="toggle-sort-year mr-4 md:mr-6 text-wz-cream text-lg font-wz-italic active:text-wz-yellow">YEAR <i id="chevron-year" class="fas fa-chevron-up transition-transform duration-300 transform text-wz-cream text-lg"></i></button>
+        <button class="toggle-sort-hours mr-4 md:mr-6 text-wz-cream text-lg font-wz-italic active:text-wz-yellow">HOURS <i id="chevron-hour" class="fas fa-chevron-up transition-transform duration-300 transform text-wz-cream text-lg"></i></button>
+        <button class="toggle-sort-price mr-4 md:mr-6 text-wz-cream text-lg font-wz-italic text-wz-yellow">PRICE <i id="chevron-price" class="fas fa-chevron-down transition-transform duration-300 transform text-wz-cream text-lg"></i></button>
       </div>
     </div>
     <fieldset data-filter-group class="flex flex-row" x-show="filter === 'make'">
