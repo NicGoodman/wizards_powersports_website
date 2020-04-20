@@ -7,10 +7,10 @@
         <img src="{{ thumbnail.src() }}" srcset="{{ thumbnail.srcset() }}" sizes="320px" class="w-full" />
       </div>
       <div class="flex flex-row flex-wrap">
-        <h3>
+        <p class="font-sans font-bold text-sm">
           {{ entry.year }} • {{ make.title }} • {{ model.title }} • {{ entry.hours }}hrs • {% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %} • {% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc ==
           'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated'%}Naturally Aspirated{% endif %} • {{ entry.horsepower }}hp • ${{ entry.price }}
-        </h3>
+        </p>
       </div>
     </div>
   </a>
