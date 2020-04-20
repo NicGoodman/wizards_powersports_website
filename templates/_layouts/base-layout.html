@@ -52,7 +52,10 @@
 				},
 				pagination: {
 					limit: 25 // impose a limit of 8 targets per page
-				}
+				},
+				load: {
+        sort: 'price:desc'
+    }
 			});
 			$toggleSortYear.on('click', function() {
 				$('button').removeClass('text-wz-yellow');
