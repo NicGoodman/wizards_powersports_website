@@ -8,29 +8,25 @@
   </script>
   <h2>{{ entry.title }}</h2>
   <div class="my-4">
-    <div class="flex flex-col items-center justify-center">
-      <div class="w-3/5"">
-        <ul class="rslides">
-          {% for image in entry.images.all() %}
-          <li><img class="" src="{{ image.Url }}" alt=""></li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="flex flex-row my-4">
-        <ul class="w-2/5 px-4 border-r border-wz-red">
-          <h3 class="mb-2">Technical Specs</h3>
-          <li class=" font-sans font-bold text-left">Year: {{ entry.year }}</li>
-          <li class=" font-sans font-bold text-left ">Make: {{ make.title }}</li>
-          <li class=" font-sans font-bold text-left ">Model: {{ model.title }}</li>
-          <li class=" font-sans font-bold text-left ">Hours: {{ entry.hours }}hrs</li>
-          <li class=" font-sans font-bold text-left ">Stroke: {% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}</li>
-          <li class=" font-sans font-bold text-left ">Turbo/SC: {% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}Naturally Aspirated{% endif %}</li>
-          <li class=" font-sans font-bold text-left ">HP: {{ entry.horsepower }}hp</li>
-          <li class=" font-sans font-bold text-left">Price: ${{ entry.price }}</li>
-        </ul>
-        <div class="w-3/5 p-4">{{ entry.description }}</div>
-      </div>
+    <div class="flex flex-row">
+      <ul class="rslides w-3/5">
+        {% for image in entry.images.all() %}
+        <li><img class="object-cover object-center" src="{{ image.Url }}" alt=""></li>
+        {% endfor %}
+      </ul>
+      <ul class="w-2/5 pl-2">
+        <h3 class="mb-2">Technical Specs</h3>
+        <li class=" font-sans font-bold text-left">Year: {{ entry.year }}</li>
+        <li class=" font-sans font-bold text-left ">Make: {{ make.title }}</li>
+        <li class=" font-sans font-bold text-left ">Model: {{ model.title }}</li>
+        <li class=" font-sans font-bold text-left ">Hours: {{ entry.hours }}hrs</li>
+        <li class=" font-sans font-bold text-left ">Stroke: {% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}</li>
+        <li class=" font-sans font-bold text-left ">Turbo/SC: {% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}Naturally Aspirated{% endif %}</li>
+        <li class=" font-sans font-bold text-left ">HP: {{ entry.horsepower }}hp</li>
+        <li class=" font-sans font-bold text-left">Price: ${{ entry.price }}</li>
+      </ul>
     </div>
+    <div class="w-2/3 p-4">{{ entry.description }}</div>
   </div>
-  <a href="tel:1-828.966-1872" class="py-4 px-8 bg-wz-yellow text-wz-black text-lg font-wz-italic shadow-lg transition-transform ease-in-out duration-300 hover:scale-105 transform z-40 hover:z-50 hover:shadow-xl self-center">Call Us!</a>
+  <a href="tel:1-828.966-1872" class="py-4 px-8 bg-wz-yellow text-wz-black text-lg font-wz-italic shadow-lg transition-transform ease-in-out duration-300 hover:scale-105 transform z-40 hover:z-50 hover:shadow-xl self-center">Call Now!</a>
 </div>
