@@ -8,8 +8,8 @@
       </div>
       <div class="flex flex-row flex-wrap">
         <p class="font-sans font-bold text-sm">
-          {{ entry.year }} • {{ make.title }} • {{ model.title }} • {{ entry.hours }}hrs<br />{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %} • {% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc ==
-          'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated'%}Naturally Aspirated{% endif %} • {{ entry.horsepower }}hp<br /> ${{ entry.price }}</p>
+          {{ entry.year }}  {{ make.title }}  {{ model.title }}  {{ entry.hours }}hrs<br />{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}  {% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc ==
+          'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated'%}Naturally Aspirated{% endif %}  {{ entry.horsepower }}hp<br /> ${{ entry.price }}</p>
       </div>
     </div>
   </a>
