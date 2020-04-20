@@ -14,7 +14,7 @@
     <div class="flex flex-col">
       <ul class="rslides">
         {% for image in entry.images.all() %}
-        <li><img class="object-cover object-center h-64" src="{{ image.Url }}" alt=""></li>
+        <li><img class="object-cover object-center h-64 md:h-full" src="{{ image.Url }}" alt=""></li>
         {% endfor %}
       </ul>
       <div class="w-full">
