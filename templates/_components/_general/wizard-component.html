@@ -1,5 +1,5 @@
 {% block wizard %}
-  <a href="{{ siteUrl }}">
+  <a href="{{ siteUrl }}" x-bind:class="{ 'hidden': open }">
     <div class="flex h-full w-12">
       <img src="assets/images/wizard.svg" alt="" class="h-full w-auto" style="transform: scaleX(-1);">
     </div>
