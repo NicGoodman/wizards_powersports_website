@@ -3,7 +3,7 @@
   id="{{ loop.index }}" data-year="{{ entry.year }}" data-price="{{ entry.price }}" data-hours="{{ entry.hours }}" data-model="{{ model.title }}" @click="open = true">
   <a href="{{ inventoryLink }}" class="inventory-item">
     <div class="flex flex-row items-start lg:items-center">
-      <div class="mr-4 flex-shrink-0">
+      <div class="mr-4 flex-shrink-0 shadow-lg">
         <img src="{{ thumbnail.src() }}" srcset="{{ thumbnail.srcset() }}" sizes="320px" class="w-24 h-24 object-cover"/>
       </div>
       <div class="flex flex-row flex-wrap">
