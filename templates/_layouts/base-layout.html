@@ -93,11 +93,11 @@
 				switch (sortOrder) {
 					case 'asc':
 						sortOrder = 'desc';
-						chevronPrice.classList.add("rotate-180");
+						chevronPrice.classList.remove("rotate-180");
 						break;
 					case 'desc':
 						sortOrder = 'asc';
-						chevronPrice.classList.remove("rotate-180");
+						chevronPrice.classList.add("rotate-180");
 						break;
 				}
 				mixer.sort('sort', 'price:' + sortOrder);
