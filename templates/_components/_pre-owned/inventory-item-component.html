@@ -7,8 +7,8 @@
         <img src="{{ thumbnail.src() }}" srcset="{{ thumbnail.srcset() }}" sizes="320px" />
       </div>
       <div class="flex flex-row flex-wrap">
-          <h3 class="text-sm">{{ entry.year }}&nbsp;&nbsp;{{ make.title }}&nbsp;&nbsp;{{ model.title }}</h3><br /><h4 class="text-wz-teal">{{ entry.hours }}hrs&nbsp;&nbsp;{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}&nbsp;&nbsp;{% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc ==
-          'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated'%}Naturally Aspirated{% endif %}&nbsp;&nbsp;{{ entry.horsepower }}hp</h4><br /><h4 class="text-wz-black text-sm">${{ entry.price }}</h4>
+          <h4 class="text-sm font-bold">{{ entry.year }}&nbsp;&nbsp;{{ make.title }}&nbsp;&nbsp;{{ model.title }}</h4><br /><h4 class="text-wz-teal">{{ entry.hours }}hrs&nbsp;&nbsp;{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}&nbsp;&nbsp;{% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc ==
+          'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated'%}Naturally Aspirated{% endif %}&nbsp;&nbsp;{{ entry.horsepower }}hp</h4><br /><h4 class="text-wz-black text-sm font-bold">${{ entry.price }}</h4>
       </div>
     </div>
   </a>
