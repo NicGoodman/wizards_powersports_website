@@ -106,7 +106,6 @@
         <input type="text" data-search-attribute="data-model" placeholder="Search by Model"/>
     </fieldset>-->
   </div>
-  <div x-data="{ open: false }">
     <div class="inventoryList w-full h-full pt-4 border-t border-wz-yellow flex flex-row flex-wrap">
       {% for entry in craft.entries().section('inventory').all() %}
       {% set thumbnail = entry.thumbnail.one().optimizedImages %}
@@ -125,5 +124,4 @@
       </div>
     </div>
   </div>
-</div>
 {% endblock %}
