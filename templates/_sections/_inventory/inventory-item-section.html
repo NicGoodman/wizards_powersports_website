@@ -7,26 +7,22 @@
     });
   </script>
   <h2>{{ entry.title }}</h2>
-  <div class="my-4">
-    <div class="flex flex-row">
-      <ul class="rslides w-3/5">
+  <div class="my-4 w-2/3">
+    <div class="flex flex-col">
+      <ul class="rslides">
         {% for image in entry.images.all() %}
         <li><img class="object-cover object-center" src="{{ image.Url }}" alt=""></li>
         {% endfor %}
       </ul>
-      <ul class="w-2/5 pl-2">
+      <div class="w-full p-4">
         <h3 class="mb-2">Technical Specs</h3>
-        <li class=" font-sans font-bold text-left">Year: {{ entry.year }}</li>
-        <li class=" font-sans font-bold text-left ">Make: {{ make.title }}</li>
-        <li class=" font-sans font-bold text-left ">Model: {{ model.title }}</li>
-        <li class=" font-sans font-bold text-left ">Hours: {{ entry.hours }}hrs</li>
-        <li class=" font-sans font-bold text-left ">Stroke: {% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}</li>
-        <li class=" font-sans font-bold text-left ">Turbo/SC: {% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc == 'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated' %}Naturally Aspirated{% endif %}</li>
-        <li class=" font-sans font-bold text-left ">HP: {{ entry.horsepower }}hp</li>
-        <li class=" font-sans font-bold text-left">Price: ${{ entry.price }}</li>
-      </ul>
+        <h4 class="text-sm font-bold w-full">{{ entry.year }}&nbsp;&nbsp;{{ make.title }}&nbsp;&nbsp;{{ model.title }}</h4>
+        <h4 class="text-wz-teal w-full">{{ entry.hours }}hrs&nbsp;&nbsp;{% if entry.stroke == '2Stroke' %}2-Stroke{% else %}4-Stroke{% endif %}&nbsp;&nbsp;{% if entry.turboSc == 'turbo' %}Turbo Charged{% elseif entry.turboSc ==
+          'supercharged' %}Supercharged{% elseif entry.turboSc == 'naturallyAspirated'%}Naturally Aspirated{% endif %}&nbsp;&nbsp;{{ entry.horsepower }}hp</h4>
+        <h4 class="text-wz-black text-sm font-bold w-full">${{ entry.price }}</h4>
+      </div>
+      <div class="w-full p-4">{{ entry.description }}</div>
     </div>
-    <div class="w-2/3 p-4">{{ entry.description }}</div>
   </div>
   <a href="tel:1-828.966-1872" class="py-4 px-8 bg-wz-yellow text-wz-black text-lg font-wz-italic shadow-lg transition-transform ease-in-out duration-300 hover:scale-105 transform z-40 hover:z-50 hover:shadow-xl self-center">Call Now!</a>
 </div>
