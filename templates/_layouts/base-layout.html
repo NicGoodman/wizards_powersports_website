@@ -31,9 +31,9 @@
 	</script>
 	<script type="text/javascript">
 		jQuery(function($) {
-			$('input[type="checkbox"][id="accordion"]').on('change', function() {
+			$('input[type="checkbox"][name="tab"]').on('change', function() {
 				let state = $(this).is(':checked');
-				$('input[type="checkbox"][id="accordion"]').prop('checked', false);
+				$('input[type="checkbox"][name="tab"]').prop('checked', false);
 				$(this).prop('checked', state);
 			});
 		});
