@@ -1,0 +1,28 @@
+{% block trailerInventory %}
+<div class="max-w-screen-lg px-4 md:px-8 mx-auto flex flex-col h-full items-start">
+  <div id="filters" class="mb-4 w-full flex flex-row flex-wrap">
+    <div class="filter-ui-group w-full p-2 mb-1 flex flex-row justify-between filters bg-wz-black text-wz-cream text-lg font-wz-italic">
+      <div class="sort-by-button-group flex flex-row flex-wrap justify-end">
+        <button class="toggle-sort-price mr-4 md:mr-6 text-wz-cream text-lg font-wz-italic text-wz-yellow">PRICE <i id="chevron-price" class="fas fa-chevron-down transition-transform duration-300 transform text-wz-cream text-lg"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="inventoryList w-full h-full pt-4 border-t border-wz-yellow flex flex-row flex-wrap">
+      {% for entry in craft.entries().section('inventory').all() %}
+        {% if entry.type == trailer %}
+          {% set thumbnail = entry.thumbnail.one().optimizedImages %}
+          {% set inventoryLink = entry.url() %}
+          {% set inventoryTitle = entry.title %}
+          {% include "_components/_trailers/trailer-inventory-item-component" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="mixitup-page-list font-wz-italic text-wz-teal p-4 border-t border-wz-yellow"></div>
+    <div class="fixed top-0 left-0 w-screen h-screen flex flex-row items-end justify-end" style="background-color: rgba(33, 42, 48, 0.33);" x-show="open" x-bind:class="{ 'overflow-hidden': open }">
+      <div class="bg-wz-grid shadow-lg w-full max-w-screen-sm flex flex-col items-end min-h-screen z-50" @click.away="open = false" x-bind:class="{ 'overflow-hidden': open }">
+        <div class="inventoryItemContent p-6 flex flex-col items-start max-h-screen">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
