@@ -1,20 +1,93 @@
-{% block trailerInventory %}
+{% block search %}
 <div class="max-w-screen-lg px-4 md:px-8 mx-auto flex flex-col h-full items-start">
-  <div id="filters" class="mb-4 w-full flex flex-row flex-wrap">
+  <div id="filters" x-data="{ filter: 'condition' }" class="mb-4 w-full flex flex-row flex-wrap">
     <div class="filter-ui-group w-full p-2 mb-1 flex flex-row justify-between filters bg-wz-black text-wz-cream text-lg font-wz-italic">
+      <div class="ml-3 flex flex-row flex-wrap">
+        <button id="conditionFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'condition' }" @click="filter = 'condition'">
+          <h3 class="text-lg">Condition</h3>
+        </button>
+        <button id="capacityFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'capacity' }" @click="filter = 'capacity'">
+          <h3 class="text-lg">Capacity</h3>
+        </button>
+        <button id="sizeFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'size' }" @click="filter = 'size'">
+          <h3 class="text-lg">Size</h3>
+        </button>
+        <button id="finishFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'finish' }" @click="filter = 'finish'">
+          <h3 class="text-lg">Finish</h3>
+        </button>
+      </div>
       <div class="sort-by-button-group flex flex-row flex-wrap justify-end">
         <button class="toggle-sort-price mr-4 md:mr-6 text-wz-cream text-lg font-wz-italic text-wz-yellow">PRICE <i id="chevron-price" class="fas fa-chevron-down transition-transform duration-300 transform text-wz-cream text-lg"></i></button>
       </div>
     </div>
+    <fieldset data-filter-group class="flex flex-row" x-show="filter === 'condition'">
+      <div class="flex flex-row flex-wrap">
+        <label class="control control-checkbox w-24 mr-2">New
+          <input type="checkbox" value=".new" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox w-24 mr-2">Used
+          <input type="checkbox" value=".used" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset data-filter-group class="flex flex-row" x-show="filter === 'size'">
+      <div class="flex flex-row flex-wrap">
+        <label class="control control-checkbox mr-4">Lightweight
+          <input type="checkbox" value=".lightweight" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox mr-4">Standard
+          <input type="checkbox" value=".standard" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox mr-4">Extended
+          <input type="checkbox" value=".extended" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset data-filter-group class="flex flex-row" x-show="filter === 'capacity'">
+      <div class="flex flex-row flex-wrap">
+        <label class="control control-checkbox mr-4">Single
+          <input type="checkbox" value=".single" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox mr-4">Double
+          <input type="checkbox" value=".double" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset data-filter-group class="flex flex-row" x-show="filter === 'finish'">
+      <div class="flex flex-row flex-wrap">
+        <label class="control control-checkbox w-24 mr-4">Painted
+          <input type="checkbox" value=".painted" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox w-24 mr-4">Galvanized
+          <input type="checkbox" value=".galvanized" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox w-24 mr-4">Aluminum
+          <input type="checkbox" value=".aluminum" class="mr-4" />
+          <div class="control_indicator"></div>
+        </label>
+      </div>
+    </fieldset>
+    <!--<fieldset data-filter-group class="text-input-wrapper">
+        <input type="text" data-search-attribute="data-model" placeholder="Search by Model"/>
+    </fieldset>-->
   </div>
     <div class="inventoryList w-full h-full pt-4 border-t border-wz-yellow flex flex-row flex-wrap">
       {% for entry in craft.entries().section('inventory').all() %}
-        {% if entry.type == trailer %}
-          {% set thumbnail = entry.thumbnail.one().optimizedImages %}
-          {% set inventoryLink = entry.url() %}
-          {% set inventoryTitle = entry.title %}
-          {% include "_components/_trailers/trailer-inventory-item-component" %}
-        {% endif %}
+      {% if entry.trailer = "1" %}
+      {% set thumbnail = entry.thumbnail.one().optimizedImages %}
+      {% set inventoryLink = entry.url() %}
+      {% set inventoryTitle = entry.title %}
+      {% include "_components/_trailers/trailer-inventory-item-component" %}
+      {% endif %}
       {% endfor %}
     </div>
     <div class="mixitup-page-list font-wz-italic text-wz-teal p-4 border-t border-wz-yellow"></div>
