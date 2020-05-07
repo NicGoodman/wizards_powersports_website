@@ -6,8 +6,8 @@
       <div class="mr-4 flex-shrink-0 shadow-lg">
         <img src="{{ thumbnail.src() }}" srcset="{{ thumbnail.srcset() }}" sizes="320px" class="w-24 h-24 object-cover"/>
       </div>
-      <div class="flex flex-row flex-wrap">
-          <h4 class="text-sm font-bold w-full">{{ entry.condition }}&nbsp;&nbsp;{{ entry.capacity }}</h4><h4 class="text-wz-teal w-full">{{ entry.finish }}&nbsp;&nbsp;{{ entry.size }}</h4><h4 class="text-wz-black text-sm font-bold w-full">${{ entry.price }}</h4>
+      <div class="flex flex-row flex-wrap capitalize">
+          <h4 class="text-sm font-bold w-full">Condition: {{ entry.condition }}&nbsp;&nbsp;Capacity: {{ entry.capacity }}</h4><h4 class="text-wz-teal w-full">Finish: {{ entry.finish }}&nbsp;&nbsp;Size: {{ entry.size }}</h4><h4 class="text-wz-black text-sm font-bold w-full">${{ entry.price }}</h4>
       </div>
     </div>
   </a>
