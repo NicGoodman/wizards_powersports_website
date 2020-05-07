@@ -82,7 +82,7 @@
   </div>
     <div class="inventoryList w-full h-full pt-4 border-t border-wz-yellow flex flex-row flex-wrap">
       {% for entry in craft.entries().section('inventory').all() %}
-      {% if entry.trailer = "1" %}
+      {% if entry.trailer == "1" %}
       {% set thumbnail = entry.thumbnail.one().optimizedImages %}
       {% set inventoryLink = entry.url() %}
       {% set inventoryTitle = entry.title %}
