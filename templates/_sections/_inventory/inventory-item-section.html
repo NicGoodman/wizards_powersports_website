@@ -17,7 +17,7 @@
         {% for image in entry.images.all() %}
         {% set image = image.optimizedImages %}
         <li>
-          <img src="{{ image.src() }}" srcset="{{ image.srcset() }}" class="object-cover object-center h-64 md:h-full" />
+          <img src="{{ image.src() }}" srcset="{{ image.srcset() }}" class="object-cover object-center h-64 lg:h-full" />
         </li>
         {% endfor %}
       </ul>
@@ -43,13 +43,13 @@
     <div class="flex flex-col">
       <ul class="rslides">
         {% for image in entry.images.all() %}
-        <li><img class="object-cover object-center h-64 md:h-full" src="{{ image.Url }}" alt=""></li>
+        <li><img class="object-cover object-center h-64 lg:h-full" src="{{ image.Url }}" alt=""></li>
         {% endfor %}
       </ul>
       <div class="w-full capitalize">
         <h3 class="mb-2">Technical Specs</h3>
         <h4 class="text-sm font-bold w-full">{{ entry.trailerTitle }}</h4>
-        <h4 class="text-wz-teal w-full">{{ entry.condition }}&nbsp;&nbsp;{{ entry.size }}&nbsp;&nbsp;{{ entry.capacity }}&nbsp;&nbsp;{{ entry.finish }}</h4>
+        <h4 class="text-wz-teal w-full">{{ entry.condition }}&nbsp;&nbsp;{{ entry.size }}&nbsp;&nbsp;{{ entry.capacity }}&nbsp;&nbsp;{% if entry.finish == 'powderCoated'%}Powder Coated {% else %}{{ entry.finish }}{% endif %}</h4>
         <h4 class="text-wz-black text-sm font-bold w-full">${{ entry.price }}</h4>
       </div>
       <div class="w-full mt-2">{{ entry.description }}</div>

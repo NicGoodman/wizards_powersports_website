@@ -1,5 +1,5 @@
 {% block trailerItem %}
-<div class="mix w-full md:w-1/2 {% if entry.finish == 'painted' %}painted{% elseif entry.finish == 'galvanized' %}galvanized{% elseif entry.finish =='aluminum' %}aluminum{% endif %} {% if entry.size == 'lightweight' %}lightweight{% elseif entry.size == 'standard' %}standard{% elseif entry.size == 'extended' %}extended{% endif %} {% if entry.capacity == 'single' %}single{% else %}double{% endif %} {% if entry.condition == 'new' %}new{% else %}used{% endif %} mb-8 hover:text-wz-red cursor-pointer"
+<div class="mix w-full md:w-1/2 {% if entry.finish == 'powderCoated' %}powderCoated{% elseif entry.finish == 'galvanized' %}galvanized{% elseif entry.finish =='aluminum' %}aluminum{% endif %} {% if entry.size == 'lightweight' %}lightweight{% elseif entry.size == 'standard' %}standard{% elseif entry.size == 'extended' %}extended{% endif %} {% if entry.capacity == 'single' %}single{% else %}double{% endif %} {% if entry.condition == 'new' %}new{% else %}used{% endif %} mb-8 hover:text-wz-red cursor-pointer"
   id="{{ loop.index }}" data-price="{{ entry.price }}" @click="open = true">
   <a href="{{ inventoryLink }}" class="inventory-item">
     <div class="flex flex-row items-start lg:items-center">
@@ -7,7 +7,7 @@
         <img src="{{ thumbnail.src() }}" srcset="{{ thumbnail.srcset() }}" sizes="320px" class="w-24 h-24 object-cover"/>
       </div>
       <div class="flex flex-row flex-wrap capitalize">
-          <h4 class="text-sm font-bold w-full">{{ entry.trailerTitle }}</h4><h4 class="text-wz-teal w-full">{{ entry.condition }}&nbsp;&nbsp;{{ entry.size }}&nbsp;&nbsp;{{ entry.capacity }}&nbsp;&nbsp;{{ entry.finish }}</h4><h4 class="text-wz-black text-sm font-bold w-full">${{ entry.price }}</h4>
+          <h4 class="text-sm font-bold w-full">{{ entry.trailerTitle }}</h4><h4 class="text-wz-teal w-full">{{ entry.condition }}&nbsp;&nbsp;{{ entry.size }}&nbsp;&nbsp;{{ entry.capacity }}&nbsp;&nbsp;{% if entry.finish == 'powderCoated'%}Powder Coated {% else %}{{ entry.finish }}{% endif %}</h4><h4 class="text-wz-black text-sm font-bold w-full">${{ entry.price }}</h4>
       </div>
     </div>
   </a>
