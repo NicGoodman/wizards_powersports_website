@@ -1,6 +1,6 @@
 {
   "require": {
-    "billythekid/conditional-fields": "^0.0.5",
+    "billythekid/conditional-fields": "^0.0.6",
     "craftcms/cms": "^3.4.0",
     "craftcms/redactor": "^2.6",
     "elivz/craft-single-cat": "^1.2",

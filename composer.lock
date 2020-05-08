@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a00e37276f51edc554ddcd6f0458754b",
+    "content-hash": "fdbbafdb9db6af668f2cc2813d0a8f0a",
     "packages": [
         {
             "name": "billythekid/conditional-fields",
-            "version": "0.0.5",
+            "version": "0.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/billythekid/conditional-fields.git",
-                "reference": "bf81500a4e1552371c7a8abeef95f6adf4122dc3"
+                "reference": "21755f0290b1686cd534c9e9c4705107310e02f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/billythekid/conditional-fields/zipball/bf81500a4e1552371c7a8abeef95f6adf4122dc3",
-                "reference": "bf81500a4e1552371c7a8abeef95f6adf4122dc3",
+                "url": "https://api.github.com/repos/billythekid/conditional-fields/zipball/21755f0290b1686cd534c9e9c4705107310e02f6",
+                "reference": "21755f0290b1686cd534c9e9c4705107310e02f6",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "craft-plugin",
                 "craftcms"
             ],
-            "time": "2020-03-27T18:53:01+00:00"
+            "time": "2020-04-28T12:05:16+00:00"
         },
         {
             "name": "cebe/markdown",
