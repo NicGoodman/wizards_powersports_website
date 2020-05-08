@@ -9,11 +9,11 @@
         <button id="strokeFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'stroke' }" @click="filter = 'stroke'">
           <h3 class="text-lg">Stroke</h3>
         </button>
-        <button id="turboFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
-          <h3 class="text-lg">Turbo/SC</h3>
-        </button>
         <button id="hpFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'hp' }" @click="filter = 'hp'">
           <h3 class="text-lg">HP</h3>
+        </button>
+        <button id="turboFilter" class="mr-4 md:mr-6" :class="{ 'text-wz-red': filter === 'turbo' }" @click="filter = 'turbo'">
+          <h3 class="text-lg">Turbo/SC</h3>
         </button>
       </div>
       <div class="sort-by-button-group flex flex-row flex-wrap justify-end">

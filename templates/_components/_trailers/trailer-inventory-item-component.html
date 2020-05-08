@@ -7,7 +7,7 @@
         <img src="{{ thumbnail.src() }}" srcset="{{ thumbnail.srcset() }}" sizes="320px" class="w-24 h-24 object-cover"/>
       </div>
       <div class="flex flex-row flex-wrap capitalize">
-          <h4 class="text-sm font-bold w-full">{{ entry.trailerTitle }}</h4><h4 class="text-wz-teal w-full">Condition: <span class="text-wz-red">{{ entry.condition }}</span>&nbsp;&nbsp;&nbsp;Size: <span class="text-wz-red">{{ entry.size }}</span><br />Capacity: <span class="text-wz-red">{{ entry.capacity }}</span>&nbsp;&nbsp;&nbsp;Finish: <span class="text-wz-red">{{ entry.finish }}</span></h4><h4 class="text-wz-black text-sm font-bold w-full">${{ entry.price }}</h4>
+          <h4 class="text-sm font-bold w-full">{{ entry.trailerTitle }}</h4><h4 class="text-wz-teal w-full">{{ entry.condition }}&nbsp;&nbsp;{{ entry.size }}&nbsp;&nbsp;{{ entry.capacity }}&nbsp;&nbsp;{{ entry.finish }}</h4><h4 class="text-wz-black text-sm font-bold w-full">${{ entry.price }}</h4>
       </div>
     </div>
   </a>
