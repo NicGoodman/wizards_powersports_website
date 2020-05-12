@@ -15552,7 +15552,7 @@ button:active {
   -webkit-backface-visibility: hidden;
   position: absolute;
   display: none;
-  width: 100%;
+  width: 90%;
   left: 0;
   top: 0;
   height:0;
