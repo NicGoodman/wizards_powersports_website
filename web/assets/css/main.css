@@ -15561,6 +15561,8 @@ button:active {
   position: relative;
   display: block;
   float: left;
+  height:0;
+  padding-top: 75%;
 }
 
 .rslides img {
@@ -15569,7 +15571,9 @@ button:active {
   width: 100%;
   height: 100%;
   border: 0;
-  --aspect-ratio: 4/3;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .control {
