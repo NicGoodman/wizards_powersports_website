@@ -11,7 +11,7 @@
     <h2 class="leading-tight text-2xl md:text-3xl">{{ entry.year }}&nbsp;&nbsp;{{ make.title }}&nbsp;&nbsp;{{ model.title }}</h2>
     <i class="fas fa-times text-wz-red text-2xl cursor-pointer z-50" @click="open = false"></i>
   </div>
-  <div class="my-4">
+  <div class="my-4 w-full">
     <div class="flex flex-col mt-4">
       <ul class="rslides">
         {% for image in entry.images.all() %}
@@ -39,7 +39,7 @@
     <h2 class="leading-tight text-2xl md:text-3xl">{{ entry.trailerTitle }}</h2>
     <i class="fas fa-times text-wz-red text-2xl cursor-pointer z-50" @click="open = false"></i>
   </div>
-  <div class="my-4">
+  <div class="my-4 w-full">
     <div class="flex flex-col mt-4">
       <ul class="rslides">
         {% for image in entry.images.all() %}
